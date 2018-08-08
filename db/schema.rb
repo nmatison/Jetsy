@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 2018_08_07_174111) do
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "password_digest", null: false
+    t.string "email_address", null: false
     t.string "session_token", null: false
+    t.index ["email_address"], name: "index_users_on_email_address", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
     t.index ["username"], name: "index_users_on_username", unique: true
   end

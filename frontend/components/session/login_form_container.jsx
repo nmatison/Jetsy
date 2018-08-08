@@ -6,13 +6,13 @@ import SessionForm from './session_form';
 
 const mapStateToProps = ({ errors }) => (
   errors: errors.session,
-  formType: 'login'
+  formType: 'Login'
 );
 
 const mapDispatchToProps = dispatch => ({
   processForm: (user) => dispatch(login(user)),
   otherForm: (
-    <button onClick{() => dispatch(openModal('signup'))}>
+    <button onClick = {() => dispatch(openModal('signup'))}>
       Signup
     </button>
   ),
