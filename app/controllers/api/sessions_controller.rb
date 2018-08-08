@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Api::SessionsController < ApplicationController
   def create
     @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
     if @user
@@ -11,9 +11,10 @@ class SessionsController < ApplicationController
 
   def delete
     if current_user
-    logout!
-    render json: ["{}"]
-  else
-    render json: ["Nobody Signed In"], status: 404
+      logout!
+      render json: ["{}"]
+    else
+      render json: ["Nobody Signed In"], status: 404
+    end
   end
 end
