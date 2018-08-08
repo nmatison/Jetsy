@@ -12,7 +12,7 @@ const Greeting = ({ currentUser, logout }) => {
   const personalGreeting = () => (
     <span className="your-page">
       <Link to={`/users/${currentUser.id}`}>You</Link>
-      <input className="logout-input" type="submit" value="Log Out" />
+      <input className="logout-input" type="submit" value="Log Out" onClick={logout} />
     </span>
   )
 
