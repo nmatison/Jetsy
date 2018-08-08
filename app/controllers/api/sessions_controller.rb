@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     if current_user
       logout!
       render json: ["{}"]
