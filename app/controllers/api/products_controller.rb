@@ -10,7 +10,7 @@ class Api::ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      render 'api/posts/show'
+      render 'api/products/show'
     else
       render json: @product.errors.full_messages, status: 422
     end
@@ -19,7 +19,7 @@ class Api::ProductsController < ApplicationController
   def update
     @product = Product.find_by(id: params[:id])
     if @product.update(post_params)
-      render 'api/posts/show'
+      render 'api/products/show'
     else
       render json: @product.errors.full_messages, status: 422
     end
@@ -28,7 +28,7 @@ class Api::ProductsController < ApplicationController
   def destroy
     @product = Product.find_by(id: params[:id])
     if @product.destroy
-      render 'api/posts/show'
+      render 'api/products/show'
     else
       render json: @product.errors.full_messages, status: 422
   end
