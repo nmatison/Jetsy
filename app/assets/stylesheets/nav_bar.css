@@ -1,15 +1,45 @@
 header {
   display: block;
+  width: 100%
 }
 
 .nav-bar {
-  display: block;
+  /* display: block; */
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: inherit;
+  border-bottom: 1px solid grey;
 }
 
 .title {
-  display: inline-block;
+  /* display: inline-block; */
+  /* position: absolute; */
+  color: #f45800;
+  font-size: 30px;
+  height: 40px;
+  width: 40px;
+  /* margin-top: 15px;
+  margin-left: 30px;
+  margin-right: 10px; */
+  /* z-index: 1px */
 }
 
-GreetingContainer {
-  display: inline-block;
+.login-signup {
+  /* display: inline-block;
+  float: right; */
+  /* margin-top: 15px;
+  margin-left: 10px; */
+}
+
+.search-bar {
+  /* display: inline-block;
+  position: absolute; */
+  /* top: 15px;
+  left: 80px; */
+  line-height: 24px;
+  /* width: 500px; */
+  border: 1px solid #CFCBC8;
+  background-color: #f9f9f8;
+  border-radius: 3px;
 }

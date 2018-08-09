@@ -8,7 +8,8 @@ const App = () =>(
     <Modal />
     <header>
       <nav className="nav-bar">
-        <h1 className="title">JETSY</h1>
+        <h1 className="title">Jetsy</h1>
+        <input className="search-bar" type="text" placeholder="Search for travel Items"/>
         <GreetingContainer />
       </nav>
     </header>
