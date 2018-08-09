@@ -5,7 +5,7 @@ header {
 
 .nav-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 80px;
   width: inherit;
   border-bottom: 1px solid #D3D3D3;
@@ -20,7 +20,6 @@ header {
 .title {
   color: #f45800;
   font-size: 40px;
-  margin-left: 30px;
   margin-right: 20px;
   text-decoration: none;
 }
@@ -98,11 +97,12 @@ header {
   justify-content: center;
   align-items: center;
   border-left: 1px solid #D3D3D3;
-  height: 32px;
+  height: 52px;
   width: 30px;
   padding: 8px;
   text-decoration: none;
 }
+
 
 .cart-div:hover {
   opacity: 0.8;
@@ -117,6 +117,7 @@ header {
 .cart-text {
   font-size: 14px;
   margin: 2px;
+  color: black;
 }
 
 .your-page{
@@ -144,7 +145,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 52px;
   width: 30px;
   padding: 8px;
   text-decoration: none;
@@ -158,6 +159,7 @@ header {
 
 .you-text {
   font-size: 14px;
+  color: black;
 }
 
 .logout-input {
