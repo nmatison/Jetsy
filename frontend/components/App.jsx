@@ -11,7 +11,7 @@ const App = () =>(
       <nav className="nav-bar">
         <div className="title-and-search">
           <Link to="/" className="title">Jetsy</Link>
-          <input className="search-bar" type="text" placeholder="  Search for travel items"/>
+          <span className="search-span"><input className="search-bar" type="text" placeholder="Search for travel items"/></span>
           <input type="submit" className="search-submit" value="Search" />
         </div>
         <GreetingContainer />

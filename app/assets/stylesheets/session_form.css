@@ -15,6 +15,7 @@
   top: 50px;
   width: auto;
   height: auto;
+  overflow: visible;
 }
 
 .session-label {
@@ -35,10 +36,11 @@
   width: 290px;
   line-height: 40px;
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #D3D3D3;
   left: 5px;
   height: auto;
+  padding-left: 3px;
 }
 
 .session-submit {
@@ -108,6 +110,11 @@ hr {
   cursor: pointer;
 }
 
-.login-errors{
+.login-errors {
   width: inherit;
+  position: relative;
+  left: 10px;
+  color: red;
+  margin-bottom: 5px;
+  font-size: 14px;
 }

@@ -36,24 +36,30 @@ class SessionForm extends React.Component {
     const email = () => {
       if (this.props.formType === "Register") {
         return (<label className="session-label">Email Address:
-          <input className="sign-in-input" type="text" onChange={this.update('email_address')}/>
+          <input className="sign-in-input" type="email" onChange={this.update('email_address')}/>
         </label>)
       } else {
         return null;
       }
     }
 
+    const errors = () => (
+      this.props.errors.map((error, i) => <p className="login-errors" key={i}>{error}</p>)
+    )
+
     return (
       <div>
-        <h1 className="formtype">{`${this.props.formType} to continue`}</h1>
+        <h1 className="formtype">{`${this.props.formType}`}</h1>
         <form className="session-form" onSubmit={this.handleSubmit}>
             <label className="session-label">Username:
               <input className="sign-in-input" type="text" onChange={this.update('username')}></input>
             </label>
+            {errors()[0]}
               {email()}
             <label className="session-label">Password:
               <input className="sign-in-input" type="password" onChange={this.update('password')}></input>
             </label>
+            {errors()[1]}
             <input className="session-submit" type='submit' value={this.props.formType}/>
             <div className="line-or">
                <hr className="before-or-line" />
@@ -61,7 +67,6 @@ class SessionForm extends React.Component {
                <hr className="after-or-line" />
              </div>
             <input className="demo-submit" type="submit" value="Demo Login" onClick={this.demoLogin}/>
-            {this.props.errors.map((error, i) => <p className="login-errors" key={i}>{error}</p>)}
         </form>
       </div>
     )

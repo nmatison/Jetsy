@@ -5,9 +5,9 @@ import {openModal, closeModal} from '../../actions/modal_actions';
 import SessionForm from '../session/session_form';
 
 
-const mapStateToProps = ({errors}) => ({
+const mapStateToProps = ({errors}, ownProps) => ({
   errors: errors.session,
-  formType: 'Register',
+  formType: ownProps.modal === 'signup' ? 'Register' : 'Please register to continue'
 });
 
 const mapDispatchToProps = dispatch => ({

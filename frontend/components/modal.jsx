@@ -3,6 +3,7 @@ import { closeModal } from '../actions/modal_actions';
 import { connect } from 'react-redux';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
+import {withRouter} from 'react-router-dom';
 
 function Modal({modal, closeModal}) {
   if (!modal) {
@@ -12,10 +13,13 @@ function Modal({modal, closeModal}) {
   switch (modal) {
     case 'login':
       component = <LoginFormContainer />;
-      break;
+      break
     case 'signup':
-      component = <SignupFormContainer />;
-      break;
+      component = <SignupFormContainer modal={modal}/>;
+      break
+    case 'regtocontinue':
+      component = <SignupFormContainer modal={modal}/>;
+      break
     default:
       return null;
   }
@@ -40,4 +44,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Modal);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Modal));
