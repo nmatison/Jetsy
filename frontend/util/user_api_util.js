@@ -1,6 +1,6 @@
-const fetchUser = (user) => (
+const fetchUser = (id) => (
   $.ajax({
     method: 'get',
-    url: `api/users/${user.id}`
+    url: `api/users/${id}`
   });
 )
