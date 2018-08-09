@@ -4,10 +4,10 @@ import { login } from '../../actions/session_actions';
 import {openModal, closeModal} from '../../actions/modal_actions';
 import SessionForm from './session_form';
 
-const mapStateToProps = ({ errors }) => (
+const mapStateToProps = ({ errors }) => ({
   errors: errors.session,
   formType: 'Login'
-);
+});
 
 const mapDispatchToProps = dispatch => ({
   processForm: (user) => dispatch(login(user)),

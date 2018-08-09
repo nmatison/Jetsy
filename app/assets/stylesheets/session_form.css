@@ -1,0 +1,94 @@
+.formtype {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  top: 3%;
+  left: 7%
+}
+
+.session-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 7%
+}
+
+.session-label {
+  position: relative;
+  left: 10%;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-input{
+  font-size: 16px;
+  border-radius: 5px;
+  position: relative;
+  width: 149%;
+  line-height: 250%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #D3D3D3;
+}
+
+.session-submit {
+  position: relative;
+  width: 151%;
+  line-height: 125%;
+  left: 10%;
+  background-color: #F56400;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
+}
+
+.line-or {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 171%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.or-span {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  color: #black;
+  opacity: 0.4;
+  top: 10%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    width: inherit;
+    overflow: hidden;
+}
+
+.demo-submit {
+  position: relative;
+  width: 151%;
+  line-height: 125%;
+  left: 10%;
+  background-color: #00BFFF;
+  color: white;
+  font-weight :bold;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
+}

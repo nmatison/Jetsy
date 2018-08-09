@@ -23,6 +23,7 @@
     "test": "test"
   },
   "scripts": {
+    "postinstall": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --mode=development --watch"
   },
@@ -39,5 +40,10 @@
   "homepage": "https://github.com/nmatison/bestsy#readme",
   "devDependencies": {
     "webpack-cli": "^3.1.0"
-  }
+  },
+  
+  "engines": {
+    "node": "8.4.0",
+    "npm": "6.1.0"
+  },
 }
