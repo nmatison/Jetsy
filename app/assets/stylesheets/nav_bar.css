@@ -1,0 +1,15 @@
+header {
+  display: block;
+}
+
+.nav-bar {
+  display: block;
+}
+
+.title {
+  display: inline-block;
+}
+
+GreetingContainer {
+  display: inline-block;
+}
