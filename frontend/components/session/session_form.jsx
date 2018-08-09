@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
       email_address: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   handleSubmit(e) {
@@ -25,9 +26,15 @@ class SessionForm extends React.Component {
     }
   }
 
+  demoLogin(e) {
+    e.preventDefault();
+    const user = {username: "Demo User", password: "demodemo"};
+    this.props.login(user).then(this.props.closeModal);
+  }
+
   render() {
     const email = () => {
-      if (this.props.formType === "Sign in") {
+      if (this.props.formType === "Sign Up") {
         return (<label className="session-label">Email Address:
           <input className="sign-in-input" type="text" onChange={this.update('email_address')}/>
         </label>)
@@ -53,7 +60,8 @@ class SessionForm extends React.Component {
                <span className="or-span">OR</span>
                <hr className="after-or-line" />
              </div>
-            <input className="demo-submit" type="submit" value="Demo Login"/>
+            <input className="demo-submit" type="submit" value="Demo Login" onClick={this.demoLogin}/>
+            {this.props.errors.map((error, i) => <p className="login-errors" key={i}>{error}</p>)}
         </form>
       </div>
     )

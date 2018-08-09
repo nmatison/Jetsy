@@ -2,42 +2,50 @@
   font-size: 20px;
   font-weight: bold;
   position: relative;
-  top: 3%;
-  left: 7%
+  top: 25px;
+  left: 25px;
+  width: auto;
+  height: 20px;
 }
 
 .session-form {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: 7%
+  top: 50px;
+  width: auto;
+  height: auto;
 }
 
 .session-label {
   position: relative;
-  left: 10%;
+  left: 25px;
   font-size: 14px;
   font-weight: 500;
   display: flex;
   flex-direction: column;
+  width: 100px;
+  height: auto;
 }
 
 .sign-in-input{
   font-size: 16px;
   border-radius: 5px;
   position: relative;
-  width: 149%;
-  line-height: 250%;
+  width: 290px;
+  line-height: 40px;
   margin-top: 5px;
   margin-bottom: 20px;
   border: 1px solid #D3D3D3;
+  left: 5px;
+  height: auto;
 }
 
 .session-submit {
   position: relative;
-  width: 151%;
-  line-height: 125%;
-  left: 10%;
+  width: 290px;
+  line-height: 20px;
+  left: 30px;
   background-color: #F56400;
   color: white;
   font-weight: bold;
@@ -52,7 +60,7 @@
   justify-content: space-around;
   align-items: center;
   position: relative;
-  width: 171%;
+  width: 350px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -63,7 +71,6 @@
   width: 20px;
   color: #black;
   opacity: 0.4;
-  top: 10%;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -81,9 +88,9 @@ hr {
 
 .demo-submit {
   position: relative;
-  width: 151%;
-  line-height: 125%;
-  left: 10%;
+  width: 290px;
+  line-height: 20px;
+  left: 30px;
   background-color: #00BFFF;
   color: white;
   font-weight :bold;
@@ -91,4 +98,8 @@ hr {
   padding: 12px 28px;
   border-radius: 5px;
   border: 1px solid #D3D3D3;
+}
+
+.login-errors{
+  width: inherit;
 }
