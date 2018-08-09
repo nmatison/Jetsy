@@ -4,42 +4,173 @@ header {
 }
 
 .nav-bar {
-  /* display: block; */
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  height: 80px;
   width: inherit;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #D3D3D3;
+}
+.title-and-search {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 750px;
 }
 
 .title {
-  /* display: inline-block; */
-  /* position: absolute; */
   color: #f45800;
-  font-size: 30px;
-  height: 40px;
-  width: 40px;
-  /* margin-top: 15px;
+  font-size: 40px;
   margin-left: 30px;
-  margin-right: 10px; */
-  /* z-index: 1px */
+  margin-right: 20px;
+  text-decoration: none;
 }
 
-.login-signup {
-  /* display: inline-block;
-  float: right; */
-  /* margin-top: 15px;
-  margin-left: 10px; */
+.title:hover {
+  cursor: pointer;
 }
 
 .search-bar {
-  /* display: inline-block;
-  position: absolute; */
-  /* top: 15px;
-  left: 80px; */
-  line-height: 24px;
-  /* width: 500px; */
+  line-height: 10px;
+  height: 32px;
   border: 1px solid #CFCBC8;
   background-color: #f9f9f8;
   border-radius: 3px;
+  width: 360px;
+}
+
+.search-submit {
+  background-color: #f45800;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  height: 35px;
+  width: 80px;
+  border-radius: 3px;
+  border: none;
+}
+
+.search-submit:hover {
+  cursor: pointer;
+}
+
+.login-signup {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 40px;
+  width: 310px;
+}
+
+.signup-button {
+  background-color: white;
+  border: none;
+  color: #f45800;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.signup-button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: white;
+  color: #f45800;
+  border: 1px solid #f45800;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.login-button:hover {
+  background-color: #FAEBD7;
+  cursor: pointer;
+}
+
+.cart-div {
+  opacity: 0.6;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #D3D3D3;
+  height: 32px;
+  width: 30px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.cart-div:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.cart {
+  height: 25px;
+  width: 25px;
+}
+
+.cart-text {
+  font-size: 14px;
+  margin: 2px;
+}
+
+.your-page{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 40px;
+  width: 310px;
+}
+
+.sell-link {
+  background-color: white;
+  border: none;
+  color: #f45800;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.you-link{
+  opacity: 0.4;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 30px;
+  padding: 8px;
+  text-decoration: none;
+  margin-bottom: 3px;
+}
+
+.person-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.you-text {
+  font-size: 14px;
+}
+
+.logout-input {
+  background-color: white;
+  color: #f45800;
+  border: 1px solid #f45800;
+  margin-right: 10px;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.logout-input:hover {
+  background-color: #FAEBD7;
+  cursor: pointer;
 }

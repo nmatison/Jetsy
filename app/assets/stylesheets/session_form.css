@@ -55,6 +55,10 @@
   border: 1px solid #D3D3D3;
 }
 
+.session-submit:hover {
+  cursor: pointer;
+}
+
 .line-or {
   display: flex;
   justify-content: space-around;
@@ -98,6 +102,10 @@ hr {
   padding: 12px 28px;
   border-radius: 5px;
   border: 1px solid #D3D3D3;
+}
+
+.demo-submit:hover {
+  cursor: pointer;
 }
 
 .login-errors{
