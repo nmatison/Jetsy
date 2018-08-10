@@ -1,1 +1,3 @@
-json.array! @products
+json.products do
+  json.array! @products
+end

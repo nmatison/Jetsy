@@ -28,7 +28,7 @@ export const updateProduct = (product) => (
   })
 )
 
-export const fetchProduct = (id) => (
+export const deleteProduct = (id) => (
   $.ajax({
     method: 'destroy',
     url: `api/products/${id}`
