@@ -1,6 +1,6 @@
 class Api::ProductsController < ApplicationController
   def index
-    @products = Products.all
+    @products = Product.all
   end
 
   def show
@@ -31,6 +31,7 @@ class Api::ProductsController < ApplicationController
       render 'api/products/show'
     else
       render json: @product.errors.full_messages, status: 422
+    end
   end
 
   private

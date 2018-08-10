@@ -10,13 +10,13 @@ header {
   width: inherit;
   border-bottom: 1px solid #D3D3D3;
 }
+
 .title-and-search {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 750px;
 }
-
 
 .title {
   color: #f45800;
