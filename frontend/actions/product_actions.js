@@ -29,14 +29,14 @@ export const deleteProduct = (id) => dispath => (
   ProductApiUtil.deleteProduct(id).then(product => dispatch(removeProduct(product)))
 );
 
-const receiveProducts = (products) => ({
+const receiveProducts = (payload) => ({
   type: RECEIVE_PRODUCTS,
-  products
+  payload
 })
 
-const receiveProduct = (product) => ({
+const receiveProduct = (payload) => ({
   type: RECEIVE_PRODUCT,
-  product
+  payload
 })
 
 const removeProduct = (product) => ({

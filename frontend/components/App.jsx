@@ -5,6 +5,7 @@ import Modal from './modal';
 import {AuthRoute} from '../util/route_util';
 import {Link} from 'react-router-dom';
 import ProductsIndexContainer from './products/products_index_container';
+import ProductsShowContainer from './products/products_show_container';
 import Footer from './footer.jsx'
 
 const App = () =>(
@@ -20,6 +21,7 @@ const App = () =>(
         <GreetingContainer />
       </nav>
       <Route exact path="/products" component={ProductsIndexContainer} />
+      <Route exact path='/products/:productId' component={ProductsShowContainer} />
     </header>
     <Footer />
   </div>

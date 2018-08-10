@@ -1,8 +1,10 @@
 @products.each do |product|
-  json.set! product.id do
-    json.extract! product, :user_id, :product_name, :description, :price
-    json.user do
-      json.extract! product.user, :username, :email_address
+  json.products do
+    json.set! product.id do
+      json.extract! product, :id, :user_id, :product_name, :description, :price
     end
+  end
+  json.user do
+    json.extract! product.user, :id, :username, :email_address
   end
 end
