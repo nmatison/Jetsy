@@ -14,12 +14,10 @@ class ProductShow extends React.Component {
     const user = this.props.user
     return(
       <div>
-        <h1>WERE IN BABY</h1>
         <h1>{product.product_name}</h1>
         <h1>{product.price}</h1>
         <h1>{product.description}</h1>
         <h1>{user.username}</h1>
-
       </div>
     )
   }

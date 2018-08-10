@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger;
   return ({product: state.entities.products[ownProps.match.params.productId],
   user: Object.values(state.entities.users)[0]})
 }
