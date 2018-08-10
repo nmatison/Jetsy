@@ -5,8 +5,12 @@ export const RECEIVE_PRODUCT = "RECEIVE_PRODUCT";
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
 
-export const fetchProducts () => dispatch => (
-  ProductApiUtil.fetchProducts().then(products => dispatch(receiveProducts(products)))
+// export const fetchProducts = () => dispatch => (
+  // ProductApiUtil.fetchProducts().then(products => dispatch(receiveProducts(products)))
+// );
+
+export const fetchProducts = () => dispatch => (
+  ProductApiUtil.fetchProducts().then((products) => dispatch(receiveProducts(products)))
 );
 
 export const fetchProduct = (id) => dispath => (

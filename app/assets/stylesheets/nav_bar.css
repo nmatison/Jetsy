@@ -15,7 +15,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 750px;
+  width: 625px;
+  padding-right: 40px;
 }
 
 .title {

@@ -1,8 +1,11 @@
 import React from 'react';
+import {Route} from 'react-router-dom';
 import GreetingContainer from './greeting_container';
-import Modal from './modal'
+import Modal from './modal';
 import {AuthRoute} from '../util/route_util';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import ProductsIndexContainer from './products/products_index_container';
+import Footer from './footer.jsx'
 
 const App = () =>(
   <div>
@@ -16,7 +19,9 @@ const App = () =>(
         </div>
         <GreetingContainer />
       </nav>
+      <Route exact path="/products" component={ProductsIndexContainer} />
     </header>
+    <Footer />
   </div>
 )
 

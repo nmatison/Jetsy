@@ -1,0 +1,45 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 75px;
+  width: 100%;
+  border-top: 1px solid #D3D3D3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: inherit;
+  width: 300px;
+}
+
+.footer-title {
+  font-size: 30px;
+  color: #f45800;
+  margin-right: 15px
+}
+
+.slogan {
+  color: #222;
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  height: inherit;
+
+}
+
+.credit {
+  color: #222;
+  font-size: 14px;
+  margin-top: 7px;
+}

@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Root from './components/root';
 import configureStore from './store/store';
-import{fetchUser} from './actions/user_actions'
+import {fetchProducts} from './actions/product_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
   const root = document.getElementById('root');
-  window.fetchUser = fetchUser;
+  window.fetchProducts = fetchProducts;
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   ReactDOM.render(<Root store={store} />, root)
