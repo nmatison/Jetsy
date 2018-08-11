@@ -11,8 +11,10 @@ class ProductForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.action(this.state)
+    this.state.user_id = this.props.currentUserId
+    this.props.action(this.state).then(() => this.props.history.push("/products"))
   }
+
 
   update(field){
     return (e) => {
@@ -29,16 +31,16 @@ class ProductForm extends React.Component {
             <h1 className="listing-details">Listing Details</h1>
             <p className="slogan">Tell the world all about how your item will make their travel experience better!</p>
             <div className="description">
-              <label className="product-label">Product Name</label>
+              <label className="product-label">Product Name:</label>
               <input className="product-input" type="text" value={this.state.product_name} onChange={this.update('product_name')} />
             </div>
             <div className="description">
-              <label className="product-label">Price</label>
-              <input className="product-input" type="text" value={this.state.price} onChange={this.update('price')} />
+              <label className="product-label">Price:</label>
+              <input className="product-input" type="text" placeholder="For example: 21.99" value={this.state.price} onChange={this.update('price')} />
             </div>
             <div className="description">
-              <label className="product-label">Description</label>
-              <textarea className="product-input" value={this.state.description} rows="10" cols="100" onChange={this.update('description')} />
+              <label className="product-label">Description:</label>
+              <textarea className="product-input" placeholder="All of your selling points for your item go here!" value={this.state.description} rows="10" cols="100" onChange={this.update('description')} />
             </div>
             <input type="submit"></input>
           </div>

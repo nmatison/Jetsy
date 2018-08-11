@@ -27,6 +27,7 @@ const App = () =>(
         <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
         <Route exact path='/products/:productId/edit' component={EditProductContainer} />
       </header>
+      <Link to="/products">All Products</Link>
       <Footer />
   </div>
 )

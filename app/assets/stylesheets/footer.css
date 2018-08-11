@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: flex-end;
   height: inherit;
-  width: 300px;
+  width: 350px;
 }
 
 .footer-title {
@@ -28,7 +28,7 @@
 .slogan {
   color: #222;
   font-size: 14px;
-  margin-top: 7px;
+  width: 250px;
 }
 
 .footer-right {

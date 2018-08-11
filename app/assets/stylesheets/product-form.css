@@ -17,7 +17,7 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 45%;
   margin-left: 20px;
   border: 1px solid #D3D3D3;
   border-radius: 3px;
@@ -42,11 +42,14 @@
 }
 
 .product-label {
-
+  display: inline-block;
+  margin-top: 12px;
 }
 
 .product-input {
-  width: 50%;
+  width: 70%;
   float: right;
   margin: 10px;
+  font-size: 14px;
+  padding-left: 1px;
 }

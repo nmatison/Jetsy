@@ -1,25 +1,31 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductForm from './product_form';
-import {fetchProduct, updateProduct, deleteProduct} from '../../actions/product_actions';
+import {fetchProduct, updateProduct, deleteProduct, fetchProducts} from '../../actions/product_actions';
 
 
 class EditProductForm extends React.Component {
 
   componentDidMount() {
     this.props.fetchProduct(this.props.match.params.productId)
+    debugger
     if (this.props.currentUserId !== this.props.ownerId) {
       this.props.history.push("/")}
     }
 
     handleSubmit(e) {
       e.preventDefault();
-      debugger
       this.props.deleteProduct(this.props.match.params.productId)
+    }
+    // .then(() => this.props.fetchProducts()).then(this.props.history.push('/products'))
+
+    componentWillReceiveProps(nextProps) {
+      if (this.props.product.id != nextProps.match.params.postId) {
+        this.props.fetchPOst(nextProps.match.params.postId);
+      }
     }
 
   render() {
-    if (!this.props.product) return null;
     const {action, formType, product } = this.props;
     return (
       <div className="edit-product-div">
@@ -32,8 +38,7 @@ class EditProductForm extends React.Component {
 
 
 const mapStateToProps = (state, ownProps) => {
-  const defaultProduct = {user_id: state.session.id, product_name: '', description: '', price: 0.00}
-  const product = state.entities.products[ownProps.match.params.postId] || defaultProduct
+  const product = state.entities.products[ownProps.match.params.productId]
   const currentUserId = state.session.id;
   const ownerId = product.user_id
   const formType = "Update Post";
@@ -41,6 +46,7 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
+  fetchProducts: () => dispatch(fetchProducts()),
   fetchProduct: (id) => dispatch(fetchProduct(id)),
   deleteProduct: (id) => dispatch(deleteProduct(id)),
   action: (product) => dispatch(updateProduct(id))
