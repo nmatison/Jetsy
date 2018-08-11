@@ -17,30 +17,36 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
   margin-left: 20px;
   border: 1px solid #D3D3D3;
   border-radius: 3px;
+  height: 90%
 }
 
 .listing-details {
   font-size: 24px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .slogan {
   font-size: 16px;
   color: #777;
-  margin-top: 3px;
-  margin-bottom: 15px;
+  margin: 5px 0px 15px 20px;
 }
 
 .description {
-  width: 100%;
+  width: 95%;
+  margin-left: 20px;
 }
 
+.product-label {
+
+}
 
 .product-input {
   width: 50%;
   float: right;
-  padding: 12px 9px 12px 9px
+  margin: 10px;
 }
