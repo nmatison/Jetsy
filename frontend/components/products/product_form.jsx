@@ -15,7 +15,6 @@ class ProductForm extends React.Component {
     this.props.action(this.state).then(() => this.props.history.push("/products"))
   }
 
-
   update(field){
     return (e) => {
       this.setState({[field]: e.target.value})

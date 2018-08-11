@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 
+
 const Greeting = ({ currentUser, logout, openModal }) => {
   const cart = <img className="cart" src="https://png.icons8.com/ios-glyphs/50/000000/shopping-cart.png" />
   const personIcon = <img className="person-icon" src="https://png.icons8.com/cotton/50/000000/gender-neutral-user.png" />
@@ -33,7 +34,16 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     </span>
   )
 
-  return currentUser ? personalGreeting() : sessionLinks();
+  return (
+    <nav className="nav-bar">
+      <div className="title-and-search">
+        <Link to="/" className="title">Jetsy</Link>
+        <span className="search-span"><input className="search-bar" type="text" placeholder="Search for travel items"/></span>
+        <input type="submit" className="search-submit" value="Search" />
+      </div>
+      { currentUser ? personalGreeting() : sessionLinks()}
+    </nav>
+  );
 }
 
 export default Greeting;

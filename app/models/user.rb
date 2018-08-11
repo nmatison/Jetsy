@@ -3,6 +3,8 @@ validates :username, :session_token, uniqueness: true, presence: true
 validates :password_digest, presence: true
 validates :password, length: {minimum: 7, allow_nil: true}
 
+has_one_attached :avatar
+
 has_many :products, dependent: :destroy
 
 attr_reader :password

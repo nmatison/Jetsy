@@ -14,21 +14,16 @@ const App = () =>(
   <div>
       <Modal />
       <header>
-        <nav className="nav-bar">
-          <div className="title-and-search">
-            <Link to="/" className="title">Jetsy</Link>
-            <span className="search-span"><input className="search-bar" type="text" placeholder="Search for travel items"/></span>
-            <input type="submit" className="search-submit" value="Search" />
-          </div>
           <GreetingContainer />
-        </nav>
+      </header>
+      <div className="outest-div">
         <Route exact path="/products" component={ProductsIndexContainer} />
         <Route exact path='/products/:productId' component={ProductsShowContainer} />
         <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
         <Route exact path='/products/:productId/edit' component={EditProductContainer} />
-      </header>
-      <Link to="/products">All Products</Link>
-      <Footer />
+        <Link to="/products">All Products</Link>
+        <Footer />
+      </div>
   </div>
 )
 
