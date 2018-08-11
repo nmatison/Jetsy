@@ -45,7 +45,7 @@
 
 .session-submit {
   position: relative;
-  width: 290px;
+  width: 295px;
   line-height: 20px;
   left: 30px;
   background-color: #F56400;
@@ -94,7 +94,7 @@ hr {
 
 .demo-submit {
   position: relative;
-  width: 290px;
+  width: 295px;
   line-height: 20px;
   left: 30px;
   background-color: #00BFFF;
@@ -113,8 +113,8 @@ hr {
 .login-errors {
   width: inherit;
   position: relative;
-  left: 10px;
   color: red;
   margin-bottom: 5px;
   font-size: 14px;
+  text-align: center
 }

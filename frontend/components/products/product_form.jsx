@@ -24,6 +24,7 @@ class ProductForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          // <h1>{this.props.formType}</h1>
           <label>Product Name
             <input type="text" value={this.state.product_name} onChange={this.update('product_name')} />
             <textarea value={this.state.description} onChange={this.update('description')} />

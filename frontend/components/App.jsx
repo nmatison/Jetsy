@@ -7,6 +7,7 @@ import {Link, Switch} from 'react-router-dom';
 import ProductsIndexContainer from './products/products_index_container';
 import ProductsShowContainer from './products/products_show_container';
 import ProductFormContainer from './products/create_product_form_container';
+import EditProductContainer from './products/edit_product_form_container';
 import Footer from './footer.jsx'
 
 const App = () =>(
@@ -24,6 +25,7 @@ const App = () =>(
         <Route exact path="/products" component={ProductsIndexContainer} />
         <Route exact path='/products/:productId' component={ProductsShowContainer} />
         <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
+        <Route exact path='/products/:productId/edit' component={EditProductContainer} />
       </header>
       <Footer />
   </div>
