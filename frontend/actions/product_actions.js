@@ -18,7 +18,7 @@ export const fetchProduct = (id) => dispath => (
 );
 
 export const createProduct = (product) => dispatch => (
-  ProductApiUtil.createProduct(produc+t).then(product => dispatch(receiveProduct(product)))
+  ProductApiUtil.createProduct(product).then(product => dispatch(receiveProduct(product)))
 );
 
 export const updateProduct = (product) => dispatch => (
