@@ -140,6 +140,10 @@ header {
   text-decoration: none;
 }
 
+.sell-link:hover {
+  text-decoration: underline;
+}
+
 .you-link{
   opacity: 0.4;
   height: 40px;
@@ -152,6 +156,10 @@ header {
   padding: 8px;
   text-decoration: none;
   margin-bottom: 3px;
+}
+
+.you-link:hover {
+  opacity: 0.8;
 }
 
 .person-icon {

@@ -1,0 +1,46 @@
+
+.product-form {
+  background-color: #faf9f6;
+  width: 100%;
+  height: 100%;
+}
+
+.form-header {
+  text-align: center;
+  font-size: 28px;
+  width: 100%;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.inputs-div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 20px;
+  border: 1px solid #D3D3D3;
+  border-radius: 3px;
+}
+
+.listing-details {
+  font-size: 24px;
+}
+
+.slogan {
+  font-size: 16px;
+  color: #777;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+.description {
+  width: 100%;
+}
+
+
+.product-input {
+  width: 50%;
+  float: right;
+  padding: 12px 9px 12px 9px
+}

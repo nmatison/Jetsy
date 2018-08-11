@@ -30,7 +30,7 @@ export const updateProduct = (product) => (
 
 export const deleteProduct = (id) => (
   $.ajax({
-    method: 'destroy',
+    method: 'delete',
     url: `api/products/${id}`
   })
 );

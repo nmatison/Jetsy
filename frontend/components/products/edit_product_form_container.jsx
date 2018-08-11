@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductForm from './product_form';
-import {fetchProduct, updateProduct} from '../../actions/product_actions';
+import {fetchProduct, updateProduct, deleteProduct} from '../../actions/product_actions';
 
 
 class EditProductForm extends React.Component {
@@ -12,11 +12,20 @@ class EditProductForm extends React.Component {
       this.props.history.push("/")}
     }
 
+    handleSubmit(e) {
+      e.preventDefault();
+      debugger
+      this.props.deleteProduct(this.props.match.params.productId)
+    }
+
   render() {
     if (!this.props.product) return null;
     const {action, formType, product } = this.props;
     return (
-      <ProductForm action={action} formType={formType} product={product} />
+      <div className="edit-product-div">
+        <ProductForm action={action} formType={formType} product={product} />
+        <input type="submit" value="Delete Product" onClick={this.handleSubmit.bind(this)}/>
+      </div>
     );
   }
 }
@@ -33,6 +42,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchProduct: (id) => dispatch(fetchProduct(id)),
+  deleteProduct: (id) => dispatch(deleteProduct(id)),
   action: (product) => dispatch(updateProduct(id))
 });
 
