@@ -25,9 +25,9 @@ export const updateProduct = (product) => dispatch => (
   ProductApiUtil.updateProduct(product).then(product => dispatch(receiveProduct(product)))
 );
 
-export const deleteProduct = (id) => dispath => (
-  ProductApiUtil.deleteProduct(id).then(product => dispatch(removeProduct(product)))
-);
+export const deleteProduct = (id) => dispath => {
+  return ProductApiUtil.deleteProduct(id).then(product => dispatch(removeProduct(product)))
+};
 
 const receiveProducts = (payload) => ({
   type: RECEIVE_PRODUCTS,
@@ -39,7 +39,10 @@ const receiveProduct = (payload) => ({
   payload
 })
 
-const removeProduct = (product) => ({
-  type: REMOVE_PRODUCT,
-  productId: product.id
-})
+const removeProduct = (payload) => {
+  debugger;
+  return {
+    type: REMOVE_PRODUCT,
+    productId: Object.keys(payload.product)[0]
+  }
+}

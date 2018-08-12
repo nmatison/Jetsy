@@ -11,20 +11,22 @@ import EditProductContainer from './products/edit_product_form_container';
 import Footer from './footer.jsx'
 
 const App = () =>(
-  <div>
+  <div className= "outest-div">
       <Modal />
       <header>
           <GreetingContainer />
       </header>
-      <div className="outest-div">
+      <div className="main-div">
         <Route exact path="/products" component={ProductsIndexContainer} />
         <Route exact path='/products/:productId' component={ProductsShowContainer} />
         <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
-        <Route exact path='/products/:productId/edit' component={EditProductContainer} />
-        <Link to="/products">All Products</Link>
-        <Footer />
+        <ProtectedRoute exact path='/products/:productId/edit' component={EditProductContainer} />
       </div>
+      <Link to="/products">All Products</Link>
+      <Footer />
   </div>
 )
 
 export default App;
+
+// <Route exact path="/" component={}></Route>
