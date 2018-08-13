@@ -13,9 +13,11 @@ class ProductIndex extends React.Component {
     console.log(this.props.user)
 
       return (
-        <div className="items-div">
-          <h1 className="travel-items">All Travel Items</h1>
-          <ul className="product-index-items">{products}</ul>
+        <div className="products-index">
+          <div className="items-div">
+            <h1 className="travel-items">All Travel Items</h1>
+            <ul className="product-index-items">{products}</ul>
+          </div>
         </div>
       )}
 }

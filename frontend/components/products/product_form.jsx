@@ -9,12 +9,28 @@ class ProductForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.update = this.update.bind(this);
+    this.handleFile = this.handleFile.bind(this);
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.state.user_id = this.props.currentUserId
-    this.props.action(this.state).then(() => this.props.history.push("/products"))
+    const productData = new FormData();
+     productData.append('product[user_id]', this.props.currentUserId);
+     productData.append('product[product_name]', this.state.product_name);
+     productData.append('product[price]', this.state.price);
+     productData.append('product[description]', this.state.description);
+     if (this.state.photoFile) {
+       productData.append('product[photo]', this.state.photoFile);
+     }
+     $.ajax({
+       url: '/api/products',
+       method: 'post',
+       data: productData,
+       contentType: false,
+       processData: false
+     }).then(
+       () => this.props.history.push("/products")
+     );
   }
 
   update(field){
@@ -44,8 +60,21 @@ class ProductForm extends React.Component {
       }
     }
 
+    handleFile(e) {
+      const file =  e.currentTarget.files[0];
+      const fileReader = new FileReader();
+      fileReader.onloadend = () => {
+        this.setState({photoFile: file, photoUrl: fileReader.result});
+      };
+      if (file) {
+        fileReader.readAsDataURL(file);
+      }
+    }
+
 
   render () {
+    console.log(this.state)
+    const preview = this.state.photoUrl ? <img className="photo-preview" src={this.state.photoUrl} /> : null;
     return (
         <form className="create-edit-form" onSubmit={this.handleSubmit}>
           <h1 className="form-header">{this.props.formType}</h1>
@@ -72,7 +101,10 @@ class ProductForm extends React.Component {
               <div className="submit-product-div"><input className="submit-product" type="submit" value="Submit Product"/></div>
             </div>
           </div>
-          <div className="photo-div"></div>
+          <div className="photo-div">
+              <input className="choose-file" type="file"  onChange={this.handleFile} />
+            <div className="photo-preview-div">{preview}</div>
+          </div>
         </form>
     );
   }

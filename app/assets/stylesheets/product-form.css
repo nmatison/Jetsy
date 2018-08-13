@@ -7,9 +7,8 @@
 
 
 .main-div {
-  max-height: 1000px;
-  height: 800px;
-  min-height: calc(100vh - 60px)
+  height:inherit;
+  min-height: calc(100% - 60px);
 }
 
 .form-header {
@@ -42,10 +41,30 @@
   border-radius: 3px;
   height: 75%;
   float: right;
-  border-top: 1px solid blue;
-  border-bottom: 1px solid red;
   max-height: 100%;
-  max-width 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.choose-file {
+  margin-left: 9%;
+  margin-top: 5%;
+}
+
+.photo-preview-div {
+  height: 70%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-preview {
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .listing-details {

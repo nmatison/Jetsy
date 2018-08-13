@@ -36,8 +36,7 @@ class ProductShow extends React.Component {
       <div className="show-main">
         <div className="product-show-div">
           <div className="image-description">
-            <div className="show-image-div"> <p>Image will go here</p>
-            </div>
+            <img src={product.photoUrl} className="show-image-div" />
             <h1 className="product-description">Description:
               <br></br>
               {product.description}

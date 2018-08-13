@@ -1,7 +1,17 @@
 class Product < ApplicationRecord
   validates :user_id, :product_name, :description, :price, presence: true
-  validates :product_name, length: {maximum: 114, minimum: 2, presence: true}
-  validates :description, length: {maximum: 450, minimum: 2, presence: true}
+  validates :product_name, length: {maximum: 100, minimum: 2, presence: true}
+  validates :description, length: {maximum: 400, minimum: 2, presence: true}
+  validate :ensure_photo
+
   has_one_attached :photo
   belongs_to :user
+
+
+
+  def ensure_photo
+    unless self.photo.attached?
+      errors[:photo] << "Must be attached"
+    end
+  end
 end

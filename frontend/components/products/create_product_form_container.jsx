@@ -3,7 +3,15 @@ import {createProduct, fetchProduct} from '../../actions/product_actions';
 import ProductForm from './product_form';
 
 const mapStateToProps = state => {
-  const product = {user_id: null, product_name: '', description: '', price: ''}
+  const product = {
+    user_id: null,
+    product_name: '',
+    description: '',
+    price: '',
+    photoFile: null,
+    photoUrl: null
+  };
+
   const formType = "Add a new listing";
   const currentUserId = state.session.id;
   return {product, formType, currentUserId}

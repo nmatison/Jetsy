@@ -11,14 +11,14 @@ class ProductsIndexItem extends React.Component{
     if (!this.props.product || !this.props.user) return null;
 
     return (
-      <ul className="inner-product-item-list">
-        <div className="product-image">Product Image Will Go Here</div>
+      <Link className="inner-product-item-list" to={`/products/${product.id}`}>
+        <img src={product.photoUrl} className="product-image"/>
         <div className="product-info">
-          <li className="product-name"><Link to={`/products/${product.id}`}>{product.product_name}</Link></li>
+          <li className="product-name">{product.product_name}</li>
           <li className="user-item">{user.username}</li>
-          <li className="product-price">{`$${product.price}`}</li>
+          <li className="product-index-price">{`$${product.price}`}</li>
         </div>
-      </ul>
+      </Link>
     )
   }
 }
