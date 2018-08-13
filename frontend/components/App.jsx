@@ -16,13 +16,13 @@ const App = () =>(
       <header>
           <GreetingContainer />
       </header>
+      <Link to="/products">All Products</Link>
       <div className="main-div">
         <Route exact path="/products" component={ProductsIndexContainer} />
         <Route exact path='/products/:productId' component={ProductsShowContainer} />
         <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
         <ProtectedRoute exact path='/products/:productId/edit' component={EditProductContainer} />
       </div>
-      <Link to="/products">All Products</Link>
       <Footer />
   </div>
 )

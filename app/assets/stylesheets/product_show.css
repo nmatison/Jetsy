@@ -1,0 +1,147 @@
+.show-main{
+  height: 90%;
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-show-div {
+  border: 1px solid #D3D3D3;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.image-description {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 80%;
+  width: 60%;
+  /* border: 1px blue solid; */
+  margin-bottom: 2%;
+}
+
+.show-image-div {
+  border: 1px solid green;
+  height: 95%;
+  width: 95%;
+  margin-top: 2%;
+  margin-bottom: 7%;
+}
+
+.edit-link {
+  width: 44%;
+  line-height: 20px;
+  background-color: #00BFFF;
+  color: white;
+  font-weight :bold;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.product-description {
+  width: 98%;
+  padding: 0;
+}
+
+.info-submit {
+  height: 79%;
+  width: 30%;
+  /* border: 1px yellow solid; */
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.product-information {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 80%;
+  width: 85%;
+  flex-direction: column;
+  margin-right: 8%;
+  word-wrap: break-word;
+}
+
+.quantity {
+  float: right;
+  margin-left: 10px;
+}
+
+
+.add-cart {
+  width: 100%;
+  line-height: 20px;
+  background-color: #F56400;
+  color: white;
+  font-weight :bold;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
+  display: block;
+  align-self: flex-end;
+  bottom: 0;
+  margin-bottom: 3%
+  /* text-decoration: none; */
+  /* text-align: center; */
+  /* margin-top: 6%; */
+}
+
+.title-price {
+  width: inherit;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.product-title {
+  max-width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-price {
+  font-weight: bold;
+  margin-bottom: 3%
+}
+
+.user-userpic {
+  /* border: 1px solid black; */
+  margin-top: 15%;
+  display: flex;
+  justify-content: space-between;
+  height: 25%;
+  font-weight: 400;
+  width: 100%;
+}
+
+.sold-text{
+  align-self: center;
+}
+
+.sold-by {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+
+.seller-pic {
+  border: 1px solid purple;
+  height: 100%;
+  width: 50%;
+  margin-right: 5%;
+}

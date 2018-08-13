@@ -12,9 +12,12 @@ class ProductsIndexItem extends React.Component{
 
     return (
       <ul className="inner-product-item-list">
-        <li className="product-name"><Link to={`/products/${product.id}`}>{product.product_name}</Link></li>
-        <li className="user-item">{user.username}</li>
-        <li className="product-price">{`$${product.price}`}</li>
+        <div className="product-image">Product Image Will Go Here</div>
+        <div className="product-info">
+          <li className="product-name"><Link to={`/products/${product.id}`}>{product.product_name}</Link></li>
+          <li className="user-item">{user.username}</li>
+          <li className="product-price">{`$${product.price}`}</li>
+        </div>
       </ul>
     )
   }

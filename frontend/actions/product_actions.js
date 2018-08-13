@@ -40,7 +40,6 @@ const receiveProduct = (payload) => ({
 })
 
 const removeProduct = (payload) => {
-  debugger;
   return {
     type: REMOVE_PRODUCT,
     productId: Object.keys(payload.product)[0]

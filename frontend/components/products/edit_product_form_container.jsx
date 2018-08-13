@@ -40,7 +40,7 @@ const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts()),
   fetchProduct: (id) => dispatch(fetchProduct(id)),
   deleteProduct: (id) => dispatch(deleteProduct(id)),
-  action: (product) => dispatch(updateProduct(id))
+  action: (product) => dispatch(updateProduct(product))
 });
 
 export default connect(

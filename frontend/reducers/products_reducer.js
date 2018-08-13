@@ -12,7 +12,6 @@ import {merge} from 'lodash';
         return merge({}, state, {[Object.values(action.payload.product)[0].id]: Object.values(action.payload.product)[0]})
       case REMOVE_PRODUCT:
         const newState = merge({}, state)
-        debugger
         delete newState[action.productId]
         return newState;
       default:

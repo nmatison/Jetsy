@@ -38,7 +38,7 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     <nav className="nav-bar">
       <div className="title-and-search">
         <Link to="/" className="title">Jetsy</Link>
-        <span className="search-span"><input className="search-bar" type="text" placeholder="Search for travel items"/></span>
+        <span className="search-span"><input className="search-bar" type="text" placeholder="Search for travel items (this does not work yet)"/></span>
         <input type="submit" className="search-submit" value="Search" />
       </div>
       { currentUser ? personalGreeting() : sessionLinks()}
