@@ -6,9 +6,8 @@ class ProductsIndexItem extends React.Component{
 
   render() {
     const product = this.props.product
-    const user = this.props.user
-
-    if (!this.props.product || !this.props.user) return null;
+    const user = this.props.users[product.user_id]
+    if (!this.props.product || !this.props.users) return null;
 
     return (
       <Link className="inner-product-item-list" to={`/products/${product.id}`}>

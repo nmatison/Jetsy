@@ -31,7 +31,7 @@ class ProductShow extends React.Component {
   render() {
     if (!this.props.product) return null;
     const product = this.props.product;
-    const user = this.props.user
+    const user = this.props.users[this.props.product.user_id]
     return(
       <div className="show-main">
         <div className="product-show-div">

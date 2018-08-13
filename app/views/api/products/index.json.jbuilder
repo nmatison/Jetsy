@@ -5,7 +5,9 @@
       json.photoUrl url_for(product.photo)
     end
   end
-  json.user do
-    json.extract! product.user, :id, :username, :email_address
+  json.users do
+    json.set! product.user.id do
+      json.extract! product.user, :id, :username, :email_address
+    end
   end
 end
