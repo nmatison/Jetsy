@@ -7,7 +7,7 @@
 
 
 .main-div {
-  /* height:inherit; */
+  height:inherit;
   min-height: calc(100vh - 60px);
 }
 

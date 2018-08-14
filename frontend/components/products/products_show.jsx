@@ -54,7 +54,7 @@ class ProductShow extends React.Component {
                   <h1 className="sold-by">Sold By:</h1>
                   <h1 className="seller-name">{user.username}</h1>
                 </div>
-                <div className="seller-pic">Seller image</div>
+                <div className="seller-pic"></div>
               </div>
             </div>
             <div className="quantity-cart">

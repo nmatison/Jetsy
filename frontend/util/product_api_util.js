@@ -26,7 +26,9 @@ export const updateProduct = (product) => (
   $.ajax({
     method: 'patch',
     url: `api/products/${product.id}`,
-    data: {product}
+    data: {product},
+    contentType: false,
+    processData: false,
   })
 );
 

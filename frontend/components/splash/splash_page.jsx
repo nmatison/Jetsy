@@ -1,17 +1,18 @@
 import React from 'react';
 import SplashPageItems from './splash_page_items';
+import {Link} from 'react-router-dom';
 
 const splashPage = () => {
   return (
     <div className="splash-page">
       <div className="splash-main">
         <div className="slide-show-ad">
-          <div className="slideshow"></div>
+          <Link className="slideshow" to="/products"></Link>
           <div className="advertisement">
-            <div className="ad-image"></div>
-            <div className="ad-div">
+            <Link className="ad-image" to="/products"></Link>
+            <Link className="ad-div" to="/products">
               <p> Everything you need for your next trip!</p>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="safe-jetsy">

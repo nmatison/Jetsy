@@ -1,3 +1,5 @@
+$airplane: image_url("airplane.png");
+
 .show-main{
   height: 90%;
   width: inherit;
@@ -31,7 +33,7 @@
 .show-image-div {
   border: 1px solid green;
   height: 75%;
-  width: 70%;
+  width: 65%;
   margin-top: 2%;
   margin-bottom: 1%;
 }
@@ -124,7 +126,7 @@
   margin-top: 15%;
   display: flex;
   justify-content: space-between;
-  height: 25%;
+  height: 30%;
   font-weight: 400;
   width: 100%;
 }
@@ -140,8 +142,11 @@
 
 
 .seller-pic {
-  border: 1px solid purple;
   height: 100%;
   width: 50%;
   margin-right: 5%;
+  background-image: $airplane;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90%;
 }
