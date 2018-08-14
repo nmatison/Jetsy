@@ -4,8 +4,9 @@ class Product < ApplicationRecord
   validates :description, length: {maximum: 400, presence: true}
   validate :ensure_photo
 
-  has_one_attached :photo
   belongs_to :user
+  has_many :reviews, dependent: :destroy
+  has_one_attached :photo
 
 
 
