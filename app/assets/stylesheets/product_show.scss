@@ -17,7 +17,6 @@ $airplane: image_url("airplane.png");
   justify-content: center;
 }
 
-
 .image-description {
   display: flex;
   flex-direction: column;
@@ -138,6 +137,12 @@ $airplane: image_url("airplane.png");
 .sold-by {
   opacity: 0.6;
   font-style: italic;
+}
+
+.seller-name {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
 }
 
 

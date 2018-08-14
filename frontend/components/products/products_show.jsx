@@ -29,7 +29,7 @@ class ProductShow extends React.Component {
   }
 
   render() {
-    if (!this.props.product) return null;
+    if (!this.props.product || !this.props.users) return null;
     const product = this.props.product;
     const user = this.props.users[this.props.product.user_id]
     return(
@@ -52,7 +52,7 @@ class ProductShow extends React.Component {
               <div className="user-userpic">
                 <div className="sold-text">
                   <h1 className="sold-by">Sold By:</h1>
-                  <h1 className="seller-name">{user.username}</h1>
+                  <Link className="seller-name" to={`/users/${user.id}`}><h1>{user.username}</h1></Link>
                 </div>
                 <div className="seller-pic"></div>
               </div>

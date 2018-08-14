@@ -11,7 +11,7 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_PRODUCTS:
       return merge({}, state, action.payload.users)
     case RECEIVE_PRODUCT:
-      return merge({}, state, {[Object.values(action.payload.user)[0].id]: Object.values(action.payload.user)[0]})
+      return merge({}, state, {[action.payload.user.id]: action.payload.user})
     case RECEIVE_USER:
       return merge({}, state, {[action.user.id]: action.user});
     default:
