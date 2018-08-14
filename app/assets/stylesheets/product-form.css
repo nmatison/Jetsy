@@ -7,8 +7,8 @@
 
 
 .main-div {
-  height:inherit;
-  min-height: calc(100% - 60px);
+  /* height:inherit; */
+  min-height: calc(100vh - 60px);
 }
 
 .form-header {

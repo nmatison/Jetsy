@@ -1,9 +1,9 @@
 import React from 'react';
-import { closeModal } from '../actions/modal_actions';
-import { removeErrors } from '../actions/session_actions'
+import { closeModal } from '../../actions/modal_actions';
+import { removeErrors } from '../../actions/session_actions'
 import { connect } from 'react-redux';
-import LoginFormContainer from './session/login_form_container';
-import SignupFormContainer from './session/signup_form_container';
+import LoginFormContainer from '../session/login_form_container';
+import SignupFormContainer from '../session/signup_form_container';
 import {withRouter} from 'react-router-dom';
 
 function Modal({modal, closeModal, removeErrors}) {

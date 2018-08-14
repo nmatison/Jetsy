@@ -44,7 +44,7 @@ body {
 
 
 #root {
-	min-height: 1000px;
+	height: inherit;
 }
 
 .outest-div{

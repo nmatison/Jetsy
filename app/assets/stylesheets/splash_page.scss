@@ -1,0 +1,58 @@
+$bag: image_url("bag.jpg");
+
+.splash-page{
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.splash-main {
+  min-height: calc(95vh - 60px);
+  width: 80%;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.slide-show-ad {
+  width: 100%;
+  height: 300px;
+  border: 1px solid green;
+  display: flex;
+}
+
+.slideshow {
+  width: 65%;
+  height: 300px;
+  border: 1px purple solid;
+}
+
+.advertisement {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 300px;
+}
+
+.ad-image {
+  width: 100%;
+  height: 70%;
+  border: 1px solid yellow;
+  margin-bottom: 3%;
+  background-image: $bag;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.ad-div {
+  background-color: #ffa200;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-div p {
+  font-size: 22px;
+}
