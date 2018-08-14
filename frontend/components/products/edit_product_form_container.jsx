@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductForm from './product_form';
-import {fetchProduct, updateProduct, deleteProduct, fetchProducts} from '../../actions/product_actions';
+import {fetchProduct, updateProduct, deleteProduct, fetchProducts, removeErrors} from '../../actions/product_actions';
 
 
 
@@ -19,9 +19,9 @@ class EditProductForm extends React.Component {
 
   render() {
     if (!this.props.product.user_id) return null;
-    const {action, formType, product, deleteProduct } = this.props;
+    const {action, formType, product, deleteProduct, errors, removeErrors } = this.props;
     return (
-        <ProductForm action={action} match={this.props.match} history={this.props.history} formType={formType} product={product} deleteProduct={deleteProduct} />
+        <ProductForm removeErrors={removeErrors} errors={errors} action={action} match={this.props.match} history={this.props.history} formType={formType} product={product} deleteProduct={deleteProduct} />
     );
   }
 }
@@ -33,11 +33,12 @@ const mapStateToProps = (state, ownProps) => {
   // const currentUserId = state.session.id;
   // const ownerId = product.user_id;
   const formType = "Update Your Product's Information";
-  return {product, formType}
+  return {product, formType, errors: state.errors.product}
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts()),
+  removeErrors: () => dispatch(removeErrors()),
   fetchProduct: (id) => dispatch(fetchProduct(id)),
   deleteProduct: (id) => dispatch(deleteProduct(id)),
   action: (product) => dispatch(updateProduct(product))

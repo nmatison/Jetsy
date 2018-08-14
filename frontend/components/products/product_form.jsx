@@ -14,23 +14,22 @@ class ProductForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const productData = new FormData();
-     productData.append('product[user_id]', this.props.currentUserId);
-     productData.append('product[product_name]', this.state.product_name);
-     productData.append('product[price]', this.state.price);
-     productData.append('product[description]', this.state.description);
-     if (this.state.photoFile) {
-       productData.append('product[photo]', this.state.photoFile);
+    if (this.props.formType === "Update Your Product's Information"){
+      this.props.action(this.state).then(
+         () => this.props.history.push(`/products/${this.state.id}`));
+    } else {
+      const productData = new FormData();
+       productData.append('product[user_id]', this.props.currentUserId);
+       productData.append('product[product_name]', this.state.product_name);
+       productData.append('product[price]', this.state.price);
+       productData.append('product[description]', this.state.description);
+       if (this.state.photoFile) {
+         productData.append('product[photo]', this.state.photoFile);
+       }
+      this.props.action(productData).then(
+         () => this.props.history.push(`/products`)
+       );
      }
-     $.ajax({
-       url: '/api/products',
-       method: 'post',
-       data: productData,
-       contentType: false,
-       processData: false
-     }).then(
-       () => this.props.history.push("/products")
-     );
   }
 
   update(field){
@@ -75,8 +74,12 @@ class ProductForm extends React.Component {
   render () {
     console.log(this.state)
     const preview = this.state.photoUrl ? <img className="photo-preview" src={this.state.photoUrl} /> : null;
+    const errors = () => (
+      this.props.errors.map((error, i) => <li className="product-single-error" key={i}>{error}</li>)
+    );
+
     return (
-        <form className="create-edit-form" onSubmit={this.handleSubmit}>
+        <form onClick={this.props.removeErrors} className="create-edit-form" onSubmit={this.handleSubmit}>
           <h1 className="form-header">{this.props.formType}</h1>
           <div className="inputs-div">
             <div className="form-header-div">
@@ -100,6 +103,7 @@ class ProductForm extends React.Component {
               <div className="cancel-div"><Link className="cancel" to="/products">Cancel</Link></div>
               <div className="submit-product-div"><input className="submit-product" type="submit" value="Submit Product"/></div>
             </div>
+            <ul className="product-errors">{errors()}</ul>
           </div>
           <div className="photo-div">
               <input className="choose-file" type="file"  onChange={this.handleFile} />

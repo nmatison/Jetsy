@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {createProduct, fetchProduct} from '../../actions/product_actions';
+import {createProduct, fetchProduct, removeErrors} from '../../actions/product_actions';
 import ProductForm from './product_form';
 
 const mapStateToProps = state => {
@@ -11,14 +11,14 @@ const mapStateToProps = state => {
     photoFile: null,
     photoUrl: null
   };
-
   const formType = "Add a new listing";
   const currentUserId = state.session.id;
-  return {product, formType, currentUserId}
+  return {product, formType, currentUserId, errors: state.errors.product}
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchProduct: (id) => dispatch(fetchProduct),
+  removeErrors: () => dispatch(removeErrors()),
   action: (product) => dispatch(createProduct(product))
 });
 
