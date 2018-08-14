@@ -4,6 +4,7 @@
       json.photoUrl url_for(@product.photo)
     end
   end
+  
   json.user do
     json.extract! @product.user, :id, :username, :email_address
   end
