@@ -6,7 +6,7 @@ validates :password, length: {minimum: 7, allow_nil: true}
 has_one_attached :avatar
 
 has_many :products, dependent: :destroy
-has_many :reviews, dependent: :destroy
+# has_many :reviews, dependent: :destroy
 
 attr_reader :password
 
