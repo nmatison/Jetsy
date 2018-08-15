@@ -5,11 +5,12 @@ import UserShowItems from './user_show_items';
 class UserShow extends React.Component {
 
   componentDidMount(){
+    this.props.fetchUser(this.props.match.params.userId);
     this.props.fetchProducts();
-    this.props.fetchUser();
   }
 
   render () {
+    if (!this.props.user || !this.props.products) return null;
     const welcome = `Welcome to ${this.props.user.username}'s store!`
     const sellerProductItems = this.props.sellerProducts.map((product) => <UserShowItems product={product} />);
 

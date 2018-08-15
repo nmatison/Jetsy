@@ -67,7 +67,8 @@ $airplane: image_url("airplane.png");
 .rating-title-body {
   display: flex;
   flex-direction: column;
-  max-width: 50%
+  max-width: 50%;
+  min-width: 50%;
 }
 
 .title-body {
@@ -86,9 +87,9 @@ $airplane: image_url("airplane.png");
   font-size: 14px;
 }
 
-.rarting-date {
+.rating-date {
   display: flex;
-
+  margin-right: 25px
 }
 
 .review-rating {
