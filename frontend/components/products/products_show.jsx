@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import ReviewForm from '../reviews/review_form';
+import ReviewIndex from '../reviews/review_index';
 
 
 class ProductShow extends React.Component {
@@ -68,7 +68,7 @@ class ProductShow extends React.Component {
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>
-        <ReviewForm currentUserId={this.props.currentUserId} reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
+        <ReviewIndex currentUserId={this.props.currentUserId} reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
       </div>
     )
   }

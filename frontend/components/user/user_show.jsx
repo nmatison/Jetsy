@@ -10,7 +10,7 @@ class UserShow extends React.Component {
   }
 
   render () {
-    if (!this.props.user || !this.props.products) return null;
+    if (!this.props.user || !this.props.sellerProducts) return null;
     const welcome = `Welcome to ${this.props.user.username}'s store!`
     const sellerProductItems = this.props.sellerProducts.map((product) => <UserShowItems product={product} />);
 

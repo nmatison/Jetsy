@@ -5,25 +5,25 @@ export const fetchReviews = (productId) => (
   })
 );
 
-export const createReview = (productId, review) => {
+export const createReview = (review) => {
   return $.ajax({
     method: 'post',
-    url: `/api/products/${productId}/reviews`,
+    url: `/api/products/${review.product_id}/reviews`,
     data: {review}
   })
 };
 
-export const updateReview = (productId, review) => (
+export const updateReview = (review) => (
   $.ajax({
     method: 'patch',
-    url: `/api/products/${productId}/reviews/${review.id}`,
+    url: `/api/products/${review.product_id}/reviews/${review.id}`,
     data: {review}
   })
 );
 
-export const deleteReview = (productId, id) => (
+export const deleteReview = (reviewId) => (
   $.ajax({
     method: 'delete',
-    url: `/api/products/${productId}/reviews/${id}`,
+    url: `/api/reviews/${reviewId}`,
   })
 );

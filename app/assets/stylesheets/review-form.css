@@ -1,0 +1,89 @@
+.review-form-details {
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  height: 250px;
+  border-bottom: 1px solid #e1e3df;
+}
+
+.review-form-details:hover {
+  border: 1px solid #f98f45
+}
+
+.review-details-list {
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  height: 250px;
+}
+
+.review-details-list div{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-form-title-body {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rating-form-title-body li {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-title-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.form-title-body li {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-form-title {
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 60%;
+}
+
+.review-form-title input {
+  width: 50%;
+  margin-right: 20%;
+}
+
+.review-form-body {
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  width: 85%;
+}
+
+.review-form-body textarea {
+  width: 70%;
+}
+
+.rating-date {
+  display: flex;
+  margin-right: 25px
+}
+
+.review-form-rating {
+  font-size: 14px;
+  width: 100%;
+}
+
+.review-form-rating input {
+  width: 15%;
+}

@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Root from './components/root';
 import configureStore from './store/store';
-import {fetchReviews} from './actions/review_actions'
+import {createReview, updateReview, deleteReview} from './actions/review_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -20,7 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 }
 
   const root = document.getElementById('root');
-  window.fetchReviews = fetchReviews;
+  window.createReview = createReview;
+  window.updateReview = updateReview;
+  window.deleteReview = deleteReview;
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   ReactDOM.render(<Root store={store} />, root)
