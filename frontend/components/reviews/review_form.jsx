@@ -5,7 +5,6 @@ class ReviewForm extends React.Component {
 
 
   render() {
-
     if (!this.props.reviews) return null;
     const reviews = this.props.reviews.map((review) => <ReviewFormItem
       review={review}
@@ -18,17 +17,20 @@ class ReviewForm extends React.Component {
       let counter = 0;
       let total = 0;
       for (var i = 0; i < this.props.reviews.length; i++) {
-        counter += this.props.reviews[i].rating
-        total += 1
+        counter += this.props.reviews[i].rating;
+        total += 1;
       }
-      return `${(Math.floor(counter / total))}`
+      return `${(Math.floor(counter / total))}`;
     }
-    const numRatings = `${reviews.length}`
+
+    const numRatings = `${reviews.length}`;
 
     return (
       <div className="review-div">
         <div className="reviews-stars">
-          <p>Reviews ({numRatings})</p>
+          <div className="reviews-create-button">
+            <p>Reviews ({numRatings})</p>
+          </div>
           <h1>Average Rating: {averageRating()}/5</h1>
         </div>
         {reviews}

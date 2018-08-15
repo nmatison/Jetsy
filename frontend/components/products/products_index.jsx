@@ -10,7 +10,6 @@ class ProductIndex extends React.Component {
 
   render () {
     const products = this.props.products.map((product) => <ProductIndexItem product={product} users={this.props.users} key={product.id} />)
-    console.log(this.props.users)
 
       return (
         <div className="products-index">

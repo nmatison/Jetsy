@@ -5,7 +5,6 @@ import {withRouter} from 'react-router-dom';
 import {fetchReviews} from '../../actions/review_actions'
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return ({product: state.entities.products[ownProps.match.params.productId],
   users: state.entities.users,
   currentUserId: state.session.id,

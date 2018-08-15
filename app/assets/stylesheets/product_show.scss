@@ -121,7 +121,7 @@ $airplane: image_url("airplane.png");
 }
 
 .user-userpic {
-  /* border: 1px solid black; */
+  text-decoration: none;
   margin-top: 15%;
   display: flex;
   justify-content: space-between;
@@ -137,12 +137,14 @@ $airplane: image_url("airplane.png");
 .sold-by {
   opacity: 0.6;
   font-style: italic;
+  color: black;
 }
 
 .seller-name {
+  margin-top: 5px;
   text-decoration: none;
   color: black;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 

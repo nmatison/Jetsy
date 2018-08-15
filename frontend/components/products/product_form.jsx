@@ -72,7 +72,6 @@ class ProductForm extends React.Component {
 
 
   render () {
-    console.log(this.state)
     const preview = this.state.photoUrl ? <img className="photo-preview" src={this.state.photoUrl} /> : null;
     const errors = () => (
       this.props.errors.map((error, i) => <li className="product-single-error" key={i}>{error}</li>)

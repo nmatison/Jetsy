@@ -1,8 +1,9 @@
 $airplane: image_url("airplane.png");
 
 .review-div {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  min-width: 50%;
 }
 
 .review-div:hover {
@@ -17,7 +18,7 @@ $airplane: image_url("airplane.png");
   font-size: 16px;
 }
 
-.reviews-stars p {
+.reviews-create-button p {
   font-weight: bold;
   margin-top: 20px;
   color: #f98f45

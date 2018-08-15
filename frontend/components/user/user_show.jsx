@@ -10,7 +10,6 @@ class UserShow extends React.Component {
   }
 
   render () {
-    console.log(this.props)
     const welcome = `Welcome to ${this.props.user.username}'s store!`
     const sellerProductItems = this.props.sellerProducts.map((product) => <UserShowItems product={product} />);
 

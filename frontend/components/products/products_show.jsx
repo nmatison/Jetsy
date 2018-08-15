@@ -11,7 +11,6 @@ class ProductShow extends React.Component {
   }
 
   editLink() {
-    console.log(this.props)
     if (this.props.currentUserId === this.props.product.user_id){
       return <Link className="edit-link" to={`/products/${this.props.product.id}/edit`}>Edit Product</Link>
     }
@@ -52,13 +51,14 @@ class ProductShow extends React.Component {
                 <h1 className="product-title">{product.product_name}</h1>
                 <h1 className="product-price">Price: ${product.price}/each</h1>
               </div>
-              <div className="user-userpic">
+              <Link className="user-userpic"to={`/users/${user.id}`}>
                 <div className="sold-text">
                   <h1 className="sold-by">Sold By:</h1>
-                  <Link className="seller-name" to={`/users/${user.id}`}><h1>{user.username}</h1></Link>
+                  <h1 className="seller-name">{user.username}</h1>
                 </div>
-                <div className="seller-pic"></div>
-              </div>
+                <div className="seller-pic">
+                </div>
+                </Link>
             </div>
             <div className="quantity-cart">
               <label>Quantity:
@@ -68,7 +68,7 @@ class ProductShow extends React.Component {
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>
-        <ReviewForm reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
+        <ReviewForm currentUserId={this.props.currentUserId} reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
       </div>
     )
   }
