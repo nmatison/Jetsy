@@ -59,7 +59,6 @@ class ProductShow extends React.Component {
                 </div>
                 <div className="seller-pic"></div>
               </div>
-              <ReviewForm reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
             </div>
             <div className="quantity-cart">
               <label>Quantity:
@@ -69,6 +68,7 @@ class ProductShow extends React.Component {
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>
+        <ReviewForm reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
       </div>
     )
   }
