@@ -14,9 +14,10 @@ class ReviewForm extends React.Component {
     />);
 
     const averageRating = () => {
+      if (this.props.reviews.length === 0) return `0`
       let counter = 0;
       let total = 0;
-      for (var i = 0; i < reviews.length; i++) {
+      for (var i = 0; i < this.props.reviews.length; i++) {
         counter += this.props.reviews[i].rating
         total += 1
       }
