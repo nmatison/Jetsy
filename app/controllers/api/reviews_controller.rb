@@ -1,7 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
   def index
-    @reviews = Review.all.select{ |el| el.product_id == params[:id] }
+    @reviews = Review.where(product_id: params[:product_id])
   end
 
   def create

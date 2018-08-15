@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+import {Route, Redirect} from 'react-router-dom';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import {Link, Switch} from 'react-router-dom';
 import SplashPage from './splash/splash_page';

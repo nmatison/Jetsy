@@ -19,6 +19,9 @@ class EditProductForm extends React.Component {
 
   render() {
     if (!this.props.product.user_id) return null;
+    if (this.props.product.user_id != this.props.currentUserId) {
+      this.props.history.push("/products")
+    }
     const {action, formType, product, deleteProduct, errors, removeErrors } = this.props;
     return (
         <ProductForm removeErrors={removeErrors} errors={errors} action={action} match={this.props.match} history={this.props.history} formType={formType} product={product} deleteProduct={deleteProduct} />
@@ -30,10 +33,10 @@ class EditProductForm extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   const defaultProduct = {user_id: null, product_name: '', description: '', price: ''};
   const product = state.entities.products[ownProps.match.params.productId] || defaultProduct;
-  // const currentUserId = state.session.id;
+  const currentUserId = state.session.id;
   // const ownerId = product.user_id;
   const formType = "Update Your Product's Information";
-  return {product, formType, errors: state.errors.product}
+  return {product, formType, currentUserId, errors: state.errors.product}
 };
 
 const mapDispatchToProps = dispatch => ({
