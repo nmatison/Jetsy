@@ -1,12 +1,13 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import ReviewForm from '../reviews/review_form';
 
 
 class ProductShow extends React.Component {
 
   componentDidMount() {
-    this.props.fetchProduct(this.props.match.params.productId)
-    console.log(this.props)
+    this.props.fetchReviews(this.props.match.params.productId);
+    this.props.fetchProduct(this.props.match.params.productId);
   }
 
   editLink() {
@@ -19,7 +20,7 @@ class ProductShow extends React.Component {
   quantitySelector() {
     let options = []
     for (var i = 1; i < 101; i++) {
-      options.push(<option value={`${i}`}>{`${i}`}</option>)
+      options.push(<option key = {i} value={`${i}`}>{`${i}`}</option>)
     }
     return (
       <select name="Quantity" className="quantity">
@@ -28,8 +29,10 @@ class ProductShow extends React.Component {
     )
   }
 
+
+
   render() {
-    if (!this.props.product || !this.props.users) return null;
+    if (!this.props.product || !this.props.users || !this.props.reviews) return null;
     const product = this.props.product;
     const user = this.props.users[this.props.product.user_id]
     return(
@@ -56,6 +59,7 @@ class ProductShow extends React.Component {
                 </div>
                 <div className="seller-pic"></div>
               </div>
+              <ReviewForm reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
             </div>
             <div className="quantity-cart">
               <label>Quantity:
