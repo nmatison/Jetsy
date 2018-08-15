@@ -9,10 +9,10 @@ const CreateEditForm = ({ formType, review }) => {
         <div className="reviewer-image"></div>
       </div>
       <div className="rating-form-title-body">
-        <li className="review-form-rating">Rating: <input type="text" placeholder={review.rating} /></li>
+        <li className="review-form-rating">Rating: <input type="text" value={review.rating} /></li>
         <div className="form-title-body">
-          <li className="review-form-title">Title:  <input type="text" placeholder={review.title} /></li>
-          <li className="review-form-body">Review: <textarea placeholder={review.body} rows="5" cols="50" /></li>
+          <li className="review-form-title">Title:  <input type="text" value={review.title} /></li>
+          <li className="review-form-body">Review: <textarea value={review.body} rows="5" cols="50" /></li>
         </div>
       </div>
       <div className="rating-date">

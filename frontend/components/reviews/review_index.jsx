@@ -4,6 +4,28 @@ import CreateEditForm from './create_review_form';
 
 class ReviewIndex extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.renderForm = this.renderForm.bind(this);
+  }
+
+  renderForm(type) {
+    const reviewed = this.props.reviews.find((review) => this.props.currentUserId === review.user_id)
+    debugger;
+    if (!this.props.currentUserId) return null;
+    if (!reviewed) {
+      var review = {user_id: this.props.currentUserId,
+        product_id: this.props.product.id,
+        title: "",
+        body: "",
+        rating: null}
+      } else {
+        var review = reviewed;
+      }
+      return <CreateEditForm
+        review={review}
+        />
+    }
 
   render() {
     if (!this.props.reviews) return null;
@@ -26,26 +48,8 @@ class ReviewIndex extends React.Component {
       return `${(Math.round(counter / total))}`;
     }
 
-    const reviewed = () => {
-      return this.props.reviews.find((review) => this.props.currentUserId === review.user_id)
-    }
 
     const numRatings = `${reviews.length}`;
-    const renderForm = (type) => {
-      if (!this.props.currentUserId || !reviewed()) return null;
-      if (!reviewed()) {
-        var review = {user_id: this.props.currentUserId,
-          product_id: this.product.id,
-          title: "",
-          body: "",
-          rating: null}
-      } else {
-        var review = reviewed();
-      }
-      return <CreateEditForm
-        review={review}
-        />
-    }
 
     return (
       <div className="review-div">
@@ -55,7 +59,7 @@ class ReviewIndex extends React.Component {
           </div>
           <h1>Average Rating: {averageRating()}/5</h1>
         </div>
-        {renderForm("Add a Review")}
+        {this.renderForm("Add a Review")}
         {reviews}
       </div>
     )
