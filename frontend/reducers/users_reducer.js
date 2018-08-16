@@ -11,7 +11,7 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_CURRENT_USER:
       return merge({}, state, {[action.currentUser.id]: action.currentUser});
     case RECEIVE_SEARCH_PRODUCTS:
-      return action.payload.users
+      return merge({}, action.payload.users)
     case RECEIVE_PRODUCTS:
       return merge({}, state, action.payload.users)
     case RECEIVE_PRODUCT:

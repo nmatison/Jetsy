@@ -13,12 +13,15 @@ class Greeting extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.searchProducts(this.state).then(() => this.props.history.push('/search'))
+    this.props.searchProducts(this.state).then(() => this.props.history.push({
+  pathname: '/search',
+  search: `?${this.state.query_string}`,
+  state: { query: this.state.query_string }
+}))
   }
 
 
   update() {
-    console.log(this.state)
     return (e) => {
       this.setState({["query_string"]: e.target.value})
     }

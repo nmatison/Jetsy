@@ -17,7 +17,7 @@ import {merge} from 'lodash';
         delete newState[action.productId]
         return newState;
       case RECEIVE_SEARCH_PRODUCTS:
-        return action.payload.products;
+        return merge({}, action.payload.products);
       default:
         return state;
     }
