@@ -5,12 +5,16 @@ import {withRouter} from 'react-router-dom';
 class SearchIndex extends React.Component {
 
   componentDidMount() {
-    this.props.searchProducts({query_string: this.props.location.search.slice(1)})
+    console.log(this.props)
+    const search = this.props.location.search.slice(1).replace(/%20/g, " ")
+    this.props.searchProducts({query_string: search})
   }
+
+
 
   render () {
     if (!this.props.products) return null;
-    const query = this.props.location.search.slice(1)
+    const query = this.props.location.search.slice(1).replace(/%20/g, " ")
     const products = this.props.products.map((product) => <SearchIndexItem
     product={product}
     users={this.props.users}

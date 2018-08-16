@@ -15,7 +15,7 @@ class Greeting extends React.Component {
     e.preventDefault();
     this.props.searchProducts(this.state).then(() => this.props.history.push({
   pathname: '/search',
-  search: `?${this.state.query_string}`,
+  search: `${this.state.query_string}`,
   state: { query: this.state.query_string }
 }))
   }
@@ -63,15 +63,15 @@ render () {
 
     return (
       <nav className="nav-bar">
-        <div className="title-and-search">
+        <form className="title-and-search" onSubmit={this.handleSubmit}>
           <Link to="/" className="title">Jetsy</Link>
           <span className="search-span"><input
             onChange={this.update()}
             className="search-bar"
             type="text"
-            placeholder="Search for travel items (this does not work yet)"/></span>
-          <input type="submit" onClick={this.handleSubmit} className="search-submit" value="Search" />
-        </div>
+            placeholder="Search for travel items"/></span>
+          <input type="submit" className="search-submit" value="Search" />
+        </form>
         { this.props.currentUser ? personalGreeting() : sessionLinks()}
       </nav>
     );
