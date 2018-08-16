@@ -1,4 +1,4 @@
-class Api::ShoppingCarts < ApplicationController
+class Api::ShoppingCartsController < ApplicationController
 
   def index
     @cart_items = ShoppingCartItems.where(shopping_cart_id: params[:id])

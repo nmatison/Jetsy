@@ -7,7 +7,7 @@ has_one_attached :avatar
 
 has_many :products, dependent: :destroy
 has_many :reviews, dependent: :destroy
-has_one: :shopping_cart, dependent: :destroy
+has_one :shopping_cart, dependent: :destroy
 
 attr_reader :password
 

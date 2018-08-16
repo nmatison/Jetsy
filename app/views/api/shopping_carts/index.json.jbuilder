@@ -12,6 +12,7 @@
   end
 end
 
+
 =begin
 
 {
@@ -21,6 +22,7 @@ end
   }
   products: {
     1: {1, 1, "doggo", "doggo is good", 54.00}
+    5: {#, #, "doggo", "doggo is good", #}
   }
 }
 
