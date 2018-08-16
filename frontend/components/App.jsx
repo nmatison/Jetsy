@@ -10,6 +10,7 @@ import ProductsShowContainer from './products/products_show_container';
 import ProductFormContainer from './products/create_product_form_container';
 import EditProductContainer from './products/edit_product_form_container';
 import UserShowContainer from './user/user_show_container'
+import SearchIndexContainer from './search/search_index_container';
 import Footer from './footer.jsx'
 
 const App = () =>(
@@ -23,6 +24,7 @@ const App = () =>(
         <Route exact path="/products" component={ProductsIndexContainer} />
         <Route exact path='/products/:productId' component={ProductsShowContainer} />
         <Route exact path='/users/:userId' component={UserShowContainer} />
+        <Route exact path='/search' component={SearchIndexContainer}
         <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
         <ProtectedRoute exact path='/products/:productId/edit' component={EditProductContainer} />
       </div>
