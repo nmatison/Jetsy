@@ -105,6 +105,9 @@
   max-width: 100%;
   max-height: inherit;
   min-height: 40px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
+  resize: none;
 }
 
 .product-inputs {
@@ -198,4 +201,5 @@
 .product-single-error {
   font-size: 14px;
   color: red;
+  list-style: none;
 }

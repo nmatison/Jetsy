@@ -2,7 +2,7 @@ import {fetchProducts, fetchProduct, deleteProduct} from '../../actions/product_
 import ProductShow from './products_show';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import {fetchReviews, createReview, updateReview, deleteReview} from '../../actions/review_actions'
+import {fetchReviews, createReview, updateReview, deleteReview, removeErrors} from '../../actions/review_actions'
 
 const mapStateToProps = (state, ownProps) => {
   return ({product: state.entities.products[ownProps.match.params.productId],
@@ -19,7 +19,8 @@ const mapDispatchToProps = dispatch => ({
   createReview: (review) => dispatch(createReview(review)),
   updateReview: (review) => dispatch(updateReview(review)),
   deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
-  deleteProduct: (id) => dispatch(deleteProduct(id))
+  deleteProduct: (id) => dispatch(deleteProduct(id)),
+  removeErrors: () => dispatch(removeErrors())
 })
 
 export default connect (

@@ -21,6 +21,7 @@ class ProductShow extends React.Component {
     for (var i = 1; i < 101; i++) {
       options.push(<option key = {i} value={`${i}`}>{`${i}`}</option>)
     }
+
     return (
       <select name="Quantity" className="quantity">
         {options}
@@ -28,6 +29,10 @@ class ProductShow extends React.Component {
     )
   }
 
+  clearErrors() {
+    if (!this.props.errors) return null
+    this.props.removeErrors()
+  }
 
 
   render() {
@@ -35,7 +40,7 @@ class ProductShow extends React.Component {
     const product = this.props.product;
     const user = this.props.users[this.props.product.user_id]
     return(
-      <div className="show-main">
+      <div className="show-main" onClick={() => this.clearErrors()}>
         <div className="product-show-div">
           <div className="image-description">
             <img src={product.photoUrl} className="show-image-div" />

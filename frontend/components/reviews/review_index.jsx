@@ -23,7 +23,7 @@ class ReviewIndex extends React.Component {
       } else {
         review = reviewed;
       }
-      console.log(review)
+
       return <CreateEditForm
         review={review}
         createReview={this.props.createReview}
@@ -57,6 +57,10 @@ class ReviewIndex extends React.Component {
 
     const numRatings = `${reviews.length}`;
 
+    const errors = () => (
+      this.props.errors.map((error, i) => <li className="review-single-error" key={i}>{error}</li>)
+    );
+
     return (
       <div className="review-div">
         <div className="reviews-stars">
@@ -64,6 +68,7 @@ class ReviewIndex extends React.Component {
             <p>Reviews ({numRatings})</p>
           </div>
           <h1>Average Rating: {averageRating()}/5</h1>
+          <div className="review-many-errors">{errors()}</div>
         </div>
         {this.renderForm()}
         {reviews}

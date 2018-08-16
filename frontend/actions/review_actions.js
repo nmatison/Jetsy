@@ -4,6 +4,7 @@ export const RECEIVE_PRODUCT_REVIEWS = "RECEIVE_PRODUCT_REVIEWS";
 export const RECEIVE_PRODUCT_REVIEW = "RECEIVE_PRODUCT_REVIEW";
 export const REMOVE_PRODUCT_REVIEW = "REMOVE_PRODUCT_REVIEW";
 export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS"
+export const REMOVE_ERRORS = "REMOVE_ERRORS"
 
 export const fetchReviews = (productId) => dispatch => (
   ReviewApiUtil.fetchReviews(productId).then((payload) => dispatch(receiveProductReviews(payload)))
@@ -40,3 +41,7 @@ export const receiveErrors = (errors) => ({
   type: RECEIVE_REVIEW_ERRORS,
   errors: errors.responseJSON
 });
+
+export const removeErrors = () => ({
+  type: REMOVE_ERRORS
+})

@@ -31,12 +31,12 @@
 
 .sign-in-input{
   font-size: 16px;
-  border-radius: 5px;
   position: relative;
   width: 290px;
   line-height: 40px;
   margin-top: 5px;
   margin-bottom: 10px;
+  border-radius: 5px;
   border: 1px solid #D3D3D3;
   left: 5px;
   height: auto;

@@ -47,6 +47,10 @@ body {
 	height: inherit;
 }
 
+input[type=submit]:hover {
+	cursor: pointer;
+}
+
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
