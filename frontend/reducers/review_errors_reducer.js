@@ -1,7 +1,10 @@
-import {RECEIVE_REVIEW_ERRORS, RECEIVE_PRODUCT_REVIEWS, RECEIVE_PRODUCT_REVIEW, REMOVE_PRODUCT_REVIEW, REMOVE_ERRORS} from '../actions/review_actions'
+import {RECEIVE_REVIEW_ERRORS,
+  RECEIVE_PRODUCT_REVIEWS,
+  RECEIVE_PRODUCT_REVIEW,
+  REMOVE_PRODUCT_REVIEW,
+  REMOVE_ERRORS} from '../actions/review_actions'
 
 const reviewErrorsReducer = (state = [], action) => {
-  console.log(action)
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_REVIEW_ERRORS:
