@@ -12,7 +12,7 @@ class ReviewIndex extends React.Component {
   renderForm() {
     const reviewed = this.props.reviews.find((review) => this.props.currentUserId === review.user_id)
     let review = ""
-    if (!this.props.currentUserId) return null;
+    if (!this.props.currentUserId || this.props.product.user_id === this.props.currentUserId) return null;
     if (!reviewed) {
       review = {id: null,
         user_id: this.props.currentUserId,
@@ -29,6 +29,7 @@ class ReviewIndex extends React.Component {
         createReview={this.props.createReview}
         updateReview={this.props.updateReview}
         deleteReview={this.props.deleteReview}
+        errors={this.props.errors}
         />
     }
 

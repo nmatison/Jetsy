@@ -8,7 +8,8 @@ const mapStateToProps = (state, ownProps) => {
   return ({product: state.entities.products[ownProps.match.params.productId],
   users: state.entities.users,
   currentUserId: state.session.id,
-  reviews: Object.values(state.entities.reviews).filter((review) => review.product_id == ownProps.match.params.productId)
+  reviews: Object.values(state.entities.reviews).filter((review) => review.product_id == ownProps.match.params.productId),
+  errors: state.errors.reviews
   })
 }
 

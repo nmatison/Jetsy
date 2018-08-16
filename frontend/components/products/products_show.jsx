@@ -76,7 +76,8 @@ class ProductShow extends React.Component {
           fetchReviews={this.props.fetchReviews}
           createReview={this.props.createReview}
           updateReview={this.props.updateReview}
-          deleteReview={this.props.deleteReview} />
+          deleteReview={this.props.deleteReview}
+          errors={this.props.errors} />
       </div>
     )
   }
