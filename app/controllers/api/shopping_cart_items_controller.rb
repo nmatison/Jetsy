@@ -1,8 +1,8 @@
 class Api::ShoppingCartItemsController < ApplicationController
   def create
-    @shopping_cart_item = ShoppingCartItem.new()
-    unless @shopping_cart_id.save
-    render json: @shopping_cart_id.errors.full_messsages, status: 422
+    @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
+    unless @shopping_cart_item.save
+    render json: @shopping_cart_item.errors.full_messsages, status: 422
     end
   end
 
@@ -11,7 +11,7 @@ class Api::ShoppingCartItemsController < ApplicationController
     if @shopping_cart.destroy
       render '/api/shopping_cart_items/show'
     else
-      render json: @shopping_cart_id.errors.full_messsages, status: 422
+      render json: @shopping_cart_item.errors.full_messsages, status: 422
     end
   end
 

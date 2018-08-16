@@ -47,6 +47,11 @@ body {
 	height: inherit;
 }
 
+.outest-div {
+	max-height: 100%;
+	min-height: calc(100vh - 60px);
+}
+
 input[type=submit]:hover {
 	cursor: pointer;
 }

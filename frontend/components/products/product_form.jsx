@@ -78,37 +78,39 @@ class ProductForm extends React.Component {
     );
 
     return (
-        <form onClick={this.props.removeErrors} className="create-edit-form" onSubmit={this.handleSubmit}>
-          <h1 className="form-header">{this.props.formType}</h1>
-          <div className="inputs-div">
-            <div className="form-header-div">
-              {this.deleteButton()}
-              <h1 className="listing-details">Listing Details</h1>
-              <p className="slogan">Tell the world all about how your item will make their travel experience better!</p>
+      <div className="form-div">
+        <h1 className="form-header">{this.props.formType}</h1>
+          <form onClick={this.props.removeErrors} className="create-edit-form" onSubmit={this.handleSubmit}>
+            <div className="inputs-div">
+              <div className="form-header-div">
+                {this.deleteButton()}
+                <h1 className="listing-details">Listing Details</h1>
+                <p className="slogan">Tell the world all about how your item will make their travel experience better!</p>
+              </div>
+              <div className="description">
+                <label className="product-label">Product Name:</label>
+                <input className="product-input" type="text" placeholder=" Your Product's name goes here" value={this.state.product_name} onChange={this.update('product_name')} />
+              </div>
+              <div className="description">
+                <label className="product-label">Price:</label>
+                <input className="product-input" type="text" placeholder=" For example: 21.99" value={this.state.price} onChange={this.update('price')} />
+              </div>
+              <div className="text-area">
+                <label className="product-label">Description:</label>
+                <textarea className="product-input" placeholder=" All of your selling points for your item go here!" value={this.state.description} rows="10" cols="100" onChange={this.update('description')} />
+              </div>
+              <div className="product-inputs">
+                <div className="cancel-div"><Link className="cancel" to="/products">Cancel</Link></div>
+                <div className="submit-product-div"><input className="submit-product" type="submit" value="Submit Product"/></div>
+              </div>
+              <ul className="product-errors">{errors()}</ul>
             </div>
-            <div className="description">
-              <label className="product-label">Product Name:</label>
-              <input className="product-input" type="text" placeholder=" Your Product's name goes here" value={this.state.product_name} onChange={this.update('product_name')} />
-            </div>
-            <div className="description">
-              <label className="product-label">Price:</label>
-              <input className="product-input" type="text" placeholder=" For example: 21.99" value={this.state.price} onChange={this.update('price')} />
-            </div>
-            <div className="description">
-              <label className="product-label">Description:</label>
-              <textarea className="product-input" placeholder=" All of your selling points for your item go here!" value={this.state.description} rows="10" cols="100" onChange={this.update('description')} />
-            </div>
-            <div className="product-inputs">
-              <div className="cancel-div"><Link className="cancel" to="/products">Cancel</Link></div>
-              <div className="submit-product-div"><input className="submit-product" type="submit" value="Submit Product"/></div>
-            </div>
-            <ul className="product-errors">{errors()}</ul>
-          </div>
-          <div className="photo-div">
+            <div className="photo-div">
               <input className="choose-file" type="file"  onChange={this.handleFile} />
-            <div className="photo-preview-div">{preview}</div>
-          </div>
-        </form>
+              <div className="photo-preview-div">{preview}</div>
+            </div>
+          </form>
+        </div>
     );
   }
 }

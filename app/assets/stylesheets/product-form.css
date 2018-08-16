@@ -1,14 +1,22 @@
 
+
+.form-div {
+  background-color: rgb(248, 247, 249)
+}
+
 .create-edit-form {
-  background-color: #faf9f6;
   width: 1905px;
-  height: 800px
+  height: 100%;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
 }
 
 
 .main-div {
   height:inherit;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 100px);
 }
 
 .form-header {
@@ -16,42 +24,36 @@
   font-size: 28px;
   width: 100%;
   padding-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .inputs-div {
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin-left: 100px;
+  width: 37%;
   border: 1px solid #D3D3D3;
   border-radius: 3px;
-  height: 75%;
+  height: 70vh;
   margin-right: 0px;
-  float: left;
 }
 
 .photo-div {
-  display: inline-block;
+  height: 70vh;
   background-color: white;
-  width: 40%;
-  margin-right: 100px;
+  width: 37%;
   border: 1px solid #D3D3D3;
   border-radius: 3px;
-  height: 75%;
-  float: right;
-  max-height: 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .choose-file {
   margin-left: 9%;
-  margin-top: 5%;
+  margin-top: 2%;
+  height: 15%
 }
 
 .photo-preview-div {
@@ -63,8 +65,9 @@
 }
 
 .photo-preview {
-  max-height: 100%;
-  max-width: 100%;
+  object-fit: cover;
+  height: 400px;
+  width: 350px;
 }
 
 .listing-details {
@@ -86,13 +89,18 @@
 
 .description {
   width: 95%;
-  height: 15%;
+  min-height: 35px;
+  height: 10%;
   margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .product-label {
   display: inline-block;
-  margin-top: 25px;
 }
 
 
@@ -103,18 +111,41 @@
   font-size: 14px;
   padding-left: 3px;
   max-width: 100%;
-  max-height: inherit;
-  min-height: 40px;
+  height: 35px;
+  max-height: 100%;
   border-radius: 5px;
   border: 1px solid #D3D3D3;
   resize: none;
+  min-height: 35px;
 }
+
+.text-area textarea {
+  min-height: 100%;
+  padding-top: 10px;
+}
+
+.text-area label {
+  margin-top: 40px;
+}
+
+.text-area {
+  width: 95%;
+  height: 10%;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+
 
 .product-inputs {
   display: flex;
-  margin-top: 75px;
+  margin-top: auto;
+  align-items: flex-start;
   justify-content: space-around;
-  width: 100%
+  width: 100%;
 }
 
 .cancel-div {
@@ -124,7 +155,7 @@
 
 .cancel {
   text-decoration: none;
-  color: white;
+  color: white;.
   font-weight: bold;
   font-size: 16px;
   width: 99%;
