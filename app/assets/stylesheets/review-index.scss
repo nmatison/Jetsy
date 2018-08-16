@@ -3,7 +3,9 @@ $airplane: image_url("airplane.png");
 .review-div {
   // display: flex;
   // flex-direction: column;
-  width: 40%;
+  width: 800px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .review-div:hover {
@@ -47,6 +49,22 @@ $airplane: image_url("airplane.png");
 
 .review-image {
   width: 15%;
+}
+
+.review-delete {
+  margin-top: 30%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
+}
+
+.review-delete:hover {
+  cursor: pointer;
 }
 
 .review-reviewer {

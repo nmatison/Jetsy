@@ -5,6 +5,7 @@
   width: 700px;
   height: 250px;
   border-bottom: 1px solid #e1e3df;
+  margin-bottom: 15px;
 }
 
 .review-form-details:hover {
@@ -59,8 +60,8 @@
 }
 
 .review-form-title input {
-  width: 50%;
-  margin-right: 20%;
+  width: 60%;
+  margin-right: 13%;
 }
 
 .review-form-body {
@@ -72,11 +73,26 @@
 
 .review-form-body textarea {
   width: 70%;
+  margin-right: 2%;
 }
 
 .rating-date {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-right: 25px
+}
+
+.review-create-update{
+  margin-bottom: 35%;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: #F56400;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 5px;
+  border: 1px solid #D3D3D3;
 }
 
 .review-form-rating {
@@ -85,5 +101,5 @@
 }
 
 .review-form-rating input {
-  width: 15%;
+  width: 25%;
 }

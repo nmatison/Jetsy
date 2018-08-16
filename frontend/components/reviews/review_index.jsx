@@ -9,21 +9,26 @@ class ReviewIndex extends React.Component {
     this.renderForm = this.renderForm.bind(this);
   }
 
-  renderForm(type) {
+  renderForm() {
     const reviewed = this.props.reviews.find((review) => this.props.currentUserId === review.user_id)
-    debugger;
+    let review = ""
     if (!this.props.currentUserId) return null;
     if (!reviewed) {
-      var review = {user_id: this.props.currentUserId,
+      review = {id: null,
+        user_id: this.props.currentUserId,
         product_id: this.props.product.id,
         title: "",
         body: "",
-        rating: null}
+        rating: ""}
       } else {
-        var review = reviewed;
+        review = reviewed;
       }
+      console.log(review)
       return <CreateEditForm
         review={review}
+        createReview={this.props.createReview}
+        updateReview={this.props.updateReview}
+        deleteReview={this.props.deleteReview}
         />
     }
 
@@ -59,7 +64,7 @@ class ReviewIndex extends React.Component {
           </div>
           <h1>Average Rating: {averageRating()}/5</h1>
         </div>
-        {this.renderForm("Add a Review")}
+        {this.renderForm()}
         {reviews}
       </div>
     )

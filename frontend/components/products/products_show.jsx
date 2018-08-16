@@ -68,7 +68,15 @@ class ProductShow extends React.Component {
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>
-        <ReviewIndex currentUserId={this.props.currentUserId} reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} />
+        <ReviewIndex
+          currentUserId={this.props.currentUserId}
+          reviews={this.props.reviews}
+          users={this.props.users}
+          product={product}
+          fetchReviews={this.props.fetchReviews}
+          createReview={this.props.createReview}
+          updateReview={this.props.updateReview}
+          deleteReview={this.props.deleteReview} />
       </div>
     )
   }
