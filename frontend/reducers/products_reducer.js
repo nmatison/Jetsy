@@ -2,7 +2,7 @@ import {RECEIVE_PRODUCT,
   RECEIVE_PRODUCTS,
   REMOVE_PRODUCT} from '../actions/product_actions';
 import {RECEIVE_USER} from '../actions/user_actions';
-import {RECEIVE_SEARCH_PRODUCTS} from '../../actions/search_actions';
+import {RECEIVE_SEARCH_PRODUCTS} from '../actions/search_actions';
 import {merge} from 'lodash';
 
   const productsReducer = (state = {}, action) => {
