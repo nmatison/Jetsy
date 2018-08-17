@@ -15,6 +15,7 @@ $airplane: image_url("airplane.png");
   width: 75%;
   display: flex;
   justify-content: center;
+
 }
 
 .image-description {
@@ -22,19 +23,19 @@ $airplane: image_url("airplane.png");
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  height: 80%;
+  // height: 80%;
   width: 45%;
   /* border: 1px blue solid; */
   margin-bottom: 2%;
-  margin-right: 10%
+  margin-top: 5%;
+  margin-right: 10%;
+  word-wrap: break-word;
 }
 
 .show-image-div {
-  // border: 1px solid green;
-  height: 75%;
-  width: 65%;
-  margin-top: 2%;
-  margin-bottom: 1%;
+  object-fit: cover;
+  height: 400px;
+  width: 300px;
 }
 
 .edit-link {
@@ -66,10 +67,10 @@ $airplane: image_url("airplane.png");
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 5%;
 }
 
 .product-information {
-  /* border: 1px solid red; */
   display: flex;
   height: 80%;
   width: 85%;
@@ -77,6 +78,7 @@ $airplane: image_url("airplane.png");
   margin-right: 8%;
   word-wrap: break-word;
 }
+
 
 .quantity {
   float: right;
@@ -97,7 +99,7 @@ $airplane: image_url("airplane.png");
   display: block;
   align-self: flex-end;
   bottom: 0;
-  margin-bottom: 4%
+
 }
 
 .title-price {
@@ -151,9 +153,10 @@ $airplane: image_url("airplane.png");
 .seller-pic {
   height: 100%;
   width: 50%;
-  margin-right: 5%;
+  margin-right: auto;
+
   background-image: $airplane;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 90%;
+  background-size: 70%;
 }

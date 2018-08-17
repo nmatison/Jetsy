@@ -2,10 +2,14 @@ class Api::SearchController < ApplicationController
 
   def index
     search_string = search_params["query_string"].downcase
+
     @products = Product.all.select do |product|
+      name = product.product_name.downcase
+      description = product.description.downcase
+
       (!LITTLE_WORDS.include?(search_string)) &&
-      (product.product_name.downcase.include?(search_string)||
-      product.description.downcase.include?(search_string))
+      (name.include?(search_string)||
+      description.include?(search_string))
     end
     render 'api/products/index' if @products
   end

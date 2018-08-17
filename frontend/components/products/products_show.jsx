@@ -46,9 +46,9 @@ class ProductShow extends React.Component {
             <img src={product.photoUrl} className="show-image-div" />
             <h1 className="product-description">Description:
               <br></br>
+              <br></br>
               {product.description}
             </h1>
-            {this.editLink()}
           </div>
           <div className="info-submit">
             <div className="product-information">
@@ -70,6 +70,7 @@ class ProductShow extends React.Component {
                 {this.quantitySelector()}
               </label>
             </div>
+            {this.editLink()}
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>
