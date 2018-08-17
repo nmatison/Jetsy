@@ -23,9 +23,7 @@ $airplane: image_url("airplane.png");
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  // height: 80%;
   width: 45%;
-  /* border: 1px blue solid; */
   margin-bottom: 2%;
   margin-top: 5%;
   margin-right: 10%;
@@ -34,12 +32,17 @@ $airplane: image_url("airplane.png");
 
 .show-image-div {
   object-fit: cover;
-  height: 400px;
-  width: 300px;
+  height: 625px;
+  width: 525px;
+}
+
+.user-description {
+  margin-bottom: auto;
+  height: 40%;
 }
 
 .edit-link {
-  width: 57%;
+  width: 87%;
   line-height: 20px;
   background-color: #00BFFF;
   color: white;
@@ -50,16 +53,19 @@ $airplane: image_url("airplane.png");
   border: 1px solid #D3D3D3;
   text-decoration: none;
   text-align: center;
-  margin-top: 6%;
+  margin-bottom: auto;
 }
 
 .product-description {
   width: 98%;
   padding: 0;
+  margin-bottom: auto;
+  word-wrap: break-word;
+  margin-top: 8%;
 }
 
 .info-submit {
-  height: 79%;
+  height: 90%;
   width: 30%;
   /* border: 1px yellow solid; */
   align-self: center;
@@ -67,18 +73,21 @@ $airplane: image_url("airplane.png");
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .product-information {
   display: flex;
-  height: 80%;
-  width: 85%;
+
   flex-direction: column;
   margin-right: 8%;
   word-wrap: break-word;
+  margin-bottom: 7%;
 }
 
+.quantity-cart {
+  margin-bottom: 5%;
+}
 
 .quantity {
   float: right;
@@ -104,7 +113,7 @@ $airplane: image_url("airplane.png");
 
 .title-price {
   width: inherit;
-  height: 25%;
+  // height: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -113,23 +122,25 @@ $airplane: image_url("airplane.png");
 
 .product-title {
   max-width: 100%;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .product-price {
   font-weight: bold;
-  margin-bottom: 3%
+  opacity: 0.8;
+  margin-top: 3%;
 }
 
 .user-userpic {
   text-decoration: none;
-  margin-top: 15%;
   display: flex;
+  margin-bottom: auto;
   justify-content: space-between;
-  height: 30%;
+  height: 45%;
   font-weight: 400;
   width: 100%;
+  margin-bottom: 3%;
 }
 
 .sold-text{
@@ -158,5 +169,5 @@ $airplane: image_url("airplane.png");
   background-image: $airplane;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 70%;
+  background-size: 50%;
 }

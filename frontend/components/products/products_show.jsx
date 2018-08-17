@@ -44,11 +44,6 @@ class ProductShow extends React.Component {
         <div className="product-show-div">
           <div className="image-description">
             <img src={product.photoUrl} className="show-image-div" />
-            <h1 className="product-description">Description:
-              <br></br>
-              <br></br>
-              {product.description}
-            </h1>
           </div>
           <div className="info-submit">
             <div className="product-information">
@@ -56,6 +51,8 @@ class ProductShow extends React.Component {
                 <h1 className="product-title">{product.product_name}</h1>
                 <h1 className="product-price">Price: ${product.price}/each</h1>
               </div>
+            </div>
+            <div className="user-description">
               <Link className="user-userpic"to={`/users/${user.id}`}>
                 <div className="sold-text">
                   <h1 className="sold-by">Sold By:</h1>
@@ -63,14 +60,19 @@ class ProductShow extends React.Component {
                 </div>
                 <div className="seller-pic">
                 </div>
-                </Link>
+              </Link>
+              <h1 className="product-description">Description:
+                <br></br>
+                <br></br>
+                {product.description}
+              </h1>
             </div>
+            {this.editLink()}
             <div className="quantity-cart">
               <label>Quantity:
                 {this.quantitySelector()}
               </label>
             </div>
-            {this.editLink()}
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>

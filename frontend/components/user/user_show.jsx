@@ -15,7 +15,7 @@ class UserShow extends React.Component {
     const sellerProductItems = this.props.sellerProducts.map((product) => <UserShowItems product={product} />);
 
     return (
-      <div className = "seller-show-div">
+      <div className="seller-show-div">
         <div className="seller-title-and-pic">
           <h1 className="welcome">{welcome}</h1>
           <div className="seller-profile-pic"></div>
