@@ -16,7 +16,6 @@ class Greeting extends React.Component {
     this.props.searchProducts(this.state).then(() => this.props.history.push({
   pathname: '/search',
   search: `${this.state.query_string}`,
-  state: { query: this.state.query_string }
 }))
   }
 
