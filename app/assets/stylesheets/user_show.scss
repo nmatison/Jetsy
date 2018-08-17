@@ -2,24 +2,35 @@ $airplane: image_url("airplane.png");
 
 .seller-show-div {
   height: inherit;
-  width: inherit;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.seller-title-and-pic {
+.seller-title-and-picture {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.welcome-total {
+  display: flex;
+  flex-direction: column;
+}
+
+.total {
+  opacity: 0.6;
 }
 
 .welcome {
   font-size: 24px;
   margin-right: 20px;
   letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #f45800;
 }
 
-.seller-profile-pic {
+.seller-profile-picture {
   height: 125px;
   width: 125px;
   margin-left: 20px;
@@ -33,7 +44,7 @@ $airplane: image_url("airplane.png");
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-top: 50px;
+  margin-top: 20px;
   height: 100%;
   width: 100%
 }
@@ -72,4 +83,104 @@ $airplane: image_url("airplane.png");
 .seller-product-price {
   color: black;
   opacity: 0.7;
+}
+
+.feature-outer-div{
+  width: 100%;
+  background-color: #faf9f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-image-links {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  margin-top: 1%;
+  opacity: 0.5;
+}
+
+
+.everything {
+  width: 100%;
+  background-color: #faf9f5;
+  display: flex;
+  justify-content: center;
+}
+
+.all-images {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+  padding: 50px 0;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 5%;
+  color: black;
+  text-decoration: none;
+}
+
+.featured-image {
+  object-fit: cover;
+  height: 450px;
+  width: 450px;
+  background-color: inherit;
+
+}
+
+.four-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  background-color: inherit;
+}
+
+.first-two-items {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  background-color: inherit;
+}
+
+.product-image-1 {
+  object-fit: cover;
+  height: 225px;
+  width: 225px;
+  background-color: inherit;
+}
+
+.last-two-items {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  background-color: inherit;
+}
+
+.single-image {
+  padding: 5px;
+  background-color: inherit;
+  color: black;
+  text-decoration: none;
+}
+
+.featured-image:hover {
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+}
+
+.single-image img:hover {
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+}
+
+.product-index-items img:hover {
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
 }

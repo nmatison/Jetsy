@@ -39,6 +39,7 @@ $airplane: image_url("airplane.png");
 .user-description {
   margin-bottom: auto;
   height: 40%;
+  width: 100%;
 }
 
 .edit-link {
@@ -156,8 +157,9 @@ $airplane: image_url("airplane.png");
 .seller-name {
   margin-top: 5px;
   text-decoration: none;
-  color: black;
+  color: #f98f45;
   font-size: 20px;
+  font-weight: bold;
 }
 
 
