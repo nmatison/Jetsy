@@ -34,7 +34,7 @@ $keys: image_url("keys.png");
   border-radius: 3px;
 }
 
-.ad:hover {
+.ad-div:hover {
   border: 1px solid #f98f45;
   border-radius: 3px;
 }
@@ -52,6 +52,7 @@ $keys: image_url("keys.png");
   background-position: center;
   background-size: 100%;
   margin-right: 1%;
+  border: 1px solid white;
 }
 
 .advertisement {
@@ -69,6 +70,7 @@ $keys: image_url("keys.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  border: 1px solid white;
 }
 
 .ad-div {
@@ -79,6 +81,7 @@ $keys: image_url("keys.png");
   justify-content: center;
   text-decoration: none;
   color: black;
+  border: 1px solid white;
 }
 
 .ad-div p {

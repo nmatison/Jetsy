@@ -14,7 +14,7 @@ $airplane: image_url("airplane.png");
   height: 650px;
   width: 75%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
 }
 
@@ -32,8 +32,8 @@ $airplane: image_url("airplane.png");
 
 .show-image-div {
   object-fit: cover;
-  height: 625px;
-  width: 525px;
+  height: 575px;
+  width: 475px;
 }
 
 .user-description {

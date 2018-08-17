@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 92%;
+  width: 85%;
   max-width: 92%;
   align-self: center;
   height: inherit;
@@ -53,9 +53,6 @@
   height: 350px;
   width: 250px;
   margin-bottom: 1%;
-}
-
-.inner-product-item-list:hover{
 }
 
 .product-info {
