@@ -5,3 +5,117 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# sellers
+
+user0 = User.create!(username: "Marshalls", email_address: "marshall@marshall.blah", password: "gutsman")
+user1 = User.create!(username: "annie's-bags", email_address: "annie@annie.blah", password: "gutsman")
+user2 = User.create!(username: "UrbanWares", email_address: "urban@urban.blah", password: "gutsman")
+user3 = User.create!(username: "FoodTight", email_address: "FoodTight@FoodTight.blah", password: "gutsman")
+user4 = User.create!(username: "Manufacturer United", email_address: "unitede@urban.blah", password: "gutsman")
+
+# random users for comments
+
+product0 = Product.new(user_id: 1,
+  product_name: "BoomTech 3.0",
+  description: "These are the lateset edition of the BoomTech series. We are
+  introducing noise-canceling effects in this rollout. Comes with a travel
+  carry case to keep them protected on your long journeys."
+  price: 125.75)
+
+  product0.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/headphones.jpg"), filename: "headphones.jpg")
+
+product1 = Product.new(user_id: 1,
+  product_name: "Navigator",
+  description: "This compass is perfect for any of your trips out into the
+  wilderness. Comes with carrying case and lanyard"
+  price: 75.68)
+
+product1.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/rawpixel-771279-unsplash.jpg"), filename: "rawpixel-771279-unsplash.jpg")
+
+
+product2 = Product.new(user_id: 1,
+  product_name: "Red and Black Lantern",
+  description: "Our small store is really pushing out into the camping/hiking
+  scene this year! Enjoy our state of the art lantern during your trips out into
+  the wild!."
+  price: 25.76)
+
+  product2.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/balazs-busznyak-531992-unsplash.jpg"), filename: "balazs-busznyak-531992-unsplash.jpg")
+
+product3 = Product.new(user_id: 1,
+  product_name: "Life's Good Water Bottle",
+  description: "Life's good water bottle. Made for any and all travels, and it
+  is completely indestructable."
+  price: 31.45)
+
+product3.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/averie-woodard-123973-unsplash.jpg"), filename: "averie-woodard-123973-unsplash.jpg")
+
+product4 = Product.new(user_id: 1,
+  product_name: "Custom Travel Mugs",
+  description: "This is a custom mug that comes with a small case that you can
+  take with you on any of your trips. Take it to a new coffee shop during your
+  vacation or show it off at one of your abroad business meetings."
+  price: 13.00)
+
+product4.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/greyson-joralemon-311103-unsplash.jpg"), filename: "greyson-joralemon-311103-unsplash.jpg")
+
+product5 = Product.new(user_id: 1,
+  product_name: "Personalized Travel Thermos",
+  description: "This is a personalized travel thermos. Take it on any vacation or
+  business trip! Whether you are hiking, laying on the beach, or at the office, your
+  drink will stay hot!"
+  price: 25.00)
+
+product5.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/jon-tyson-558716-unsplash.jpg"), filename: "jon-tyson-558716-unsplash.jpg")
+
+
+product6 = Product.new(user_id: 2,
+product_name: "Duffel-Bag",
+description: "This is my best duffel-bag yet! This bag can hold a lot of weight,
+ and it is perfect as a carry-on item for those short business trips that take
+ you out of town.",
+price: 21.99)
+
+product6.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/harsh-jadav-163197-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/harsh-jadav-163197-unsplash.jpg")
+
+product7 = Product.new(user_id: 2,
+product_name: "Professional Briefcase",
+description: "Professional Briefcase that can be used casually or formally. Take
+it on your business trips and impress your forigen colleagues!",
+price: 35.00)
+
+product7.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/clem-onojeghuo-254153-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/clem-onojeghuo-254153-unsplash.jpg")
+
+product8 = Product.new(user_id: 2,
+product_name: "Travel Backpack",
+description: "Travel Backpack designed for you on the go travelers. Plenty of
+room to store everything you need for a weekend trip. Great for out door vacations!",
+price: 29.50)
+
+product8.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/aunnop-suthumno-657586-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/aunnop-suthumno-657586-unsplash.jpg")
+
+product9 = Product.new(user_id: 2,
+product_name: "Purse by Annie",
+description: "My very first purse release! Bring it with you on your trips to
+the big city! Plenty of room for all of your necessities.",
+price: 75.00)
+
+product9.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/imageslee-campbell-191016-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/lee-campbell-191016-unsplash.jpg")
+
+
+product10 = Product.new(user_id: 2,
+product_name: "Hiking Backpack",
+description: "Another hiking bag! This time, I have listened to all of my clients
+advice, and I have made the straps wider for comfort along with a few other upgrades.",
+price: 47.25)
+
+product10.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg")
+
+product11 = Product.new(user_id: 2,
+product_name: "Traveling Suitcase",
+description: "Traveling Suitcase that holds a lot of stuff for your longer vacations.",
+price: 110.00)
+
+product11.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg")
