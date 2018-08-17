@@ -24,7 +24,7 @@ product0 = Product.new(user_id: 1,
   carry case to keep them protected on your long journeys."
   price: 125.75)
 
-  product0.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/headphones.jpg"), filename: "headphones.jpg")
+product0.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/headphones.jpg"), filename: "headphones.jpg")
 
 product1 = Product.new(user_id: 1,
   product_name: "Navigator",
@@ -150,3 +150,21 @@ Made using a passed-down family recipe!",
 price: 12.50)
 
 product15.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg")
+
+
+product0.save!
+product1.save!
+product2.save!
+product3.save!
+product4.save!
+product5.save!
+product6.save!
+product7.save!
+product8.save!
+product9.save!
+product10.save!
+product11.save!
+product12.save!
+product13.save!
+product14.save!
+product15.save!

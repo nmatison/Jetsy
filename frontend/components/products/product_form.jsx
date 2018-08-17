@@ -18,7 +18,6 @@ class ProductForm extends React.Component {
       this.props.action(this.state).then(
          () => this.props.history.push(`/products/${this.state.id}`));
     } else {
-      debugger
       const productData = new FormData();
        productData.append('product[user_id]', this.props.currentUserId);
        productData.append('product[product_name]', this.state.product_name);
