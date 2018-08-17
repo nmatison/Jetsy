@@ -106,7 +106,7 @@ description: "My very first purse release! Bring it with you on your trips to
 the big city! Plenty of room for all of your necessities.",
 price: 75.00)
 
-product9.photo.attach(io: File.open("./app/assets/imageslee-campbell-191016-unsplash.jpg"), filename: "lee-campbell-191016-unsplash.jpg")
+product9.photo.attach(io: File.open("./app/assets/images/lee-campbell-191016-unsplash.jpg"), filename: "lee-campbell-191016-unsplash.jpg")
 
 
 product10 = Product.new(user_id: 2,
@@ -122,7 +122,7 @@ product_name: "Traveling Suitcase",
 description: "Traveling Suitcase that holds a lot of stuff for your longer vacations.",
 price: 110.00)
 
-product11.photo.attach(io: File.open("./app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "josiah-weiss-435592-unsplash.jpg")
+product11.photo.attach(io: File.open("./app/assets/images/michal-parzuchowski-262847-unsplash.jpg"), filename: "michal-parzuchowski-262847-unsplash.jpg")
 
 product12 = Product.new(user_id: 3,
 product_name: "Comfy blanket",
