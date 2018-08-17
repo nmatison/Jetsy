@@ -222,18 +222,25 @@ $airplane: image_url("airplane.png");
   height: 50%;
   margin-bottom: 20px;
 }
+
 .more-seller-product {
   object-fit: cover;
-  height: 150px;
-  width: 150px;
+  height: 135px;
+  width: 135px;
   margin-top: 10px;
   margin-bottom: 10px;
+  border: 1px solid white;
 }
+.more-seller-product:hover {
+  border: 1px solid #f98f45;
+  border-radius: 3px;
+}
+
 .more-seller-title {
   text-decoration: none;
   color: black;
   max-width: 100%;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .more-seller-link {
@@ -248,5 +255,5 @@ $airplane: image_url("airplane.png");
   text-decoration: none;
   color: black;
   opacity: 0.7;
-  font-size: 14px;
+  font-size: 13px;
 }
