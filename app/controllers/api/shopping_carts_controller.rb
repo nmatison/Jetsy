@@ -1,7 +1,7 @@
 class Api::ShoppingCartsController < ApplicationController
 
   def index
-    @cart_items = ShoppingCartItem.where(shopping_cart_id: params[:id])
+    @cart_items = ShoppingCartItem.where(shopping_cart_id: params[:cart][:id])
   end
 
   def create
@@ -12,7 +12,7 @@ class Api::ShoppingCartsController < ApplicationController
   end
 
   private
-  
+
   def shopping_cart_params
     params.require(:cart).permit(:user_id)
   end

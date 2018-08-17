@@ -1,5 +1,5 @@
 export const fetchCartItems = (cart) => (
-  $ajax({
+  $.ajax({
     method: "get",
     url: '/api/shopping_carts',
     data: {cart}

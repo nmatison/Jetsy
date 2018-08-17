@@ -5,7 +5,7 @@
     end
   end
 
-  json.products do
+  json.product do
     json.set! cart_item.product_id do
       json.extract! cart_item.product, :id, :user_id, :product_name, :description, :price
     end
