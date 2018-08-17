@@ -9,6 +9,10 @@
 
 # sellers
 
+User.destroy_all
+Product.destroy_all
+Review.destroy_all
+
 user0 = User.create!(username: "Marshalls", email_address: "marshall@marshall.blah", password: "gutsman")
 user1 = User.create!(username: "annie's-bags", email_address: "annie@annie.blah", password: "gutsman")
 user2 = User.create!(username: "UrbanWares", email_address: "urban@urban.blah", password: "gutsman")
@@ -21,7 +25,7 @@ product0 = Product.new(user_id: 1,
   product_name: "BoomTech 3.0",
   description: "These are the lateset edition of the BoomTech series. We are
   introducing noise-canceling effects in this rollout. Comes with a travel
-  carry case to keep them protected on your long journeys."
+  carry case to keep them protected on your long journeys.",
   price: 125.75)
 
 product0.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/headphones.jpg"), filename: "headphones.jpg")
@@ -29,7 +33,7 @@ product0.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/
 product1 = Product.new(user_id: 1,
   product_name: "Navigator",
   description: "This compass is perfect for any of your trips out into the
-  wilderness. Comes with carrying case and lanyard"
+  wilderness. Comes with carrying case and lanyard",
   price: 75.68)
 
 product1.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/rawpixel-771279-unsplash.jpg"), filename: "rawpixel-771279-unsplash.jpg")
@@ -39,7 +43,7 @@ product2 = Product.new(user_id: 1,
   product_name: "Red and Black Lantern",
   description: "Our small store is really pushing out into the camping/hiking
   scene this year! Enjoy our state of the art lantern during your trips out into
-  the wild!."
+  the wild!.",
   price: 25.76)
 
   product2.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/balazs-busznyak-531992-unsplash.jpg"), filename: "balazs-busznyak-531992-unsplash.jpg")
@@ -47,7 +51,7 @@ product2 = Product.new(user_id: 1,
 product3 = Product.new(user_id: 1,
   product_name: "Life's Good Water Bottle",
   description: "Life's good water bottle. Made for any and all travels, and it
-  is completely indestructable."
+  is completely indestructable.",
   price: 31.45)
 
 product3.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/averie-woodard-123973-unsplash.jpg"), filename: "averie-woodard-123973-unsplash.jpg")
@@ -56,7 +60,7 @@ product4 = Product.new(user_id: 1,
   product_name: "Custom Travel Mugs",
   description: "This is a custom mug that comes with a small case that you can
   take with you on any of your trips. Take it to a new coffee shop during your
-  vacation or show it off at one of your abroad business meetings."
+  vacation or show it off at one of your abroad business meetings.",
   price: 13.00)
 
 product4.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/greyson-joralemon-311103-unsplash.jpg"), filename: "greyson-joralemon-311103-unsplash.jpg")
@@ -65,7 +69,7 @@ product5 = Product.new(user_id: 1,
   product_name: "Personalized Travel Thermos",
   description: "This is a personalized travel thermos. Take it on any vacation or
   business trip! Whether you are hiking, laying on the beach, or at the office, your
-  drink will stay hot!"
+  drink will stay hot!",
   price: 25.00)
 
 product5.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/jon-tyson-558716-unsplash.jpg"), filename: "jon-tyson-558716-unsplash.jpg")
