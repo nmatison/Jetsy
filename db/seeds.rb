@@ -147,13 +147,6 @@ price: 150.00)
 
 product14.photo.attach(io: File.open("./app/assets/images/bag-camera.jpg"), filename: "bag-camera.jpg")
 
-product15 = Product.new(user_id: 3,
-product_name: "Dry Gin",
-description: "A bit of home brewed Gin for all of you home brewers out there.
-Made using a passed-down family recipe!",
-price: 12.50)
-
-product15.photo.attach(io: File.open("./app/assets/images/gin.jpg"), filename: "gin.jpg")
 
 
 product0.save!
