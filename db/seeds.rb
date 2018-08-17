@@ -28,7 +28,7 @@ product0 = Product.new(user_id: 1,
   carry case to keep them protected on your long journeys.",
   price: 125.75)
 
-product0.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/headphones.jpg"), filename: "headphones.jpg")
+product0.photo.attach(io: File.open("./app/assets/images/headphones.jpg"), filename: "headphones.jpg")
 
 product1 = Product.new(user_id: 1,
   product_name: "Navigator",
@@ -36,7 +36,7 @@ product1 = Product.new(user_id: 1,
   wilderness. Comes with carrying case and lanyard",
   price: 75.68)
 
-product1.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/rawpixel-771279-unsplash.jpg"), filename: "rawpixel-771279-unsplash.jpg")
+product1.photo.attach(io: File.open("./app/assets/images/rawpixel-771279-unsplash.jpg"), filename: "rawpixel-771279-unsplash.jpg")
 
 
 product2 = Product.new(user_id: 1,
@@ -46,7 +46,7 @@ product2 = Product.new(user_id: 1,
   the wild!.",
   price: 25.76)
 
-  product2.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/balazs-busznyak-531992-unsplash.jpg"), filename: "balazs-busznyak-531992-unsplash.jpg")
+  product2.photo.attach(io: File.open("./app/assets/images/balazs-busznyak-531992-unsplash.jpg"), filename: "balazs-busznyak-531992-unsplash.jpg")
 
 product3 = Product.new(user_id: 1,
   product_name: "Life's Good Water Bottle",
@@ -54,7 +54,7 @@ product3 = Product.new(user_id: 1,
   is completely indestructable.",
   price: 31.45)
 
-product3.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/averie-woodard-123973-unsplash.jpg"), filename: "averie-woodard-123973-unsplash.jpg")
+product3.photo.attach(io: File.open("./app/assets/images/averie-woodard-123973-unsplash.jpg"), filename: "averie-woodard-123973-unsplash.jpg")
 
 product4 = Product.new(user_id: 1,
   product_name: "Custom Travel Mugs",
@@ -63,7 +63,7 @@ product4 = Product.new(user_id: 1,
   vacation or show it off at one of your abroad business meetings.",
   price: 13.00)
 
-product4.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/greyson-joralemon-311103-unsplash.jpg"), filename: "greyson-joralemon-311103-unsplash.jpg")
+product4.photo.attach(io: File.open("./app/assets/images/greyson-joralemon-311103-unsplash.jpg"), filename: "greyson-joralemon-311103-unsplash.jpg")
 
 product5 = Product.new(user_id: 1,
   product_name: "Personalized Travel Thermos",
@@ -72,7 +72,7 @@ product5 = Product.new(user_id: 1,
   drink will stay hot!",
   price: 25.00)
 
-product5.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images/jon-tyson-558716-unsplash.jpg"), filename: "jon-tyson-558716-unsplash.jpg")
+product5.photo.attach(io: File.open("./app/assets/images/jon-tyson-558716-unsplash.jpg"), filename: "jon-tyson-558716-unsplash.jpg")
 
 
 product6 = Product.new(user_id: 2,
@@ -82,7 +82,7 @@ description: "This is my best duffel-bag yet! This bag can hold a lot of weight,
  you out of town.",
 price: 21.99)
 
-product6.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/harsh-jadav-163197-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/harsh-jadav-163197-unsplash.jpg")
+product6.photo.attach(io: File.open("./app/assets/images/harsh-jadav-163197-unsplash.jpg"), filename: "harsh-jadav-163197-unsplash.jpg")
 
 product7 = Product.new(user_id: 2,
 product_name: "Professional Briefcase",
@@ -90,7 +90,7 @@ description: "Professional Briefcase that can be used casually or formally. Take
 it on your business trips and impress your forigen colleagues!",
 price: 35.00)
 
-product7.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/clem-onojeghuo-254153-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/clem-onojeghuo-254153-unsplash.jpg")
+product7.photo.attach(io: File.open("./app/assets/images/clem-onojeghuo-254153-unsplash.jpg"), filename: "clem-onojeghuo-254153-unsplash.jpg")
 
 product8 = Product.new(user_id: 2,
 product_name: "Travel Backpack",
@@ -98,7 +98,7 @@ description: "Travel Backpack designed for you on the go travelers. Plenty of
 room to store everything you need for a weekend trip. Great for out door vacations!",
 price: 29.50)
 
-product8.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/aunnop-suthumno-657586-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/aunnop-suthumno-657586-unsplash.jpg")
+product8.photo.attach(io: File.open("./app/assets/images/aunnop-suthumno-657586-unsplash.jpg"), filename: "aunnop-suthumno-657586-unsplash.jpg")
 
 product9 = Product.new(user_id: 2,
 product_name: "Purse by Annie",
@@ -106,7 +106,7 @@ description: "My very first purse release! Bring it with you on your trips to
 the big city! Plenty of room for all of your necessities.",
 price: 75.00)
 
-product9.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/imageslee-campbell-191016-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/lee-campbell-191016-unsplash.jpg")
+product9.photo.attach(io: File.open("./app/assets/imageslee-campbell-191016-unsplash.jpg"), filename: "lee-campbell-191016-unsplash.jpg")
 
 
 product10 = Product.new(user_id: 2,
@@ -115,21 +115,21 @@ description: "Another hiking bag! This time, I have listened to all of my client
 advice, and I have made the straps wider for comfort along with a few other upgrades.",
 price: 47.25)
 
-product10.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg")
+product10.photo.attach(io: File.open("./app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "josiah-weiss-435592-unsplash.jpg")
 
 product11 = Product.new(user_id: 2,
 product_name: "Traveling Suitcase",
 description: "Traveling Suitcase that holds a lot of stuff for your longer vacations.",
 price: 110.00)
 
-product11.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg")
+product11.photo.attach(io: File.open("./app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "josiah-weiss-435592-unsplash.jpg")
 
 product12 = Product.new(user_id: 3,
 product_name: "Comfy blanket",
 description: "Comfy blanket that can be used anywhere! Dog not included!",
 price: 14.00)
 
-product12.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/dog-blanket.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/dog-blanket.jpg")
+product12.photo.attach(io: File.open("./app/assets/images/dog-blanket.jpg"), filename: "dog-blanket.jpg")
 
 product13 = Product.new(user_id: 3,
 product_name: "Hiking Shoes",
@@ -137,7 +137,7 @@ description: "I breaking out into the shoe business! Here are my first pair of
 hiking shoes. Various sizes available!",
 price: 14.00)
 
-product13.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/shoes.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/shoes.jpg")
+product13.photo.attach(io: File.open("./app/assets/images/shoes.jpg"), filename: "shoes.jpg")
 
 
 product14 = Product.new(user_id: 3,
@@ -145,7 +145,7 @@ product_name: "Back Pack with additions",
 description: "A backpack with a lot of additions supplied by other local sellers.",
 price: 150.00)
 
-product14.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg")
+product14.photo.attach(io: File.open("./app/assets/images/bag-camera.jpg"), filename: "bag-camera.jpg")
 
 product15 = Product.new(user_id: 5,
 product_name: "Dry Gin",
@@ -153,7 +153,7 @@ description: "A bit of home brewed Gin for all of you home brewers out there.
 Made using a passed-down family recipe!",
 price: 12.50)
 
-product15.photo.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg")
+product15.photo.attach(io: File.open("./app/assets/images/bag-camera.jpg"), filename: "bag-camera.jpg")
 
 
 product0.save!
