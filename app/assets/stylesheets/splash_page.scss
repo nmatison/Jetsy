@@ -165,7 +165,7 @@ $keys: image_url("keys.png");
 .favorites {
   font-size: 18px;
   margin-left: 10%;
-  margin-top: 20px; 
+  margin-top: 20px;
   // opacity: 0.7;
   width: 25%;
   font-weight: bold;
@@ -180,26 +180,6 @@ $keys: image_url("keys.png");
 }
 
 
-.splash-page-items li:nth-child(1) {
-  background-image: $dog;
-}
-
-.splash-page-items li:nth-child(2) {
-  background-image: $shoes;
-}
-
-.splash-page-items li:nth-child(3) {
-  background-image: $bag-camera;
-}
-
-.splash-page-items li:nth-child(4) {
-  background-image: $gin;
-}
-
-.splash-page-items li:nth-child(5) {
-  background-image: $headphones;
-}
-
 .splash-item {
   background-repeat: no-repeat;
   background-position: center;
@@ -210,6 +190,57 @@ $keys: image_url("keys.png");
   width: 18%;
   border: 1px solid white;
 }
+
+.splash1 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-image: $dog;
+}
+
+.splash2 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-image: $shoes;
+}
+
+.splash3 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-image: $bag-camera;
+}
+
+.splash4 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-image: $gin;
+}
+
+.splash5 {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  background-image: $headphones;
+}
+
 
 .splash-item:hover {
   border: 1px solid #f98f45;

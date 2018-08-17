@@ -119,3 +119,34 @@ description: "Traveling Suitcase that holds a lot of stuff for your longer vacat
 price: 110.00)
 
 product11.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/josiah-weiss-435592-unsplash.jpg")
+
+product12 = Product.new(user_id: 3,
+product_name: "Comfy blanket",
+description: "Comfy blanket that can be used anywhere! Dog not included!",
+price: 14.00)
+
+product12.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/dog-blanket.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/dog-blanket.jpg")
+
+product13 = Product.new(user_id: 3,
+product_name: "Hiking Shoes",
+description: "I breaking out into the shoe business! Here are my first pair of
+hiking shoes. Various sizes available!",
+price: 14.00)
+
+product13.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/shoes.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/shoes.jpg")
+
+
+product14 = Product.new(user_id: 3,
+product_name: "Back Pack with additions",
+description: "A backpack with a lot of additions supplied by other local sellers.",
+price: 150.00)
+
+product14.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg")
+
+product15 = Product.new(user_id: 5,
+product_name: "Dry Gin",
+description: "A bit of home brewed Gin for all of you home brewers out there.
+Made using a passed-down family recipe!",
+price: 12.50)
+
+product15.image.attach(io: File.open("/home/nick/Desktop/Jetsy/app/assets/images//home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg"), filename: "/home/nick/Desktop/Jetsy/app/assets/images/bag-camera.jpg")
