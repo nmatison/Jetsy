@@ -18,6 +18,7 @@ class ProductForm extends React.Component {
       this.props.action(this.state).then(
          () => this.props.history.push(`/products/${this.state.id}`));
     } else {
+      debugger
       const productData = new FormData();
        productData.append('product[user_id]', this.props.currentUserId);
        productData.append('product[product_name]', this.state.product_name);
@@ -25,12 +26,11 @@ class ProductForm extends React.Component {
        productData.append('product[description]', this.state.description);
        if (this.state.photoFile) {
          productData.append('product[photo]', this.state.photoFile);
+         this.props.action(productData).then(
+           () => this.props.history.push(`/products`));
        }
-      this.props.action(productData).then(
-         () => this.props.history.push(`/products`)
-       );
      }
-  }
+   }
 
   update(field){
     return (e) => {
@@ -70,6 +70,11 @@ class ProductForm extends React.Component {
       }
     }
 
+    photoButton() {
+      if (this.props.formType === "Update Your Product's Information") return null;
+      return  <input className="choose-file" type="file" onChange={this.handleFile} />
+    }
+
 
   render () {
     const preview = this.state.photoUrl ? <img className="photo-preview" src={this.state.photoUrl} /> : null;
@@ -80,7 +85,7 @@ class ProductForm extends React.Component {
     return (
       <div className="form-div">
         <h1 className="form-header">{this.props.formType}</h1>
-          <form onClick={this.props.removeErrors} className="create-edit-form" onSubmit={this.handleSubmit}>
+        <form onClick={this.props.removeErrors} className="create-edit-form" onSubmit={this.handleSubmit}>
             <div className="inputs-div">
               <div className="form-header-div">
                 {this.deleteButton()}
@@ -106,7 +111,7 @@ class ProductForm extends React.Component {
               <ul className="product-errors">{errors()}</ul>
             </div>
             <div className="photo-div">
-              <input className="choose-file" type="file"  onChange={this.handleFile} />
+              {this.photoButton()}
               <div className="photo-preview-div">{preview}</div>
             </div>
           </form>
@@ -116,6 +121,3 @@ class ProductForm extends React.Component {
 }
 
 export default ProductForm;
-
-// <input type="submit" value="Delete Product" onClick={this.handleDelete.bind(this)}/>
-// delete button not implemented yet

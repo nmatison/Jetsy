@@ -22,15 +22,14 @@ export const createProduct = (product) => {
   })
 };
 
-export const updateProduct = (product) => (
+export const updateProduct = (product) => {
+  return (
   $.ajax({
     method: 'patch',
     url: `api/products/${product.id}`,
-    data: {product},
-    contentType: false,
-    processData: false,
+    data: {product}
   })
-);
+)};
 
 export const deleteProduct = (id) => (
   $.ajax({

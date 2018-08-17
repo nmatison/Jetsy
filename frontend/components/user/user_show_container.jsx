@@ -1,8 +1,7 @@
-import { connect } from 'react-redux'
-import UserShow from './user_show'
-import { fetchUser } from '../../actions/user_actions'
-import { fetchProducts } from '../../actions/product_actions'
-
+import { connect } from 'react-redux';
+import UserShow from './user_show';
+import { fetchUser } from '../../actions/user_actions';
+import { fetchProducts } from '../../actions/product_actions';
 
 const mapStateToProps = (state, ownProps) => {
   let values = Object.values(state.entities.products)

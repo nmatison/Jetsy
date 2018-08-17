@@ -16,7 +16,11 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(this.props.closeModal);
+    if (this.props.formType === "Please register to continue") {
+      this.props.processForm(user).then(this.props.closeModal).then(() => this.props.history.push("/products/new"));
+    } else {
+      this.props.processForm(user).then(this.props.closeModal).then(() => this.props.history.push("/products"));
+    }
   }
 
   update(type) {
@@ -25,10 +29,15 @@ class SessionForm extends React.Component {
     }
   }
 
+
   demoLogin(e) {
     e.preventDefault();
     const user = {username: "Demo User", password: "demodemo"};
-    this.props.login(user).then(this.props.closeModal);
+    if (this.props.formType === "Please register to continue") {
+      this.props.login(user).then(this.props.closeModal).then(() => this.props.history.push("/products/new"));
+    } else {
+      this.props.login(user).then(this.props.closeModal).then(() => this.props.history.push("/products"));
+    }
   }
 
   render() {

@@ -7,6 +7,7 @@ class ProductShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchReviews(this.props.match.params.productId);
+    this.props.fetchProducts();
     this.props.fetchProduct(this.props.match.params.productId);
   }
 
@@ -36,9 +37,30 @@ class ProductShow extends React.Component {
 
 
   render() {
-    if (!this.props.product || !this.props.users || !this.props.reviews) return null;
-    const product = this.props.product;
+    if (!this.props.product || !this.props.users || !this.props.reviews || !this.props.products.length) return null;
+
     const user = this.props.users[this.props.product.user_id]
+    const listOfProducts = this.props.products.filter((product) => product.user_id === user.id)
+    let products;
+    if (listOfProducts.length > 8) {
+      products = listOfProducts.slice(0, 8)
+    } else {
+      products = listOfProducts
+    }
+    const product = this.props.product;
+
+    const sellerProducts = () => {
+      return products.map(prod => <Link
+        className="more-seller-link"
+      to={`/products/${prod.id}`}
+      key={prod.id}>
+      <img className="more-seller-product"  src={prod.photoUrl} />
+      <h6 className="more-seller-title">{prod.product_name}</h6>
+      <h6 className="more-seller-price">${prod.price}</h6>
+      </Link>
+    )
+      }
+
     return(
       <div className="show-main" onClick={() => this.clearErrors()}>
         <div className="product-show-div">
@@ -76,16 +98,25 @@ class ProductShow extends React.Component {
             <input type="submit" className="add-cart" value="Add To Cart" />
           </div>
         </div>
-        <ReviewIndex
-          currentUserId={this.props.currentUserId}
-          reviews={this.props.reviews}
-          users={this.props.users}
-          product={product}
-          fetchReviews={this.props.fetchReviews}
-          createReview={this.props.createReview}
-          updateReview={this.props.updateReview}
-          deleteReview={this.props.deleteReview}
-          errors={this.props.errors} />
+        <div className="review-more-items">
+          <ReviewIndex
+            currentUserId={this.props.currentUserId}
+            reviews={this.props.reviews}
+            users={this.props.users}
+            product={product}
+            fetchReviews={this.props.fetchReviews}
+            createReview={this.props.createReview}
+            updateReview={this.props.updateReview}
+            deleteReview={this.props.deleteReview}
+            errors={this.props.errors} />
+          <div className="side-bar">
+            <div className="more-from">
+              <h2>More from</h2>
+              <h1>{user.username}</h1>
+            </div>
+            <div className="more-seller-items">{sellerProducts()}</div>
+          </div>
+        </div>
       </div>
     )
   }

@@ -9,6 +9,7 @@ class UserShow extends React.Component {
     this.props.fetchProducts();
   }
 
+
   featureDiv() {
     if (this.props.sellerProducts.length < 6) return null;
     const products = this.props.sellerProducts.slice(0, 6);

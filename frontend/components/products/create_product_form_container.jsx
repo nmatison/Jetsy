@@ -17,7 +17,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProduct: (id) => dispatch(fetchProduct),
+  fetchProduct: (id) => dispatch(fetchProduct(id)),
   removeErrors: () => dispatch(removeErrors()),
   action: (product) => dispatch(createProduct(product))
 });

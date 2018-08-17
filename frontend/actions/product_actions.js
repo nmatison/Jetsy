@@ -27,6 +27,7 @@ export const updateProduct = (product) => dispatch => (
   ProductApiUtil.updateProduct(product).then(product => dispatch(receiveProduct(product)), (err) => dispatch(receiveErrors(err)))
 );
 
+
 export const deleteProduct = (id) => dispath => {
   return ProductApiUtil.deleteProduct(id).then(product => dispatch(removeProduct(product)))
 };

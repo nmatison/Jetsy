@@ -1,0 +1,71 @@
+$link: image_url("linkedin-logo.png");
+$github: image_url("github.jpg");
+
+.footer {
+  left: 0;
+  bottom: 0;
+  max-height: 75px;
+  height: 75px;
+  width: 100%;
+  border-top: 1px solid #D3D3D3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: inherit;
+  text-align: center;
+  width: 33%;
+  margin-left: 10px;
+}
+
+.footer-title {
+  font-size: 30px;
+  color: #f45800;
+  margin-right: 15px
+}
+
+.footer-slogan {
+  color: #222;
+  font-size: 13px;
+  width: 65%;
+  margin-top: 10px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: inherit;
+  margin-right: 10px;
+  width: 30%;
+}
+
+.linked-in {
+  width: 20%;
+  height: 40%;
+  background-image: $link;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.git-hub {
+  width: 20%;
+  height: 48%;
+  background-image: $github;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.credit {
+  color: #222;
+  font-size: 14px;
+  margin-top: 7px;
+}

@@ -43,7 +43,8 @@ $airplane: image_url("airplane.png");
 }
 
 .edit-link {
-  width: 87%;
+  margin-top: 50px;
+  width: 82%;
   line-height: 20px;
   background-color: #00BFFF;
   color: white;
@@ -172,4 +173,80 @@ $airplane: image_url("airplane.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+}
+
+.review-more-items {
+  width: 90%;
+  margin-right: auto;
+  margin-left: 3%;
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  border-top: 1px solid #D3D3D3
+}
+
+.side-bar {
+  width: 27%;
+  margin-right: 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.more-from h2 {
+  font-size: 18px;
+  text-align: center;
+  color: black;
+}
+
+.more-from h1 {
+  font-size: 18px;
+  text-align: center;
+  color: black;
+  margin-left: 1.5%;
+  color: #f98f45;
+  font-weight: bold;
+}
+
+.more-from {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.more-seller-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 50%;
+  margin-bottom: 20px;
+}
+.more-seller-product {
+  object-fit: cover;
+  height: 150px;
+  width: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.more-seller-title {
+  text-decoration: none;
+  color: black;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.more-seller-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 150px;
+}
+
+.more-seller-price {
+  text-decoration: none;
+  color: black;
+  opacity: 0.7;
+  font-size: 14px;
 }

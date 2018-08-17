@@ -7,7 +7,7 @@ import GreetingContainer from './splash/greeting_container';
 import Modal from './splash/modal';
 import ProductsIndexContainer from './products/products_index_container';
 import ProductsShowContainer from './products/products_show_container';
-import ProductFormContainer from './products/create_product_form_container';
+import CreateProductFormContainer from './products/create_product_form_container';
 import EditProductContainer from './products/edit_product_form_container';
 import UserShowContainer from './user/user_show_container'
 import SearchIndexContainer from './search/search_index_container';
@@ -25,7 +25,7 @@ const App = () =>(
         <Route exact path="/products" component={ProductsIndexContainer} />
         <Route exact path='/products/:productId' component={ProductsShowContainer} />
         <Route exact path='/users/:userId' component={UserShowContainer} />
-        <ProtectedRoute exact path='/products/new' component={ProductFormContainer} />
+        <ProtectedRoute exact path='/products/new' component={CreateProductFormContainer} />
         <ProtectedRoute exact path='/products/:productId/edit' component={EditProductContainer} />
       </div>
       <Footer />
