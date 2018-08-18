@@ -30,11 +30,11 @@ This project was designed and worked on in a 10 day time-frame, and I will be re
 ## Review Form
 The Review form was probably the most difficult challenged faced during the completion of this project. It had multiple components being rendered on top of one another. This challenge was solved by properly passing down props to the child components when necessary and putting in proper checks in each component to ensure that the correct props were being received by each child component.
 
-### Creating a Comment
+### Creating a Review
 ![Review Form](https://github.com/nmatison/Jetsy/blob/master/app/assets/images/comments.jpg)
 
 
-### Updating a Comment
+### Updating a Review
 ![Review Form](https://github.com/nmatison/Jetsy/blob/master/app/assets/images/productshow.jpg)
 
 
