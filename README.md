@@ -38,7 +38,7 @@ The Review form was probably the most difficult challenged faced during the comp
 ![Review Form](https://github.com/nmatison/Jetsy/blob/master/app/assets/images/productshow.jpg)
 
 
-##Search Bar Parsing
+## Search Bar Parsing
 
 Using Regex and Ajax requests on the front end, the Jetsy App is able to take an inputed string from the front end and correctly send it back to the back-end to be properly compared with the product data in the database. The back end will send back back any products whose name or product details contains the query string. This is done by taking the search query from the location string using React props.
 
