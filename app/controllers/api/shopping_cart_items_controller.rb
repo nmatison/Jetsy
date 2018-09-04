@@ -1,4 +1,9 @@
 class Api::ShoppingCartItemsController < ApplicationController
+
+  def index
+    @cart_items = ShoppingCartItem.where(shopping_cart_id: params[:cart][:id])
+  end
+
   def create
     @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
     unless @shopping_cart_item.save
