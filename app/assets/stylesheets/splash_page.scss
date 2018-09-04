@@ -34,12 +34,12 @@ $keys: image_url("keys.png");
   border-radius: 3px;
 }
 
-.ad-div:hover {
+.slogan-div:hover {
   border: 1px solid #f98f45;
   border-radius: 3px;
 }
 
-.ad-image:hover {
+.slogan-image:hover {
   border: 1px solid #f98f45;
   border-radius: 3px;
 }
@@ -55,14 +55,14 @@ $keys: image_url("keys.png");
   border: 1px solid white;
 }
 
-.advertisement {
+.slogan-image-div {
   display: flex;
   flex-direction: column;
   width: 35%;
   height: 300px;
 }
 
-.ad-image {
+.slogan-image {
   width: 100%;
   height: 70%;
   margin-bottom: 3%;
@@ -73,7 +73,7 @@ $keys: image_url("keys.png");
   border: 1px solid white;
 }
 
-.ad-div {
+.slogan-div {
   background-color: #ffa200;
   height: 20%;
   display: flex;
@@ -84,11 +84,11 @@ $keys: image_url("keys.png");
   border: 1px solid white;
 }
 
-.ad-div p {
+.slogan-div p {
   font-size: 18px;
   font-weight: bold;
   opacity: 0.7;
-  letter-spacing: 0.50px;
+  letter-spacing: 0.5px;
 }
 
 .safe-jetsy {
@@ -179,8 +179,6 @@ $keys: image_url("keys.png");
   justify-content: space-around;
 }
 
-
-
 .splash-item {
   background-repeat: no-repeat;
   background-position: center;
@@ -241,7 +239,6 @@ $keys: image_url("keys.png");
   width: 100%;
   background-image: $headphones;
 }
-
 
 .splash-item:hover {
   border: 1px solid #f98f45;

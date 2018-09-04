@@ -8,9 +8,9 @@ const splashPage = () => {
       <div className="splash-main">
         <div className="slide-show-ad">
           <Link className="slideshow" to="/products"></Link>
-          <div className="advertisement">
-            <Link className="ad-image" to="/products"></Link>
-            <Link className="ad-div" to="/products">
+          <div className="slogan-image-div">
+            <Link className="slogan-image" to="/products"></Link>
+            <Link className="slogan-div" to="/products">
               <p> Everything you need for your next trip!</p>
             </Link>
           </div>
