@@ -6,12 +6,14 @@ import {createCart} from './actions/cart_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
+  console.log(window.currentUser)
   if (window.currentUser) {
   const preloadedState = {
     entities: {
-      users: { [window.currentUser.id]: window.currentUser }
+      users: { [window.currentUser.user.id]: window.currentUser.user },
+      cart: {id: window.currentUser.cart.id}
     },
-    session: { id: window.currentUser.id }
+    session: { id: window.currentUser.user.id }
   };
   store = configureStore(preloadedState);
   delete window.currentUser;
