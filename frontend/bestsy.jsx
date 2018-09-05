@@ -6,7 +6,7 @@ import {createCart} from './actions/cart_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
-  console.log(window.currentUser)
+
   if (window.currentUser) {
   const preloadedState = {
     entities: {

@@ -7,7 +7,7 @@ class Api::ShoppingCartItemsController < ApplicationController
   def create
     @shopping_cart_item = ShoppingCartItem.new(shopping_cart_item_params)
     unless @shopping_cart_item.save
-    render json: @shopping_cart_item.errors.full_messsages, status: 422
+    render json: @shopping_cart_item.errors.full_messages, status: 422
     end
   end
 

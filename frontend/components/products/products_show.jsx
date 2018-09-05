@@ -10,7 +10,7 @@ class ProductShow extends React.Component {
     this.addToCart = this.addToCart.bind(this);
     this.state = {
       quantity: null,
-      cart_id: this.props.cartId,
+      shopping_cart_id: this.props.cartId,
       product_id: null
     }
   }
@@ -18,7 +18,7 @@ class ProductShow extends React.Component {
   componentDidMount() {
     this.props.fetchReviews(this.props.match.params.productId);
     this.props.fetchProducts();
-    this.props.fetchProduct(this.props.match.params.productId)
+    this.props.fetchProduct(this.props.match.params.productId);
    
   }
 
@@ -31,12 +31,12 @@ class ProductShow extends React.Component {
   quantitySelector() {
     let options = []
     for (var i = 1; i < 101; i++) {
-      options.push(<option key = {i} value={`${i}`}>{`${i}`}</option>)
+      options.push(<option key = {i} value={i}>{`${i}`}</option>)
     }
 
     return (
-      <select name="Quantity" className="quantity">
-        <option disabled="true" selected="true" value={"Select Quantity"}>{"Select Quantity"}</option>
+      <select name="Quantity" defaultValue= "Select Quantity" className="quantity" onChange={(e) => this.setState({quantity: parseInt(e.target.value), product_id: this.props.product.id})}>
+        <option disabled="true" value={"Select Quantity"}>{"Select Quantity"}</option>
         {options}
       </select>
     )
@@ -45,9 +45,9 @@ class ProductShow extends React.Component {
   addToCart(e) {
     e.preventDefault()
     if (this.state.quantity) {
-
+      this.props.createCartItem(this.state)
     } else {
-      window.alert("Please Select A Quantity;")
+      window.alert("Please Select A Quantity")
     }
   }
 
@@ -59,7 +59,7 @@ class ProductShow extends React.Component {
 
   render() {
     if (!this.props.product || !this.props.users || !this.props.reviews || !this.props.products.length) return null;
-
+    console.log(this.state)
     const user = this.props.users[this.props.product.user_id]
     const listOfProducts = this.props.products.filter((product) => product.user_id === user.id)
     let products;
