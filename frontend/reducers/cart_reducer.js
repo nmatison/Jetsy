@@ -1,9 +1,9 @@
-import {RECEIVE_CART} from '../actions/cart_actions';
+import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 
 const cartReducer = (state = {}, action) => {
   switch (action.type) {
-    case RECEIVE_CART:
-      return action.cart
+    case RECEIVE_CURRENT_USER:
+      return action.payload.cart
     default:
       return state;
   }

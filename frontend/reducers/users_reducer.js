@@ -9,19 +9,20 @@ const usersReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
-      return merge({}, state, {[action.currentUser.id]: action.currentUser});
+    console.log(action)
+      return merge({}, state, {[action.payload.user.id]: action.payload.user});
     case RECEIVE_SEARCH_PRODUCTS:
       return merge({}, state, action.payload.users)
     case RECEIVE_PRODUCTS:
       return merge({}, state, action.payload.users)
     case RECEIVE_PRODUCT:
-      return merge({}, state, {[action.payload.user.id]: action.payload.user})
+      return merge({}, state, {[action.payload.user.id]: action.payload.user});
     case RECEIVE_PRODUCT_REVIEWS:
       return merge({}, state, action.payload.users)
     case RECEIVE_PRODUCT_REVIEW:
-      return merge({}, state, [action.payload.reviewer.id]: action.payload.reviewer);
+      return merge({}, state, {[action.payload.reviewer.id]: action.payload.reviewer});
     case RECEIVE_USER:
-      return merge({}, state, {[action.user.id]: action.user});
+      return merge({}, state, {[action.payload.user.id]: action.payload.user})
     default:
       return state;
   }

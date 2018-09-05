@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Root from './components/root';
 import configureStore from './store/store';
-import {searchProducts} from './actions/search_actions'
+import {createCart} from './actions/cart_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
 
-  window.searchProducts = searchProducts;
+  window.createCart = createCart;
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   ReactDOM.render(<Root store={store} />, root)

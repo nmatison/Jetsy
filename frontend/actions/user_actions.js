@@ -5,10 +5,10 @@ export const RECEIVE_USER = "RECEIVE_USER";
 
 
 export const fetchUser = (id) => dispatch => (
-  UserApiUtil.fetchUser(id).then((user) => dispatch(receiveUser(user)))
+  UserApiUtil.fetchUser(id).then((payload) => dispatch(receiveUser(payload)))
 )
 
-const receiveUser = (user) => ({
+const receiveUser = (payload) => ({
   type: RECEIVE_USER,
-  user
+  payload
 })

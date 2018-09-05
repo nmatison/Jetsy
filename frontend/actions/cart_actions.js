@@ -17,7 +17,10 @@ const receiveCartItems = (payload) => ({
   payload
 });
 
-const receiveCart = (cart) => ({
+const receiveCart = (cart) => {
+  console.log(cart);
+  return ({
   type: RECEIVE_CART,
   cart
-})
+  })
+}

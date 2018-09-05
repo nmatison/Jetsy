@@ -7,7 +7,7 @@ export const REMOVE_ERRORS = "REMOVE_ERRORS"
 
 
 export const login = user => dispatch => (
-  SessionApiUtil.login(user).then((user) => dispatch(receiveCurrentUser(user)), (err) => dispatch(receiveErrors(err)))
+  SessionApiUtil.login(user).then((payload) => dispatch(receiveCurrentUser(payload)), (err) => dispatch(receiveErrors(err)))
 );
 
 export const logout = () => dispatch => (
@@ -15,12 +15,12 @@ export const logout = () => dispatch => (
 );
 
 export const signup = user => dispatch => (
-  SessionApiUtil.signup(user).then((user) => dispatch(receiveCurrentUser(user)), err => dispatch(receiveErrors(err)))
+  SessionApiUtil.signup(payload).then((user) => dispatch(receiveCurrentUser(payload)), err => dispatch(receiveErrors(err)))
 );
 
-const receiveCurrentUser = (currentUser) => ({
+const receiveCurrentUser = (payload) => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser
+  payload
 });
 
 const receiveErrors = (errors) => ({
