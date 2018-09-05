@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
     resources :reviews, only: [:destroy]
     resources :search, only: [:index]
-    resources :shopping_carts, only: [:show, :create]
+    resources :shopping_carts, only: [:create]
     resources :shopping_cart_items, only: [:create, :destroy]
   end
 end
