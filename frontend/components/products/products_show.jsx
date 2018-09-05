@@ -4,11 +4,22 @@ import ReviewIndex from '../reviews/review_index';
 
 
 class ProductShow extends React.Component {
+  
+  constructor(props) {
+    super(props)
+    this.addToCart = this.addToCart.bind(this);
+    this.state = {
+      quantity: null,
+      cart_id: this.props.cartId,
+      product_id: null
+    }
+  }
 
   componentDidMount() {
     this.props.fetchReviews(this.props.match.params.productId);
     this.props.fetchProducts();
-    this.props.fetchProduct(this.props.match.params.productId);
+    this.props.fetchProduct(this.props.match.params.productId)
+   
   }
 
   editLink() {
@@ -25,9 +36,19 @@ class ProductShow extends React.Component {
 
     return (
       <select name="Quantity" className="quantity">
+        <option disabled="true" selected="true" value={"Select Quantity"}>{"Select Quantity"}</option>
         {options}
       </select>
     )
+  }
+
+  addToCart(e) {
+    e.preventDefault()
+    if (this.state.quantity) {
+
+    } else {
+      window.alert("Please Select A Quantity;")
+    }
   }
 
   clearErrors() {
@@ -95,7 +116,7 @@ class ProductShow extends React.Component {
                 {this.quantitySelector()}
               </label>
             </div>
-            <input type="submit" className="add-cart" value="Add To Cart" />
+            <input type="submit" className="add-cart" value="Add To Cart" onClick={(e) => this.addToCart(e)} />
           </div>
         </div>
         <div className="review-more-items">
