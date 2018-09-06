@@ -4,7 +4,8 @@ import { fetchCartItems } from '../../actions/cart_item_actions';
 
 const mapStateToProps = ({entities}) => ({
   cartItems: entities.cart.cartItems,
-  cartProducts: entities.products
+  cartProducts: entities.products,
+  cartId: entities.cart.id
 });
 
 const mapDispatchToProps = dispatch => ({

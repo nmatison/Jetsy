@@ -38,10 +38,10 @@ render () {
         <button className="signup-button" onClick={() => this.props.openModal('regtocontinue')}>Sell on Jetsy</button>
       <button className="signup-button" onClick={() => this.props.openModal('signup')}>Register</button>
       <button className="login-button" onClick={() => this.props.openModal('login')}>Sign In</button>
-        <div className="cart-div">
+        <Link to="/cart" className="cart-div">
           {cart}
           <span className="cart-text">Cart</span>
-        </div>
+        </Link>
     </nav>
   );
 
@@ -53,10 +53,10 @@ render () {
         <span className="you-text">You</span>
       </Link>
       <input className="logout-input" type="submit" value="Log Out" onClick={this.props.logout} />
-        <div className="cart-div">
+        <Link to="/cart" className="cart-div">
           {cart}
           <span className="cart-text">Cart</span>
-        </div>
+        </Link>
     </span>
   )
 

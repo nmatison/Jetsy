@@ -8,8 +8,8 @@ export const createCartItem = (cartItem) => (dispatch) => (
   CartItemApiUtil.createCartItem(cartItem)
 );
 
-export const fetchCartItems = cart => dispatch =>
-  CartItemApiUtil.fetchCartItems(cart).then(payload =>
+export const fetchCartItems = cartId => dispatch =>
+  CartItemApiUtil.fetchCartItems(cartId).then(payload =>
     dispatch(receiveCartItems(payload))
   );
 

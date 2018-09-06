@@ -6,7 +6,7 @@ class Cart extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchCartItems
+    this.props.fetchCartItems(this.props.cartId)
   }
 
   cartList(cartItems, products) {
@@ -18,6 +18,7 @@ class Cart extends React.Component {
   }
 
   render() {
+    console.log(this.props.cartId)
     if (!this.props.cartItems) return null 
     return (
       <div>
