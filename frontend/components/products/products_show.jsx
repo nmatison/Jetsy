@@ -59,7 +59,6 @@ class ProductShow extends React.Component {
 
   render() {
     if (!this.props.product || !this.props.users || !this.props.reviews || !this.props.products.length) return null;
-    console.log(this.state)
     const user = this.props.users[this.props.product.user_id]
     const listOfProducts = this.props.products.filter((product) => product.user_id === user.id)
     let products;

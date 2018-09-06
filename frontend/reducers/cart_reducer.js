@@ -11,7 +11,6 @@ const cartReducer = (state = {}, action) => {
       let newState = Object.assign({}, state)
       let mergeState = merge({}, newState.cartItems, action.payload.cart_items)
       newState.cartItems = mergeState 
-      console.log(newState)
       return newState;
     default:
       return state;

@@ -1,8 +1,10 @@
 import React from 'react';
+import CartItem from './cart_item';
 
 class Cart extends React.Component {
   constructor(props) {
     super(props)
+    this.cartList.bind(this);
   }
 
   componentDidMount() {
@@ -10,19 +12,20 @@ class Cart extends React.Component {
   }
 
   cartList(cartItems, products) {
-    return(
-      cartItems.map((item) => {
+    console.log("sup")
+    return (
+      Object.values(cartItems).map((item) => {
         <CartItem key={item.updated_at} item={item} product={products[item.product_id]} />
       })
     )
   }
 
   render() {
-    console.log(this.props.cartId)
     if (!this.props.cartItems) return null 
     return (
       <div>
-        {this.cartList(this.props.cartItems, this.props.products)}
+        <h1>Cart</h1>
+        <ul>{this.cartList(this.props.cartItems, this.props.cartProducts)} </ul>
       </div>
     )
   }
