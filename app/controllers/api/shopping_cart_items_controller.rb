@@ -1,7 +1,7 @@
 class Api::ShoppingCartItemsController < ApplicationController
 
   def index
-    @cart_items = ShoppingCartItem.where(shopping_cart_id: params[:cart][:id])
+    @cart_items = ShoppingCartItem.where(shopping_cart_id: params[:cart_item][:shopping_cart_id])
   end
 
   def create

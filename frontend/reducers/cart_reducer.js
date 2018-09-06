@@ -1,5 +1,5 @@
 import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
-import { RECEIVE_CART_ITEM } from '../actions/cart_item_actions';
+import { RECEIVE_CART_ITEMS } from '../actions/cart_item_actions'
 import { merge } from 'lodash';
 
 const cartReducer = (state = {}, action) => {
@@ -7,12 +7,12 @@ const cartReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return action.payload.cart;
-    // case RECEIVE_CART_ITEM:
-    //   let newState = Object.assign({}, state)
-    //   console.log(newState)
-    //   mergeState = merge({}, newState.cartItems, {[action.cartItem.id]: action.cartItem})
-    //   newState.cartItems = mergeState 
-    //   return newState;
+    case RECEIVE_CART_ITEMS:
+      let newState = Object.assign({}, state)
+      let mergeState = merge({}, newState.cartItems, action.payload.cart_items)
+      newState.cartItems = mergeState 
+      console.log(newState)
+      return newState;
     default:
       return state;
   }
