@@ -12,20 +12,20 @@ class Cart extends React.Component {
   }
 
   cartList(cartItems, products) {
-    console.log("sup")
     return (
-      Object.values(cartItems).map((item) => {
+      Object.values(cartItems).map((item) => (
         <CartItem key={item.updated_at} item={item} product={products[item.product_id]} />
-      })
-    )
+      ))
+    );
   }
 
   render() {
-    if (!this.props.cartItems) return null 
+    if (!this.props.cartItems) return null
+
     return (
       <div>
         <h1>Cart</h1>
-        <ul>{this.cartList(this.props.cartItems, this.props.cartProducts)} </ul>
+        {this.cartList(this.props.cartItems, this.props.cartProducts)}
       </div>
     )
   }
