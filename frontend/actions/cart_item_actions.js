@@ -23,7 +23,11 @@ const receiveCartItems = payload => ({
   payload
 });
 
-const removeCartItem = (cartItem) => ({
-  type: REMOVE_CART_ITEM,
-  cartItemId: cartItem.id
-})
+const removeCartItem = (cartItem) => {
+  console.log(cartItem) 
+  return ({
+    
+    type: REMOVE_CART_ITEM,
+    cartItemId: cartItem.id
+  })
+}

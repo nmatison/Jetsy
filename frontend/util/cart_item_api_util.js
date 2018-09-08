@@ -1,4 +1,3 @@
-
 export const fetchCartItems = (cart_item) => (
   $.ajax({
     method: 'get',

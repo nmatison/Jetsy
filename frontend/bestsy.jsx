@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Root from './components/root';
 import configureStore from './store/store';
-import {fetchCartItems} from './actions/cart_item_actions'
+import {deleteCartItem} from './actions/cart_item_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
 
-  window.fetchCartItems = fetchCartItems;
+  window.deleteCartItem = deleteCartItem;
   window.dispatch = store.dispatch;
   window.getState = store.getState;
   ReactDOM.render(<Root store={store} />, root)
