@@ -13,10 +13,10 @@ class Cart extends React.Component {
     this.props.fetchCartItems(this.props.cartId)
   }
 
-  cartList(cartItems, products) {
+  cartList(cartItems, products, deleteCartItem) {
     return (
       Object.values(cartItems).map((item) => (
-        <CartItem key={item.updated_at} item={item} product={products[item.product_id]} />
+        <CartItem key={item.updated_at} item={item} product={products[item.product_id]} deleteCartItem={deleteCartItem} />
       ))
     );
   }
@@ -46,7 +46,7 @@ class Cart extends React.Component {
         <div className="cart-items">
           <h1>Shopping Cart</h1>
           <div className="cart-item-list">
-            {this.cartList(this.props.cartItems, this.props.cartProducts)}
+            {this.cartList(this.props.cartItems, this.props.cartProducts, this.props.deleteCartItem)}
           </div>
         </div>
         <div className="total">
