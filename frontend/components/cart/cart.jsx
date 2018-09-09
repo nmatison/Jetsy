@@ -4,7 +4,8 @@ import CartItem from './cart_item';
 class Cart extends React.Component {
   constructor(props) {
     super(props)
-    this.cartList.bind(this);
+    this.cartList = this.cartList.bind(this);
+    this.calcTotal = this.calcTotal.bind(this);
   }
 
   componentDidMount() {
@@ -19,15 +20,29 @@ class Cart extends React.Component {
     );
   }
 
+  calcTotal(cartItems, products) {
+    let counter = 0
+
+    Object.values(cartItems).forEach((item) => {
+      counter += (item.quantity * products[item.product_id].price)
+    })
+    return counter.toLocaleString();
+  }
+
   render() {
     if (!this.props.cartItems) return null
 
-    return (
-      <div>
+    return <div>
         <h1>Cart</h1>
-        {this.cartList(this.props.cartItems, this.props.cartProducts)}
-      </div>
-    )
+        <div className="cart-item-list">
+          {this.cartList(this.props.cartItems, this.props.cartProducts)}
+        </div>
+        <div className="total">
+          <h1>
+            {`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}
+          </h1>
+        </div>
+      </div>;
   }
 
 }
