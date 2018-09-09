@@ -54,6 +54,9 @@ class Cart extends React.Component {
             <li>{`Total Cost: $${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
             <li>{`Total Items: ${this.totalItems(this.props.cartItems)}`}</li>
           </ul>
+          <div className="checkout-buttons">
+            <button>Checkout</button>
+          </div>
         </div>
       </div>
     );

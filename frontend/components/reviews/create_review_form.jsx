@@ -7,7 +7,7 @@ class CreateEditForm extends React.Component {
     super(props)
     this.state=this.props.review
     this.update=this.update.bind(this)
-    this.handleInput=this.handleInput.bind.this
+    // this.handleInput=this.handleInput.bind.this
   }
 
   deleteButton() {
