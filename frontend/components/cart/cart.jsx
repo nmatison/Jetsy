@@ -41,10 +41,13 @@ class Cart extends React.Component {
   render() {
     if (!this.props.cartItems) return null
 
-    return <div>
-        <h1>Cart</h1>
-        <div className="cart-item-list">
-          {this.cartList(this.props.cartItems, this.props.cartProducts)}
+    return (
+      <div className="cart-container">
+        <div className="cart-items">
+          <h1>Shopping Cart</h1>
+          <div className="cart-item-list">
+            {this.cartList(this.props.cartItems, this.props.cartProducts)}
+          </div>
         </div>
         <div className="total">
           <ul>
@@ -52,9 +55,9 @@ class Cart extends React.Component {
             <li>{`Total Items: ${this.totalItems(this.props.cartItems)}`}</li>
           </ul>
         </div>
-      </div>;
+      </div>
+    );
   }
-
 }
 
 export default Cart;

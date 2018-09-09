@@ -1,0 +1,29 @@
+.cart-container {
+  display: flex;
+  height: inherit;
+  width: inherit;
+}
+
+.cart-items {
+  width: 55%;
+}
+
+.cart-item-list {
+  max-height: 550px;
+  overflow: scroll;
+  min-width: 350px;
+}
+
+.inner-cart-list {
+  display: flex;
+  border-top: 1px solid #D3D3D3;
+}
+
+.cart-item-photo {
+  object-fit: cover;
+  height: 145px;
+  width: 120px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+}
