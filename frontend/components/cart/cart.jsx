@@ -6,6 +6,7 @@ class Cart extends React.Component {
     super(props)
     this.cartList = this.cartList.bind(this);
     this.calcTotal = this.calcTotal.bind(this);
+    this.totalItems = this.totalItems.bind(this);
   }
 
   componentDidMount() {
@@ -29,6 +30,14 @@ class Cart extends React.Component {
     return counter.toLocaleString();
   }
 
+  totalItems(cartItems) {
+    let counter = 0 
+    Object.values(cartItems).forEach(item => {
+      counter += item.quantity
+    });
+    return counter
+  }
+
   render() {
     if (!this.props.cartItems) return null
 
@@ -38,9 +47,10 @@ class Cart extends React.Component {
           {this.cartList(this.props.cartItems, this.props.cartProducts)}
         </div>
         <div className="total">
-          <h1>
-            {`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}
-          </h1>
+          <ul>
+            <li>{`Total Cost: $${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
+            <li>{`Total Items: ${this.totalItems(this.props.cartItems)}`}</li>
+          </ul>
         </div>
       </div>;
   }
