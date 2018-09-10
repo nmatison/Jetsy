@@ -13,7 +13,7 @@
 
 
 .main-div {
-  height:inherit;
+  height: inherit;
   min-height: calc(100vh - 100px);
 }
 
@@ -153,7 +153,7 @@
 
 .cancel {
   text-decoration: none;
-  color: white;.
+  color: white;
   font-weight: bold;
   font-size: 16px;
   width: 99%;

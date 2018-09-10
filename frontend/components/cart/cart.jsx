@@ -49,12 +49,12 @@ class Cart extends React.Component {
             {this.cartList(this.props.cartItems, this.props.cartProducts, this.props.deleteCartItem)}
           </div>
         </div>
-        <div className="total">
+        <div className="cart-total">
           <ul>
             <li>{`Total Cost: $${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
             <li>{`Total Items: ${this.totalItems(this.props.cartItems)}`}</li>
           </ul>
-          <div className="checkout-buttons">
+          <div className="checkout-button">
             <button>Checkout</button>
           </div>
         </div>
