@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import ReviewIndex from '../reviews/review_index';
 
 
@@ -58,8 +58,9 @@ class ProductShow extends React.Component {
 
 
   render() {
-    if (!this.props.product || !this.props.users || !this.props.reviews || !this.props.products.length) return null;
+    if (!this.props.product || !this.props.users[this.props.product.user_id] || !this.props.reviews || !this.props.products.length) return null;
     const user = this.props.users[this.props.product.user_id]
+    console.log(this.props.product)
     const listOfProducts = this.props.products.filter((product) => product.user_id === user.id)
     let products;
     if (listOfProducts.length > 8) {
@@ -142,4 +143,4 @@ class ProductShow extends React.Component {
   }
 }
 
-export default ProductShow;
+export default withRouter(ProductShow);
