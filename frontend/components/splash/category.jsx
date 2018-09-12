@@ -14,9 +14,9 @@ class Category extends React.Component {
 
   render(){
     return (
-    <div>
-      <ul>
-        <Link to="/products">All Items</Link>
+    <div className="categories">
+      <ul className="category-links">
+        <Link className="category-index" to="/products">All Items</Link>
         <li onClick={() => this.handleClick("Bag")}>Bags</li>
         <li onClick={() => this.handleClick("Clothes")}>Clothes</li>
         <li onClick={() => this.handleClick("Shoes")}>Shoes</li>

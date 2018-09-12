@@ -6,10 +6,14 @@ header {
 
 .nav-bar {
   display: flex;
+  flex-direction: column;
+  height: 130px;
+}
+
+.nav-bar-links {
+  display: flex;
   justify-content: space-around;
-  height: 80px;
   width: inherit;
-  border-bottom: 1px solid #D3D3D3;
 }
 
 .title-and-search {
@@ -187,4 +191,35 @@ header {
 .logout-input:hover {
   background-color: #FAEBD7;
   cursor: pointer;
+}
+
+.categories {
+  margin-top: 10px;
+  border-top: #D3D3D3 1px solid;
+  border-bottom: #D3D3D3 1px solid;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.category-links {
+  display: flex;
+  justify-content: space-around;
+  font-size: 16px;
+  border-bottom: 5px solid white;
+}
+
+.category-index {
+  text-decoration: none;
+  color: black;
+  border-bottom: 5px solid white;
+}
+
+.category-index:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #f45800;
+}
+
+.category-links li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #f45800;
 }

@@ -61,21 +61,21 @@ render () {
     </span>
   )
 
-    return (
-      <nav className="nav-bar">
-        <form className="title-and-search" onSubmit={this.handleSubmit}>
-          <Link to="/" className="title">Jetsy</Link>
-          <span className="search-span"><input
-            onChange={this.update()}
-            className="search-bar"
-            type="text"
-            placeholder="Search for travel items"/></span>
-          <input type="submit" className="search-submit" value="Search" />
-        </form>
-        { this.props.currentUser ? personalGreeting() : sessionLinks()}
-        <CategoryContainer />
-      </nav>
-    );
+    return <div className="nav-bar">
+        <nav className="nav-bar-links">
+          <form className="title-and-search" onSubmit={this.handleSubmit}>
+            <Link to="/" className="title">
+              Jetsy
+            </Link>
+            <span className="search-span">
+              <input onChange={this.update()} className="search-bar" type="text" placeholder="Search for travel items" />
+            </span>
+            <input type="submit" className="search-submit" value="Search" />
+          </form>
+          {this.props.currentUser ? personalGreeting() : sessionLinks()}
+        </nav>
+          <CategoryContainer />
+      </div>;
   }
 }
 export default withRouter(Greeting);
