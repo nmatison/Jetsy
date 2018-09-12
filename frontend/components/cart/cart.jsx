@@ -58,14 +58,14 @@ class Cart extends React.Component {
               <li>{`Total Items:`}</li>
               <li>{`Subtotal:`}</li>
               <li>{`Tax:`}</li>
-              <li className="shipping">{`Shipping:`}</li>
+              <li >{`Shipping:`}</li>
               <li>{`Estimated Total:`}</li>
             </ul>
             <ul className="cart-total-right">
               <li>{`${this.totalItems(this.props.cartItems)}`}</li>
               <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
               <li>{`--`}</li>
-              <li className="shipping">{`free`}</li>
+              <li>{`free`}</li>
               <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
             </ul>
           </div>

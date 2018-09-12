@@ -109,6 +109,19 @@
   display: flex;
 }
 
+.line-break {
+  border-bottom: 1px solid #d3d3d3;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.line-break-2 {
+  border-bottom: 1px solid #d3d3d3;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
 
 .checkout-button {
   margin-top: 10px;
