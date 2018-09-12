@@ -108,12 +108,7 @@
 .cart-total-information {
   display: flex;
 }
-/* 
-.shipping {
-  border-bottom: 1px solid #d3d3d3;
-  padding-bottom: 5px;
-  margin-bottom: 5px;
-} */
+
 
 .checkout-button {
   margin-top: 10px;
