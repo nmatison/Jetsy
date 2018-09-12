@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {withRouter} from 'react-router-dom'
+import CategoryContainer from './category_container';
 
 class Greeting extends React.Component {
 
@@ -72,6 +73,7 @@ render () {
           <input type="submit" className="search-submit" value="Search" />
         </form>
         { this.props.currentUser ? personalGreeting() : sessionLinks()}
+        <CategoryContainer />
       </nav>
     );
   }
