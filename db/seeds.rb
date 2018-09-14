@@ -25,7 +25,7 @@ product0 = Product.new(user_id: 1,
   product_name: "BoomTech 3.0",
   description: "These are the lateset edition of the BoomTech series. We are
   introducing noise-canceling effects in this rollout. Comes with a travel
-  carry case to keep them protected on your long journeys.",
+  carry case to keep them protected on your long journeys and hiking adventures.",
   price: 125.75)
 
 product0.photo.attach(io: File.open("./app/assets/images/headphones.jpg"), filename: "headphones.jpg")
@@ -33,7 +33,7 @@ product0.photo.attach(io: File.open("./app/assets/images/headphones.jpg"), filen
 product1 = Product.new(user_id: 1,
   product_name: "Navigator",
   description: "This compass is perfect for any of your trips out into the
-  wilderness. Comes with carrying case and lanyard",
+  wilderness and hiking experiences. Comes with carrying case and lanyard.",
   price: 75.68)
 
 product1.photo.attach(io: File.open("./app/assets/images/rawpixel-771279-unsplash.jpg"), filename: "rawpixel-771279-unsplash.jpg")
@@ -51,7 +51,7 @@ product2 = Product.new(user_id: 1,
 product3 = Product.new(user_id: 1,
   product_name: "Life's Good Water Bottle",
   description: "Life's good water bottle. Made for any and all travels, and it
-  is completely indestructable.",
+  is completely indestructable. Perfect for hiking!",
   price: 31.45)
 
 product3.photo.attach(io: File.open("./app/assets/images/averie-woodard-123973-unsplash.jpg"), filename: "averie-woodard-123973-unsplash.jpg")
@@ -68,7 +68,7 @@ product4.photo.attach(io: File.open("./app/assets/images/greyson-joralemon-31110
 product5 = Product.new(user_id: 1,
   product_name: "Personalized Travel Thermos",
   description: "This is a personalized travel thermos. Take it on any vacation or
-  business trip! Whether you are hiking, laying on the beach, or at the office, your
+  business trip! Whether you are hiking, laying on the beach, or out for business, your
   drink will stay hot!",
   price: 25.00)
 
@@ -77,7 +77,7 @@ product5.photo.attach(io: File.open("./app/assets/images/jon-tyson-558716-unspla
 
 product6 = Product.new(user_id: 2,
 product_name: "Duffel-Bag",
-description: "This is my best duffel-bag yet! This bag can hold a lot of weight,
+description: "This is my best duffel-bag yet! These bags can hold a lot of weight,
  and it is perfect as a carry-on item for those short business trips that take
  you out of town.",
 price: 21.99)
@@ -86,7 +86,7 @@ product6.photo.attach(io: File.open("./app/assets/images/harsh-jadav-163197-unsp
 
 product7 = Product.new(user_id: 2,
 product_name: "Professional Briefcase",
-description: "Professional Briefcase that can be used casually or formally. Take
+description: "Professional Briefcase that can be used casually or formally. Ditch your bags and upgrade with style! Take
 it on your business trips and impress your forigen colleagues!",
 price: 35.00)
 
@@ -95,7 +95,8 @@ product7.photo.attach(io: File.open("./app/assets/images/clem-onojeghuo-254153-u
 product8 = Product.new(user_id: 2,
 product_name: "Travel Backpack",
 description: "Travel Backpack designed for you on the go travelers. Plenty of
-room to store everything you need for a weekend trip. Great for out door vacations!",
+room to store everything you need for a weekend trip. Easy on the shoulders, and it leaves your arms free for more bags.
+Great for out door vacations/hiking excursions!",
 price: 29.50)
 
 product8.photo.attach(io: File.open("./app/assets/images/aunnop-suthumno-657586-unsplash.jpg"), filename: "aunnop-suthumno-657586-unsplash.jpg")
@@ -103,7 +104,7 @@ product8.photo.attach(io: File.open("./app/assets/images/aunnop-suthumno-657586-
 product9 = Product.new(user_id: 2,
 product_name: "Purse by Annie",
 description: "My very first purse release! Bring it with you on your trips to
-the big city! Plenty of room for all of your necessities.",
+the big city! Plenty of room for all of your necessities. Why carry bags when you could be styling with this purse!",
 price: 75.00)
 
 product9.photo.attach(io: File.open("./app/assets/images/lee-campbell-191016-unsplash.jpg"), filename: "lee-campbell-191016-unsplash.jpg")
