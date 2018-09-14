@@ -16,7 +16,7 @@ Review.destroy_all
 user0 = User.create!(username: "Marshalls", email_address: "marshall@marshall.blah", password: "gutsman")
 user1 = User.create!(username: "annie's-bags", email_address: "annie@annie.blah", password: "gutsman")
 user2 = User.create!(username: "UrbanWares", email_address: "urban@urban.blah", password: "gutsman")
-user3 = User.create!(username: "FoodTight", email_address: "FoodTight@FoodTight.blah", password: "gutsman")
+user3 = User.create!(username: "Essentials", email_address: "FoodTight@FoodTight.blah", password: "gutsman")
 user4 = User.create!(username: "Manufacturer United", email_address: "unitede@urban.blah", password: "gutsman")
 
 # random users for comments
@@ -152,7 +152,7 @@ product15 = Product.new(user_id: 3,
 product_name: "Dry Gin",
 description: "A bit of home brewed Gin for all of you home brewers out there.
 Made using a passed-down family recipe! Great with some food!",
-price: 12.50)
+price: 12.52)
 
 product15.photo.attach(io: File.open("./app/assets/images/gin.jpg"), filename: "gin.jpg")
 
@@ -160,7 +160,7 @@ product16 = Product.new(user_id: 4,
   product_name: "Sun Dress",
   description: "Beautiful dress that is perfect for beach days or any vacation in any kind
   of hot or humid weather. Add it to your clothing collection today!",
-  price: 45.00 )
+  price: 45.32 )
 
 product16.photo.attach(io: File.open("./app/assets/images/sun-dress.jpg"), filename: "sun-dress.jpg")
 
@@ -168,16 +168,47 @@ product17 = Product.new(user_id: 4,
   product_name: "Full-sized Blanket",
   description: "Large blanket that would be great to keep you warm. It would also be perfect to 
   lay out as you tan on the beach!",
-  price: 32.00 )
+  price: 32.76 )
 
 product17.photo.attach(io: File.open("./app/assets/images/full-blanket.jpg"), filename: "full-blanket.jpg")
 
 product18 = Product.new(user_id: 4,
+  product_name: "Blanket Set",
   description: "Here are a full set of our previous blankets! Take them with you to the beach, on a hiking trip,
   on a plane, or just keep them around at home for your regular use.",
-  price: 55.00 )
+  price: 55.88 )
 
 product18.photo.attach(io: File.open("./app/assets/images/blanket-set.jpg"), filename: "blanket-set.jpg")
+
+product19 = Product.new(user_id: 4,
+  product_name: "Travel Pillow",
+  description: "A comfortable neck pillow.",
+  price: 20.44)
+
+product19.photo.attach(io: File.open("./app/assets/images/neck_pillow.jpeg"), filename: "neck_pillow.jpeg")
+
+product20 = Product.new(user_id: 4,
+  product_name: "Beach Hammock",
+  description: "Why continue to lay on the ground when you could be floating over a beach? Comes with
+  instructions and materials to hang.",
+  price: 76.21)
+
+product20.photo.attach(io: File.open("./app/assets/images/hammock.jpg"), filename: "hammock.jpg")
+
+product21 = Product.new(user_id: 4,
+  product_name: "White-dress",
+  description: "Light, airy dress that would be great to wear in those hot environments like the beach!",
+  price: 88.15)
+
+product21.photo.attach(io: File.open("./app/assets/images/white-dress.jpg"), filename: "white-dress.jpg")
+
+product22 = Product.new(user_id: 3,
+  product_name: "Personal Note Book",
+  description: "This note book will be great on business trips.
+  Take it to meetings and pull it out during phone calls!",
+  price: 18.66)
+
+product22.photo.attach(io: File.open("./app/assets/images/notebook.jpg"), filename: "notebook.jpg")
 
 
 product0.save!
