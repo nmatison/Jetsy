@@ -128,7 +128,7 @@ product11.photo.attach(io: File.open("./app/assets/images/michal-parzuchowski-26
 
 product12 = Product.new(user_id: 3,
 product_name: "Comfy blanket",
-description: "Comfy blanket that can be used anywhere! Dog not included!",
+description: "Comfy blanket that can be used anywhere! Take it to the beach, on an airplane, or even on a hike! Dog not included!",
 price: 14.00)
 
 product12.photo.attach(io: File.open("./app/assets/images/dog-blanket.jpg"), filename: "dog-blanket.jpg")
@@ -143,7 +143,7 @@ product13.photo.attach(io: File.open("./app/assets/images/shoes.jpg"), filename:
 
 product14 = Product.new(user_id: 3,
 product_name: "Back Pack with additions",
-description: "A backpack with a lot of additions supplied by other local sellers.",
+description: "A backpack with a lot of additions supplied by other local sellers. Drop the bags and travel light!",
 price: 150.00)
 
 product14.photo.attach(io: File.open("./app/assets/images/bag-camera.jpg"), filename: "bag-camera.jpg")
@@ -151,10 +151,34 @@ product14.photo.attach(io: File.open("./app/assets/images/bag-camera.jpg"), file
 product15 = Product.new(user_id: 3,
 product_name: "Dry Gin",
 description: "A bit of home brewed Gin for all of you home brewers out there.
-Made using a passed-down family recipe!",
+Made using a passed-down family recipe! Great with some food!",
 price: 12.50)
 
 product15.photo.attach(io: File.open("./app/assets/images/gin.jpg"), filename: "gin.jpg")
+
+product16 = Product.new(user_id: 4, 
+  product_name: "Sun Dress",
+  description: "Beautiful dress that is perfect for beach days or any vacation in any kind
+  of hot or humid weather. Add it to your clothing collection today!",
+  price: 45.00 )
+
+product16.photo.attach(io: File.open("./app/assets/images/sun-dress.jpg"), filename: "sun-dress.jpg")
+
+product17 = Product.new(user_id: 4,
+  product_name: "Full-sized Blanket",
+  description: "Large blanket that would be great to keep you warm. It would also be perfect to 
+  lay out as you tan on the beach!",
+  price: 32.00 )
+
+product17.photo.attach(io: File.open("./app/assets/images/full-blanket.jpg"), filename: "full-blanket.jpg")
+
+product18 = Product.new(user_id: 4,
+  description: "Here are a full set of our previous blankets! Take them with you to the beach, on a hiking trip,
+  on a plane, or just keep them around at home for your regular use.",
+  price: 55.00 )
+
+product18.photo.attach(io: File.open("./app/assets/images/blanket-set.jpg"), filename: "blanket-set.jpg")
+
 
 product0.save!
 product1.save!
