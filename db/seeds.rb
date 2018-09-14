@@ -112,7 +112,7 @@ product9.photo.attach(io: File.open("./app/assets/images/lee-campbell-191016-uns
 
 product10 = Product.new(user_id: 2,
 product_name: "Hiking Backpack",
-description: "Another hiking bag! This time, I have listened to all of my clients
+description: "More hiking bags! This time, I have listened to all of my clients
 advice, and I have made the straps wider for comfort along with a few other upgrades.",
 price: 47.25)
 
@@ -120,7 +120,8 @@ product10.photo.attach(io: File.open("./app/assets/images/josiah-weiss-435592-un
 
 product11 = Product.new(user_id: 2,
 product_name: "Traveling Suitcase",
-description: "Traveling Suitcase that holds a lot of stuff for your longer vacations.",
+description: "Traveling Suitcase that holds a lot of stuff for your longer vacations. Much easier than carrying around
+those heavy bags.",
 price: 110.00)
 
 product11.photo.attach(io: File.open("./app/assets/images/michal-parzuchowski-262847-unsplash.jpg"), filename: "michal-parzuchowski-262847-unsplash.jpg")
@@ -134,12 +135,11 @@ product12.photo.attach(io: File.open("./app/assets/images/dog-blanket.jpg"), fil
 
 product13 = Product.new(user_id: 3,
 product_name: "Hiking Shoes",
-description: "I breaking out into the shoe business! Here are my first pair of
+description: "I am breaking out into the shoe business! Here are my first pair of
 hiking shoes. Various sizes available!",
 price: 14.00)
 
 product13.photo.attach(io: File.open("./app/assets/images/shoes.jpg"), filename: "shoes.jpg")
-
 
 product14 = Product.new(user_id: 3,
 product_name: "Back Pack with additions",
