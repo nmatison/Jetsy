@@ -190,7 +190,7 @@ product19.photo.attach(io: File.open("./app/assets/images/neck_pillow.jpeg"), fi
 product20 = Product.new(user_id: 4,
   product_name: "Beach Hammock",
   description: "Why continue to lay on the ground when you could be floating over a beach? Comes with
-  instructions and materials to hang.",
+  instructions and materials to hang. Nice to set up in the middle of a hiking trip as well.",
   price: 76.21)
 
 product20.photo.attach(io: File.open("./app/assets/images/hammock.jpg"), filename: "hammock.jpg")
@@ -209,6 +209,25 @@ product22 = Product.new(user_id: 3,
   price: 18.66)
 
 product22.photo.attach(io: File.open("./app/assets/images/notebook.jpg"), filename: "notebook.jpg")
+
+product23 = Product.new(user_id: 5,
+  product_name: "Black and Red Hammock",
+  description: "Newly released black and red hammock. Great for the beach and hiking trips.",
+  price: 65.00)
+
+product23.photo.attach(io: File.open("./app/assets/images/black-and-red-hammock.jpg"), filename: "black-and-red-hammock.jpg")
+
+product24 = Product.new(user_id: 5,
+  product_name: "Mason Jar",
+  description: "Cool, Hip Mason Jar. Great to take while hiking, or next in the sand while you are at the beach.
+  Comes with lids!",
+  price: 9.99)
+
+product24.photo.attach(io: File.open("./app/assets/images/mason-jar1.jpg"), filename: "mason-jar1.jpg")
+
+product25 = Product.new(user_id: 5, 
+  )
+
 
 
 product0.save!
