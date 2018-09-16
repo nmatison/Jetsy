@@ -18,8 +18,8 @@ class Category extends React.Component {
       <ul className="category-links">
         <Link className="category-index" to="/products">All Items</Link>
         <li onClick={() => this.handleClick("Bag")}>Bags</li>
-        {/* <li onClick={() => this.handleClick("Clothes")}>Clothes</li> */}
         <li onClick={() => this.handleClick("Beach")}>Beach</li>
+        <li onClick={() => this.handleClick("Comfort")}>Comfort</li>
         <li onClick={() => this.handleClick("Hiking")}>Hiking</li>
         <li onClick={() => this.handleClick("Business")}>Business</li>
       </ul>

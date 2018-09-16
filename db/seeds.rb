@@ -21,7 +21,7 @@ ApplicationRecord.connection.reset_pk_sequence!('shopping_cart_items')
 
 
 user0 = User.create!(username: "Marshalls", email_address: "marshall@marshall.blah", password: "gutsman")
-user1 = User.create!(username: "annie's-bags", email_address: "annie@annie.blah", password: "gutsman")
+user1 = User.create!(username: "annie's", email_address: "annie@annie.blah", password: "gutsman")
 user2 = User.create!(username: "UrbanWares", email_address: "urban@urban.blah", password: "gutsman")
 user3 = User.create!(username: "Essentials", email_address: "FoodTight@FoodTight.blah", password: "gutsman")
 user4 = User.create!(username: "Manufacturer United", email_address: "unitede@urban.blah", password: "gutsman")
