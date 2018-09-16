@@ -29,7 +29,6 @@ class Greeting extends React.Component {
 
 
 
-
 render () {
   const cart = <img className="cart" src="https://png.icons8.com/ios-glyphs/50/000000/shopping-cart.png" />
   const personIcon = <img className="person-icon" src="https://png.icons8.com/cotton/50/000000/gender-neutral-user.png" />

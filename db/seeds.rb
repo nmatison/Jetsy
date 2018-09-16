@@ -13,6 +13,13 @@ User.destroy_all
 Product.destroy_all
 Review.destroy_all
 
+ApplicationRecord.connection.reset_pk_sequence!('users')
+ApplicationRecord.connection.reset_pk_sequence!('reviews')
+ApplicationRecord.connection.reset_pk_sequence!('products')
+ApplicationRecord.connection.reset_pk_sequence!('shopping_carts')
+ApplicationRecord.connection.reset_pk_sequence!('shopping_cart_items')
+
+
 user0 = User.create!(username: "Marshalls", email_address: "marshall@marshall.blah", password: "gutsman")
 user1 = User.create!(username: "annie's-bags", email_address: "annie@annie.blah", password: "gutsman")
 user2 = User.create!(username: "UrbanWares", email_address: "urban@urban.blah", password: "gutsman")
@@ -226,7 +233,38 @@ product24 = Product.new(user_id: 5,
 product24.photo.attach(io: File.open("./app/assets/images/mason-jar1.jpg"), filename: "mason-jar1.jpg")
 
 product25 = Product.new(user_id: 5, 
-  )
+  product_name: "Red Duffle Bag",
+  description: "Light bag made with tough material. Comes with extra straps.",
+  price: 31.05)
+
+product25.photo.attach(io: File.open("./app/assets/images/another-bag.jpg"), filename: "another-bag.jpg")
+
+product26 = Product.new(user_id: 5,
+  product_name: "Multi-Colored Scarves",
+  description: "This is our newest collection of scarves. They come in a multitude of colors.",
+  price: 12.34)
+
+product26.photo.attach(io: File.open("./app/assets/images/scarves.jpg"), filename: "scarves.jpg")
+
+product27 = Product.new(user_id: 4,
+  product_name: "Simple Comfortable Beanie",
+  description: "This is a comfortable beanie. Where it on your next ski trip or your next adventure
+  in the snow! Comes in a variety of colors and sizes.",
+  price: 9.99)
+
+product27.photo.attach(io: File.open("./app/assets/images/beanie.jpg"), filename: "beanie.jpg")
+
+product28 = Product.new(user_id: 5,
+  product_name: "Two Person Tent",
+  description: "Tent made to hold two people. Great for your hiking trips and camping trips!
+  Sturdy and long lasting.",
+  price: 89.99)
+
+product28.photo.attach(io: File.open("./app/assets/images/tent.jpg"), filename: "tent.jpg")
+
+
+# product29.photo.attach(io: File.open("./app/assets/images/tent.jpg"), filename: "tent.jpg")
+# product30.photo.attach(io: File.open("./app/assets/images/tent.jpg"), filename: "tent.jpg")
 
 
 
@@ -246,3 +284,16 @@ product12.save!
 product13.save!
 product14.save!
 product15.save!
+product16.save!
+product17.save!
+product18.save!
+product19.save!
+product20.save!
+product21.save!
+product22.save!
+product23.save!
+product24.save!
+product25.save!
+product26.save!
+product27.save!
+product28.save!

@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2018_08_16_155628) do
     t.integer "user_id", null: false
     t.integer "product_id", null: false
     t.integer "rating", null: false
-    t.string "title", null: false
+    t.string "title"
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

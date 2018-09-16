@@ -211,7 +211,7 @@ header {
 .category-index {
   text-decoration: none;
   color: black;
-  border-bottom: 5px solid white;
+  border-bottom: 2px solid white;
 }
 
 .category-index:hover {

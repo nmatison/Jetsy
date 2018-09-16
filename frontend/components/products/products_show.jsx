@@ -82,8 +82,7 @@ class ProductShow extends React.Component {
     )
       }
 
-    return(
-      <div className="show-main" onClick={() => this.clearErrors()}>
+    return <div className="show-main" onClick={() => this.clearErrors()}>
         <div className="product-show-div">
           <div className="image-description">
             <img src={product.photoUrl} className="show-image-div" />
@@ -92,54 +91,48 @@ class ProductShow extends React.Component {
             <div className="product-information">
               <div className="title-price">
                 <h1 className="product-title">{product.product_name}</h1>
-                <h1 className="product-price">Price: ${product.price}/each</h1>
+                <h1 className="product-price">
+                  Price: ${product.price}
+                  /each
+                </h1>
               </div>
             </div>
             <div className="user-description">
-              <Link className="user-userpic"to={`/users/${user.id}`}>
+              <Link className="user-userpic" to={`/users/${user.id}`}>
                 <div className="sold-text">
                   <h1 className="sold-by">Sold By:</h1>
                   <h1 className="seller-name">{user.username}</h1>
                 </div>
-                <div className="seller-pic">
-                </div>
+                <div className="seller-pic" />
               </Link>
-              <h1 className="product-description">Description:
-                <br></br>
-                <br></br>
+              <h1 className="product-description">
+                Description:
+                <br />
+                <br />
                 {product.description}
               </h1>
             </div>
             {this.editLink()}
             <div className="quantity-cart">
-              <label>Quantity:
+              <label>
+                Quantity:
                 {this.quantitySelector()}
               </label>
             </div>
-            <input type="submit" className="add-cart" value="Add To Cart" onClick={(e) => this.addToCart(e)} />
+            <input type="submit" className="add-cart" value="Add To Cart" onClick={e => this.addToCart(e)} />
           </div>
         </div>
         <div className="review-more-items">
-          <ReviewIndex
-            currentUserId={this.props.currentUserId}
-            reviews={this.props.reviews}
-            users={this.props.users}
-            product={product}
-            fetchReviews={this.props.fetchReviews}
-            createReview={this.props.createReview}
-            updateReview={this.props.updateReview}
-            deleteReview={this.props.deleteReview}
-            errors={this.props.errors} />
+          <ReviewIndex currentUserId={this.props.currentUserId} reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} createReview={this.props.createReview} updateReview={this.props.updateReview} deleteReview={this.props.deleteReview} errors={this.props.errors} />
           <div className="side-bar">
-            <div className="more-from">
+            <Link to={`/users/${user.id}`} className="more-from">
               <h2>More from</h2>
               <h1>{user.username}</h1>
-            </div>
+            </Link>
             <div className="more-seller-items">{sellerProducts()}</div>
           </div>
         </div>
-      </div>
-    )
+      </div>;
   }
 }
 
