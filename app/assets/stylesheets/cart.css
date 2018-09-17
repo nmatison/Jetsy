@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   width: inherit;
-  min-height: calc(100vh - 100px);
+  min-height: calc(100Wivh - 100px);
 }
 
 .cart-main h1 {
@@ -51,7 +51,7 @@
 .cart-item-photo {
   object-fit: cover;
   height: 145px;
-  width: 120px;
+  min-width: 120px;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid white;
@@ -116,9 +116,8 @@
 }
 
 .cart-total-container {
-  min-width: 225px;
+  min-width: 325px;
   align-self: center;
-  /* margin-left: 3%; */
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -173,6 +172,7 @@
 
 .cart-total-information {
   display: flex;
+  justify-content: space-between;
 }
 
 
