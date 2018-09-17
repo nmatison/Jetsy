@@ -1,7 +1,6 @@
 .cart-main {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-around; */
   height: 100%;
   width: inherit;
   min-height: calc(100vh - 100px);
@@ -11,6 +10,10 @@
   text-align: center;
   margin-top: 2%;
   margin-bottom: 2%;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #f45800;
 }
 
 .cart-container {

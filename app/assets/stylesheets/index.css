@@ -21,6 +21,9 @@
   margin-right: 20px;
   letter-spacing: 0.5px;
   margin-top: 20px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: #f45800;
 }
 
 .product-index-items {
