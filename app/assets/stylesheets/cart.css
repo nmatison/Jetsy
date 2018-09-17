@@ -60,18 +60,35 @@
 .item-product-name {
   text-decoration: none;
   color: black;
+  margin-bottom: 7px;;
+}
+
+.item-product-price {
+  opacity: 0.6;
+  margin-bottom: 7px;;
+}
+
+.item-product-quantity {
+  opacity: 0.6;
+}
+
+.item-product-subtotal { 
+  margin-top: 30px;
 }
 
 .cart-item-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   min-width: 225px;
 }
+
 
 .remove-button {
   display: flex;
   align-items: flex-end;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .remove-button button {

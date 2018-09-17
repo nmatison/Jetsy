@@ -15,9 +15,9 @@ class CartItem extends React.Component {
     </Link>
     <div className="cart-item-details">
       <Link className="item-product-name" to={`products/${product.id}`} >{product.product_name}</Link>
-      <li>{`Price: $${product.price.toLocaleString()}/each`}</li>
-      <li>{`Quantity: ${item.quantity}`}</li>
-      <li>{`Subtotal: $${(
+      <li className="item-product-price">{`Price: $${product.price.toLocaleString()}/each`}</li>
+      <li className="item-product-quantity">{`Quantity: ${item.quantity}`}</li>
+      <li className="item-product-subtotal">{`Subtotal: $${(
         item.quantity * product.price
       ).toLocaleString()}`}</li>
     </div>
