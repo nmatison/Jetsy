@@ -54,31 +54,31 @@ class Cart extends React.Component {
             </div>
           </div>
           <div className="cart-total">
-          <div className="cart-total-container">
-            <div className="cart-total-information">
-              <ul className="cart-total-left">
-                <li>{`Subtotal:`}</li>
-                <li>{`Total Items:`}</li>
-                <li>{`Tax:`}</li>
-                <li>{`Shipping:`}</li>
-              </ul>
-              <ul className="cart-total-right">
-                <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
-                <li className="">{`${this.totalItems(this.props.cartItems)}`}</li>
-                <li>{`--`}</li>
-                <li>{`free`}</li>
-              </ul>
-            </div>
+            <div className="cart-total-container">
+              <div className="cart-total-information">
+                <ul className="cart-total-left">
+                  <li>{`Subtotal:`}</li>
+                  <li className="total-cart-items">{`Total Items:`}</li>
+                  <li className="tax">{`Tax:`}</li>
+                  <li className="shipping">{`Shipping:`}</li>
+                </ul>
+                <ul className="cart-total-right">
+                  <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
+                  <li className="total-cart-items">{`${this.totalItems(this.props.cartItems)}`}</li>
+                  <li className="tax">{`--`}</li>
+                  <li className="shipping">{`free`}</li>
+                </ul>
+              </div>
               <div className="estimated-total">
                 <li>{`Total:`}</li>
                 <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
               </div>
-            <div className="checkout-button">
-              <button>Checkout</button>
+              <div className="checkout-button">
+                <button>Checkout</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>;
   }
 }
