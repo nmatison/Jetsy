@@ -112,7 +112,7 @@ product9 = Product.new(user_id: 2,
 product_name: "Purse by Annie",
 description: "My very first purse release! Bring it with you on your trips to
 the big city! Plenty of room for all of your necessities. Why carry bags when you could be styling with this purse!",
-price: 75.00)
+price: 75.05)
 
 product9.photo.attach(io: File.open("./app/assets/images/lee-campbell-191016-unsplash.jpg"), filename: "lee-campbell-191016-unsplash.jpg")
 
@@ -129,14 +129,14 @@ product11 = Product.new(user_id: 2,
 product_name: "Traveling Suitcase",
 description: "Traveling Suitcase that holds a lot of stuff for your longer vacations. Much easier than carrying around
 those heavy bags.",
-price: 110.00)
+price: 110.23)
 
 product11.photo.attach(io: File.open("./app/assets/images/michal-parzuchowski-262847-unsplash.jpg"), filename: "michal-parzuchowski-262847-unsplash.jpg")
 
 product12 = Product.new(user_id: 3,
 product_name: "Comfy blanket",
 description: "Comfy blanket that can be used anywhere! Take it to the beach, on an airplane, or even on a hike! Dog not included!",
-price: 14.00)
+price: 14.45)
 
 product12.photo.attach(io: File.open("./app/assets/images/dog-blanket.jpg"), filename: "dog-blanket.jpg")
 
@@ -144,14 +144,14 @@ product13 = Product.new(user_id: 3,
 product_name: "Hiking Shoes",
 description: "I am breaking out into the shoe business! Here are my first pair of
 hiking shoes. Various sizes available!",
-price: 14.00)
+price: 44.99)
 
 product13.photo.attach(io: File.open("./app/assets/images/shoes.jpg"), filename: "shoes.jpg")
 
 product14 = Product.new(user_id: 3,
 product_name: "Back Pack with additions",
 description: "A backpack with a lot of additions supplied by other local sellers. Drop the bags and travel light!",
-price: 150.00)
+price: 150.89)
 
 product14.photo.attach(io: File.open("./app/assets/images/bag-camera.jpg"), filename: "bag-camera.jpg")
 
@@ -220,7 +220,7 @@ product22.photo.attach(io: File.open("./app/assets/images/notebook.jpg"), filena
 product23 = Product.new(user_id: 5,
   product_name: "Black and Red Hammock",
   description: "Newly released black and red hammock. Great for the beach and hiking trips.",
-  price: 65.00)
+  price: 65.21)
 
 product23.photo.attach(io: File.open("./app/assets/images/black-and-red-hammock.jpg"), filename: "black-and-red-hammock.jpg")
 
@@ -233,9 +233,9 @@ product24 = Product.new(user_id: 5,
 product24.photo.attach(io: File.open("./app/assets/images/mason-jar1.jpg"), filename: "mason-jar1.jpg")
 
 product25 = Product.new(user_id: 5, 
-  product_name: "Red Duffle Bag",
-  description: "Light bag made with tough material. Comes with extra straps.",
-  price: 31.05)
+  product_name: "Face Cream",
+  description: "Green face cream made to give you the comfort you feel at home while you are on the go!",
+  price: 10.95)
 
 product25.photo.attach(io: File.open("./app/assets/images/another-bag.jpg"), filename: "another-bag.jpg")
 
@@ -262,9 +262,23 @@ product28 = Product.new(user_id: 5,
 
 product28.photo.attach(io: File.open("./app/assets/images/tent.jpg"), filename: "tent.jpg")
 
+product29 = Product.new(user_id: 5,
+  product_name: "Healthy Crackers",
+  description: "Home-made crackers made with low salt and no fat! If you are looking for 
+  comfort food on the go, then look no further! Comes in packs of 100 and ships with protection
+  to make sure your food arrives safe and sound.",
+  price: 5.00)
 
-# product29.photo.attach(io: File.open("./app/assets/images/tent.jpg"), filename: "tent.jpg")
-# product30.photo.attach(io: File.open("./app/assets/images/tent.jpg"), filename: "tent.jpg")
+product29.photo.attach(io: File.open("./app/assets/images/crackers.jpg"), filename: "crackers.jpg")
+
+product30 = Product.new(user_id: 3,
+  product_name: "Hand-Bag",
+  description: "This is my largest hand bag yet! Take it with you on a business trip or on
+  any sort of vacation! Comes only in this one color.",
+  price: 97.08)
+
+product30.photo.attach(io: File.open("./app/assets/images/bag1.jpg"), filename: "bag1.jpg")
+
 
 
 
@@ -297,3 +311,5 @@ product25.save!
 product26.save!
 product27.save!
 product28.save!
+product29.save! 
+product30.save!

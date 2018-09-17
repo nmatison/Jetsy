@@ -46,6 +46,7 @@ class ProductShow extends React.Component {
     e.preventDefault()
     if (this.state.quantity) {
       this.props.createCartItem(this.state)
+      window.alert(`${this.state.quantity} ${this.props.product.product_name}'s added to your cart!`)
     } else {
       window.alert("Please Select A Quantity")
     }
@@ -60,7 +61,6 @@ class ProductShow extends React.Component {
   render() {
     if (!this.props.product || !this.props.users[this.props.product.user_id] || !this.props.reviews || !this.props.products.length) return null;
     const user = this.props.users[this.props.product.user_id]
-    console.log(this.props.product)
     const listOfProducts = this.props.products.filter((product) => product.user_id === user.id)
     let products;
     if (listOfProducts.length > 8) {
