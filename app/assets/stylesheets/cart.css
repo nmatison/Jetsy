@@ -89,6 +89,7 @@
   align-items: flex-end;
   margin-right: 15px;
   margin-bottom: 15px;
+  min-width: 125px;
 }
 
 .remove-button button {
