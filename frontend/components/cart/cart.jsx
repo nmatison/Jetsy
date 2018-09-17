@@ -41,9 +41,12 @@ class Cart extends React.Component {
   render() {
     if (!this.props.cartItems) return null
 
-    return <div className="cart-container">
-        <div className="cart-items">
+    return (
+    
+      <div className="cart-main">
           <h1>Shopping Cart</h1>
+      <div className="cart-container">
+        <div className="cart-items">
           <div className="cart-item-list">
             {this.cartList(
               this.props.cartItems,
@@ -73,7 +76,9 @@ class Cart extends React.Component {
             <button>Checkout</button>
           </div>
         </div>
-      </div>;
+        </div>
+      </div>
+    );
   }
 }
 

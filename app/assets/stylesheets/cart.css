@@ -1,10 +1,25 @@
+.cart-main {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  height: 100%;
+  width: inherit;
+  min-height: calc(100vh - 100px);
+}
+
+.cart-main h1 {
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
 .cart-container {
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   height: 100%;
   width: inherit;
-  min-height: calc(100vh - 100px);
 }
 
 .cart-items {
