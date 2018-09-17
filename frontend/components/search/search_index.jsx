@@ -28,7 +28,7 @@ class SearchIndex extends React.Component {
       return (
         <div className="products-index">
           <div className="items-div">
-            <h1 className="travel-items">Displaying All "{query}" Items </h1>
+            <h1 className="travel-items">Displaying All {query} Items </h1>
             <ul className="product-index-items">{products}</ul>
           </div>
         </div>

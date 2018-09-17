@@ -142,7 +142,7 @@ product12.photo.attach(io: File.open("./app/assets/images/dog-blanket.jpg"), fil
 
 product13 = Product.new(user_id: 3,
 product_name: "Hiking Shoes",
-description: "I am breaking out into the shoe business! Here are my first pair of
+description: "Here are my first pair of
 hiking shoes. Various sizes available!",
 price: 44.99)
 

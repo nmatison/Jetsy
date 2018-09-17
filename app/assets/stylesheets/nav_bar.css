@@ -5,9 +5,10 @@ header {
 }
 
 .nav-bar {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  height: 130px;
+  height: 115px;
 }
 
 .nav-bar-links {
