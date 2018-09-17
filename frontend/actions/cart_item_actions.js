@@ -24,7 +24,6 @@ const receiveCartItems = payload => ({
 });
 
 const removeCartItem = (cartItem) => {
-  console.log(cartItem) 
   return ({
     
     type: REMOVE_CART_ITEM,
