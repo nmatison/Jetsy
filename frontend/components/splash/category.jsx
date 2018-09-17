@@ -3,13 +3,12 @@ import { Link, withRouter } from "react-router-dom";
 
 class Category extends React.Component {
 
-
-
   handleClick (searchString) {
-    this.props.searchProducts({query_string: searchString}).then(() => this.props.history.push({
+    this.props.searchProducts({ query_string: searchString }).then(() => this.props.history.push({
       pathname: '/search',
       search: `${searchString}`
-  }));
+    }));
+    
 }
 
   render(){
