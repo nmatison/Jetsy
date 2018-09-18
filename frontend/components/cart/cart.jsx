@@ -17,11 +17,12 @@ class Cart extends React.Component {
   cartList(cartItems, products, deleteCartItem) {
     let itemsArray = Object.values(cartItems)
     if (itemsArray.length === 0) {
-      return (<p>
-          Your cart is looking empty. <Link className="category-index" to="/products">
-          Check out some of our selections and fill it up!
+      return <div className="empty-cart">
+          <p>Your cart is looking empty.</p> 
+          <Link className="link-to-index" to="/products">
+            Click here to fill it up!
           </Link>
-      </p>);
+        </div>;
     }
     return (
       itemsArray.map((item) => (

@@ -83,6 +83,23 @@
   min-width: 225px;
 }
 
+.empty-cart {
+  height: 100px;
+  overflow-wrap: break-word;
+}
+.link-to-index {
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid white;
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+.link-to-index:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #f45800;
+}
+
 
 .remove-button {
   display: flex;
