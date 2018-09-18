@@ -10,7 +10,7 @@ class ProductShow extends React.Component {
     this.addToCart = this.addToCart.bind(this);
     this.state = {
       quantity: null,
-      shopping_cart_id: this.props.cartId,
+      shopping_cart_id: null,
       product_id: null
     }
   }
@@ -48,6 +48,7 @@ class ProductShow extends React.Component {
       this.props.openModal("regtocontinue");
     } else {
       if (this.state.quantity) {
+        this.state.shopping_cart_id = this.props.cartId
         this.props.createCartItem(this.state)
         window.alert(`${this.state.quantity} ${this.props.product.product_name}'s added to your cart!`)
       } else {
