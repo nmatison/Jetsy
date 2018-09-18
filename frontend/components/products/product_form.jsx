@@ -73,7 +73,7 @@ class ProductForm extends React.Component {
       if (this.props.formType === "Update Your Product's Information") return null;
       return  <input className="choose-file" type="file" onChange={this.handleFile} />
     }
-
+z
 
   render () {
     const preview = this.state.photoUrl ? <img className="photo-preview" src={this.state.photoUrl} /> : null;

@@ -43,7 +43,7 @@ render () {
 
   const personalGreeting = () => (
     <span className="your-page">
-      <Link to='/products/new' className="sell-link">Sell a travel item</Link>
+      <Link to='/new-product' className="sell-link">Sell a travel item</Link>
       <Link className="you-link" to={`/users/${this.props.currentUser.id}`}>
         {personIcon}
         <span className="you-text">You</span>

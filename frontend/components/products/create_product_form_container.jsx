@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {createProduct, fetchProduct, removeErrors} from '../../actions/product_actions';
+import {createProduct, removeErrors} from '../../actions/product_actions';
 import ProductForm from './product_form';
 
 const mapStateToProps = state => {
@@ -17,7 +17,6 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchProduct: (id) => dispatch(fetchProduct(id)),
   removeErrors: () => dispatch(removeErrors()),
   action: (product) => dispatch(createProduct(product))
 });

@@ -27,7 +27,7 @@ class EditProductForm extends React.Component {
         <ProductForm removeErrors={removeErrors} errors={errors} action={action} match={this.props.match} history={this.props.history} formType={formType} product={product} deleteProduct={deleteProduct} />
     );
   }
-}
+};
 
 
 const mapStateToProps = (state, ownProps) => {
