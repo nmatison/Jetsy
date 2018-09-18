@@ -48,7 +48,11 @@ render () {
         {personIcon}
         <span className="you-text">You</span>
       </Link>
-      <input className="logout-input" type="submit" value="Log Out" onClick={this.props.logout} />
+      <input 
+      className="logout-input" 
+      type="submit" 
+      value="Log Out" 
+        onClick={this.props.logout} />
         <Link to="/cart" className="cart-div">
           {cart}
           <span className="cart-text">Cart</span>

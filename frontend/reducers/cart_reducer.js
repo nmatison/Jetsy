@@ -1,4 +1,4 @@
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from '../actions/session_actions';
 import { RECEIVE_CART_ITEMS, REMOVE_CART_ITEM } from '../actions/cart_item_actions'
 import { RECEIVE_SEARCH_PRODUCTS } from '../actions/search_actions';
 import { merge } from 'lodash';
@@ -20,9 +20,11 @@ const cartReducer = (state = {}, action) => {
     case RECEIVE_SEARCH_PRODUCTS:
       let newState2 = Object.assign({}, state);
       if (newState2.cartItems) {
-        delete newState2.cartItems
+        delete newState2.cartItems;
       }
       return newState2;
+    case LOGOUT_CURRENT_USER:
+      return {cartItems: {}};
     default:
       return state;
   }
