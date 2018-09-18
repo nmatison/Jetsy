@@ -1,5 +1,6 @@
 import React from 'react';
 import CartItem from './cart_item';
+import { Link } from 'react-router-dom';
 
 class Cart extends React.Component {
   constructor(props) {
@@ -14,8 +15,16 @@ class Cart extends React.Component {
   }
 
   cartList(cartItems, products, deleteCartItem) {
+    let itemsArray = Object.values(cartItems)
+    if (itemsArray.length === 0) {
+      return (<p>
+          Your cart is looking empty. <Link className="category-index" to="/products">
+          Check out some of our selections and fill it up!
+          </Link>
+      </p>);
+    }
     return (
-      Object.values(cartItems).map((item) => (
+      itemsArray.map((item) => (
         <CartItem key={item.updated_at} item={item} product={products[item.product_id]} deleteCartItem={deleteCartItem} />
       ))
     );
@@ -36,6 +45,14 @@ class Cart extends React.Component {
       counter += item.quantity
     });
     return counter
+  }
+
+  checkout(cartItems) {
+    let itemsArray = Object.values(cartItems);
+      if (itemsArray.length === 0) {
+        return window.alert("There is nothing in your cart!")
+      }
+    return window.alert("I hope you have enjoyed my site! Feel free to check out my github and linked-in links in the footer!");
   }
 
   render() {
@@ -74,7 +91,7 @@ class Cart extends React.Component {
                 <li>{`$${this.calcTotal(this.props.cartItems, this.props.cartProducts)}`}</li>
               </div>
               <div className="checkout-button">
-                <button onClick={(e) => window.alert("I hope you have enjoyed my site! Feel free to check out my github and linked-in links in the footer!")}>Checkout</button>
+                <button onClick={(e) => this.checkout(this.props.cartItems)}>Checkout</button>
               </div>
             </div>
           </div>
