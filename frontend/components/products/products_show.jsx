@@ -44,11 +44,15 @@ class ProductShow extends React.Component {
 
   addToCart(e) {
     e.preventDefault()
-    if (this.state.quantity) {
-      this.props.createCartItem(this.state)
-      window.alert(`${this.state.quantity} ${this.props.product.product_name}'s added to your cart!`)
+    if (!this.props.currentUserId) {
+      this.props.openModal("regtocontinue");
     } else {
-      window.alert("Please Select A Quantity")
+      if (this.state.quantity) {
+        this.props.createCartItem(this.state)
+        window.alert(`${this.state.quantity} ${this.props.product.product_name}'s added to your cart!`)
+      } else {
+        window.alert("Please Select A Quantity")
+      }
     }
   }
 

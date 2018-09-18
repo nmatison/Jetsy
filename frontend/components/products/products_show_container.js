@@ -1,8 +1,17 @@
-import { fetchProducts, fetchProduct, deleteProduct } from '../../actions/product_actions';
 import ProductShow from './products_show';
 import { connect } from 'react-redux';
-import { fetchReviews, createReview, updateReview, deleteReview, removeErrors } from '../../actions/review_actions'
+import { 
+  fetchProducts, 
+  fetchProduct, 
+  deleteProduct } from '../../actions/product_actions';
+import { 
+  fetchReviews, 
+  createReview, 
+  updateReview, 
+  deleteReview, 
+  removeErrors } from '../../actions/review_actions'
 import { createCartItem } from '../../actions/cart_item_actions';
+import { openModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return ({product: state.entities.products[ownProps.match.params.productId],
@@ -24,6 +33,7 @@ const mapDispatchToProps = dispatch => ({
   updateReview: (review) => dispatch(updateReview(review)),
   deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
   deleteProduct: (id) => dispatch(deleteProduct(id)),
+  openModal: (type) => dispatch(openModal(type)),
   removeErrors: () => dispatch(removeErrors())
 })
 

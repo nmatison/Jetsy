@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import {withRouter} from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom';
 import CategoryContainer from './category_container';
 
 class Greeting extends React.Component {
@@ -20,14 +19,11 @@ class Greeting extends React.Component {
 }))
   }
 
-
   update() {
     return (e) => {
       this.setState({["query_string"]: e.target.value})
     }
   }
-
-
 
 render () {
   const cart = <img className="cart" src="https://png.icons8.com/ios-glyphs/50/000000/shopping-cart.png" />

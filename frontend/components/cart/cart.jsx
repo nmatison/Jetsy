@@ -52,7 +52,7 @@ class Cart extends React.Component {
       if (itemsArray.length === 0) {
         return window.alert("There is nothing in your cart!")
       }
-    return window.alert("I hope you have enjoyed my site! Feel free to check out my github and linked-in links in the footer!");
+    return window.alert("I hope you have enjoyed my site! Feel free to check out my Github and Linked-in links at the bottom of the page.");
   }
 
   render() {
