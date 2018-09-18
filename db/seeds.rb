@@ -237,7 +237,7 @@ product25 = Product.new(user_id: 5,
   description: "Green face cream made to give you the comfort you feel at home while you are on the go!",
   price: 10.95)
 
-product25.photo.attach(io: File.open("./app/assets/images/another-bag.jpg"), filename: "another-bag.jpg")
+product25.photo.attach(io: File.open("./app/assets/images/cream.jpg"), filename: "cream.jpg")
 
 product26 = Product.new(user_id: 5,
   product_name: "Multi-Colored Scarves",
@@ -278,8 +278,6 @@ product30 = Product.new(user_id: 3,
   price: 97.08)
 
 product30.photo.attach(io: File.open("./app/assets/images/bag1.jpg"), filename: "bag1.jpg")
-
-
 
 
 product0.save!
