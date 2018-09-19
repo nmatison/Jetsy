@@ -26,6 +26,9 @@ This project was designed and worked on in a 10 day time-frame, and I will be re
 ## Seller Profile Page
 ![seller profile page](https://github.com/nmatison/Jetsy/blob/master/app/assets/images/Seller%20Show%20Page.jpg)
 
+### Shopping Cart and Categories
+![Shopping Cart](https://github.com/nmatison/Jetsy/blob/master/app/assets/images/ShoppingCart.gif)
+
 
 ## Review Form
 The Review form was probably the most difficult challenged faced during the completion of this project. It had multiple components being rendered on top of one another. This challenge was solved by properly passing down props to the child components when necessary and putting in proper checks in each component to ensure that the correct props were being received by each child component.
@@ -93,5 +96,5 @@ Due to the short time-frame and its connection with React-Redux, Rails was chose
 The front-end is set up to handle different reducers for different responses and data objects (reviews, errors, users, products, etc) returned from Rails.
 
 ## Possible Future Additions
-+ Finish the shopping cart feature (the back-end is already set-up)
-+ Create categories and favorites for products.
++ Allow users to follow sellers.
++ Create favorites for products.
