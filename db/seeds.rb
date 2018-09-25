@@ -25,13 +25,12 @@ user1 = User.create!(username: "annie's", email_address: "annie@annie.blah", pas
 user2 = User.create!(username: "UrbanWares", email_address: "urban@urban.blah", password: "gutsman")
 user3 = User.create!(username: "Essentials", email_address: "FoodTight@FoodTight.blah", password: "gutsman")
 user4 = User.create!(username: "Manufacturer United", email_address: "unitede@urban.blah", password: "gutsman")
-user5 = User.create!(username: "Demo User", email_address: "demo@demo.com", password: "demodemo")
 cart0 = ShoppingCart.create!(user_id: 1)
-cart0 = ShoppingCart.create!(user_id: 2)
-cart0 = ShoppingCart.create!(user_id: 3)
-cart0 = ShoppingCart.create!(user_id: 4)
-cart0 = ShoppingCart.create!(user_id: 5)
-cart0 = ShoppingCart.create!(user_id: 6)
+cart1 = ShoppingCart.create!(user_id: 2)
+cart2 = ShoppingCart.create!(user_id: 3)
+cart3 = ShoppingCart.create!(user_id: 4)
+cart4 = ShoppingCart.create!(user_id: 5)
+cart5 = ShoppingCart.create!(user_id: 6)
 # random users for comments
 
 product0 = Product.new(user_id: 1,
