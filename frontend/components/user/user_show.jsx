@@ -62,7 +62,12 @@ class UserShow extends React.Component {
 
   render () {
     if (!this.props.user || !this.props.sellerProducts) return null;
-    const welcome = `${this.props.user.username}'s products:`
+    let welcome;
+    if (this.props.user.username[this.props.user.username.length - 1] === "s") {
+      welcome = `${this.props.user.username}' products:`;
+    } else {
+      welcome = `${this.props.user.username}'s products:`;
+    }
     const sellerProductItems = this.props.sellerProducts.map((product) => <UserShowItems key={product.id} product={product} />);
     const totalProducts = this.props.sellerProducts.length;
 
