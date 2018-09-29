@@ -12,7 +12,8 @@ import EditProductContainer from './products/edit_product_form_container';
 import UserShowContainer from './user/user_show_container'
 import SearchIndexContainer from './search/search_index_container';
 import CartContainer from './cart/cart_container';
-import Footer from './footer.jsx'
+import Footer from './footer'
+import ScrollToTop from './scrollToTop';
 
 const App = () =>(
   <div className= "outest-div">
@@ -21,6 +22,7 @@ const App = () =>(
           <GreetingContainer />
       </header>
       <div className="main-div">
+      <ScrollToTop>
         <Route exact path="/" component ={SplashPage} />
         <Route exact path='/search' component={SearchIndexContainer} />
         <Route exact path="/products" component={ProductIndexContainer} />
@@ -29,6 +31,7 @@ const App = () =>(
         <Route exact path='/cart' component={CartContainer} />
         <ProtectedRoute exact path='/new-product' component={CreateProductFormContainer} />
         <ProtectedRoute exact path='/products/:productId/edit' component={EditProductContainer} />
+      </ScrollToTop>
       </div>
       <Footer />
   </div>
