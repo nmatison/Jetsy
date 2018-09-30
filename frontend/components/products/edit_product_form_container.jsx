@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductForm from './product_form';
-import {fetchProduct, updateProduct, deleteProduct, removeErrors} from '../../actions/product_actions';
+import { fetchProduct, updateProduct, deleteProduct, removeErrors } from '../../actions/product_actions';
 
 class EditProductForm extends React.Component {
 
@@ -22,8 +22,6 @@ class EditProductForm extends React.Component {
         <ProductForm removeErrors={removeErrors} 
         errors={errors} 
         action={action} 
-        match={this.props.match} 
-        history={this.props.history} 
         formType={formType} 
         product={product} 
         deleteProduct={deleteProduct} />
@@ -34,9 +32,8 @@ class EditProductForm extends React.Component {
 const mapStateToProps = (state, ownProps) => {
   const defaultProduct = {user_id: null, product_name: '', description: '', price: ''};
   const product = state.entities.products[ownProps.match.params.productId] || defaultProduct;
-  const currentUserId = state.session.id;
   const formType = "Update Your Product's Information";
-  return {product, formType, currentUserId, errors: state.errors.product}
+  return {product, formType, errors: state.errors.product}
 };
 
 const mapDispatchToProps = dispatch => ({

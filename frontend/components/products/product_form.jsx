@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 
 class ProductForm extends React.Component {
 
@@ -119,4 +119,4 @@ z
   }
 }
 
-export default ProductForm;
+export default withRouter(ProductForm);
