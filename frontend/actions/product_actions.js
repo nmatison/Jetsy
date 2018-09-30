@@ -7,10 +7,6 @@ export const REMOVE_ERRORS = "REMOVE_ERRORS";
 export const RECEIVE_PRODUCT_ERRORS = "RECEIVE_PRODUCT_ERRORS";
 
 
-// export const fetchProducts = () => dispatch => (
-  // ProductApiUtil.fetchProducts().then(products => dispatch(receiveProducts(products)))
-// );
-
 export const fetchProducts = () => dispatch => (
   ProductApiUtil.fetchProducts().then((products) => dispatch(receiveProducts(products)))
 );

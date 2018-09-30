@@ -5,7 +5,6 @@ export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const LOGOUT_CURRENT_USER = "LOGOUT_CURRENT_USER"
 export const REMOVE_ERRORS = "REMOVE_ERRORS"
 
-
 export const login = user => dispatch => (
   SessionApiUtil.login(user).then((payload) => dispatch(receiveCurrentUser(payload)), (err) => dispatch(receiveErrors(err)))
 );
