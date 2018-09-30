@@ -1,6 +1,6 @@
 import React from 'react';
 import ReviewFormItem from './review_form_item';
-import CreateEditForm from './create_review_form';
+import CreateEditFormContainer from './create_edit_review_container';
 
 class ReviewIndex extends React.Component {
 
@@ -24,11 +24,8 @@ class ReviewIndex extends React.Component {
         review = reviewed;
       }
 
-      return <CreateEditForm
+      return <CreateEditFormContainer
         review={review}
-        createReview={this.props.createReview}
-        updateReview={this.props.updateReview}
-        deleteReview={this.props.deleteReview}
         errors={this.props.errors}
         />
     }

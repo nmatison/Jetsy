@@ -5,11 +5,7 @@ import {
   fetchProduct, 
   deleteProduct } from '../../actions/product_actions';
 import { 
-  fetchReviews, 
-  createReview, 
-  updateReview, 
-  deleteReview, 
-  removeErrors } from '../../actions/review_actions'
+  fetchReviews, removeErrors } from '../../actions/review_actions'
 import { createCartItem } from '../../actions/cart_item_actions';
 import { openModal } from '../../actions/modal_actions';
 
@@ -29,9 +25,6 @@ const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts()),
   createCartItem: (cartItem) => dispatch(createCartItem(cartItem)),
   fetchReviews: (productId) => dispatch(fetchReviews(productId)),
-  createReview: (review) => dispatch(createReview(review)),
-  updateReview: (review) => dispatch(updateReview(review)),
-  deleteReview: (reviewId) => dispatch(deleteReview(reviewId)),
   deleteProduct: (id) => dispatch(deleteProduct(id)),
   openModal: (type) => dispatch(openModal(type)),
   removeErrors: () => dispatch(removeErrors())

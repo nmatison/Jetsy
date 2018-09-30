@@ -10,7 +10,13 @@ class ProductIndex extends React.Component {
 
   render () {
     if (Object.values(this.props.users).length == 1) return null
-    const products = this.props.products.map((product) => <ProductIndexItem product={product} users={this.props.users} key={product.id} />)
+    const products = this.props.products.map((product) => {
+    <ProductIndexItem 
+      product={product} 
+      users={this.props.users}
+      key={product.id} 
+      />
+    });
 
       return (
         <div className="products-index">
@@ -19,7 +25,8 @@ class ProductIndex extends React.Component {
             <ul className="product-index-items">{products}</ul>
           </div>
         </div>
-      )}
+      );
+    };
 }
 
 export default ProductIndex;

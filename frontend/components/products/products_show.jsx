@@ -128,7 +128,13 @@ class ProductShow extends React.Component {
           </div>
         </div>
         <div className="review-more-items">
-          <ReviewIndex currentUserId={this.props.currentUserId} reviews={this.props.reviews} users={this.props.users} product={product} fetchReviews={this.props.fetchReviews} createReview={this.props.createReview} updateReview={this.props.updateReview} deleteReview={this.props.deleteReview} errors={this.props.errors} />
+          <ReviewIndex 
+            currentUserId={this.props.currentUserId} 
+            reviews={this.props.reviews} 
+            users={this.props.users} 
+            product={product} 
+            fetchReviews={this.props.fetchReviews} 
+            errors={this.props.errors} />
           <div className="side-bar">
             <Link to={`/users/${user.id}`} className="more-from">
               <h2>More from</h2>
