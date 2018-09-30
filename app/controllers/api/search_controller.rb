@@ -1,6 +1,6 @@
 class Api::SearchController < ApplicationController
 
-  def index
+  def search
     search_string = search_params["query_string"].downcase
 
     @products = Product.all.select do |product|

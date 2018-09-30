@@ -8,7 +8,8 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index, :create, :update]
     end
     resources :reviews, only: [:destroy]
-    resources :search, only: [:index]
+    get '/search', to: 'search#search'
+    # resources :search, only: [:index]
     resources :shopping_carts, only: [:create]
     resources :shopping_cart_items, only: [:index, :create, :destroy]
   end
