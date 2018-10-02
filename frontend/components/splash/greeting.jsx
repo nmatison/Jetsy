@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import CategoryContainer from './category_container';
 import PersonalGreeting from './personal_greeting';
+import SessionLinks from './session_links';
 
 class Greeting extends React.Component {
 
@@ -20,21 +21,6 @@ class Greeting extends React.Component {
     }));
   }
 
-  sessionLinks() {
-    const cart = <img className="cart" src="https://png.icons8.com/ios-glyphs/50/000000/shopping-cart.png" />
-    return (
-      <nav className="login-signup">
-        <button className="signup-button" onClick={() => this.props.openModal('regtocontinue')}>Sell on Jetsy</button>
-        <button className="signup-button" onClick={() => this.props.openModal('signup')}>Register</button>
-        <button className="login-button" onClick={() => this.props.openModal('login')}>Sign In</button>
-        <Link to="/cart" className="cart-div">
-          {cart}
-          <span className="cart-text">Cart</span>
-        </Link>
-      </nav>
-    );
-  };
-
   update() {
     return (e) => {
       this.setState({["query_string"]: e.target.value})
@@ -42,7 +28,6 @@ class Greeting extends React.Component {
   }
 
 render () {
-  
     return <div className="nav-bar">
         <nav className="nav-bar-links">
           <form className="title-and-search" onSubmit={this.handleSubmit}>
@@ -54,7 +39,10 @@ render () {
             </span>
             <input type="submit" className="search-submit" value="Search" />
           </form>
-          {this.props.currentUser ? <PersonalGreeting currentUser={this.props.currentUser} logout={this.props.logout} /> : this.sessionLinks()}
+          {this.props.currentUser ? <PersonalGreeting 
+            currentUser={this.props.currentUser} 
+            logout={this.props.logout} /> : <SessionLinks openModal={this.props.openModal} /> 
+          };
         </nav>
           <CategoryContainer />
       </div>;
