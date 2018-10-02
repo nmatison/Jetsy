@@ -1,7 +1,6 @@
 import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
-import {Link, Switch} from 'react-router-dom';
 import SplashPage from './splash/splash_page';
 import GreetingContainer from './splash/greeting_container';
 import Modal from './splash/modal';
@@ -39,4 +38,3 @@ const App = () =>(
 
 export default App;
 
-// <Route exact path="/" component={}></Route>
