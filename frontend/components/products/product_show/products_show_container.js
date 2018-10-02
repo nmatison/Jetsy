@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import { 
   fetchProducts, 
   fetchProduct, 
-  deleteProduct } from '../../actions/product_actions';
+  deleteProduct } from '../../../actions/product_actions';
 import { 
-  fetchReviews, removeErrors } from '../../actions/review_actions'
-import { createCartItem } from '../../actions/cart_item_actions';
-import { openModal } from '../../actions/modal_actions';
+  fetchReviews, removeErrors } from '../../../actions/review_actions'
+import { createCartItem } from '../../../actions/cart_item_actions';
+import { openModal } from '../../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return ({product: state.entities.products[ownProps.match.params.productId],

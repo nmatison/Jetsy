@@ -5,10 +5,10 @@ import {Link, Switch} from 'react-router-dom';
 import SplashPage from './splash/splash_page';
 import GreetingContainer from './splash/greeting_container';
 import Modal from './splash/modal';
-import ProductIndexContainer from './products/products_index_container';
-import ProductShowContainer from './products/products_show_container';
-import CreateProductFormContainer from './products/create_product_form_container';
-import EditProductContainer from './products/edit_product_form_container';
+import ProductIndexContainer from './products/product_index/products_index_container';
+import ProductShowContainer from './products/product_show/products_show_container';
+import CreateProductFormContainer from './products/product_form/create_product_form_container';
+import EditProductContainer from './products/product_form/edit_product_form_container';
 import UserShowContainer from './user/user_show_container'
 import SearchIndexContainer from './search/search_index_container';
 import CartContainer from './cart/cart_container';

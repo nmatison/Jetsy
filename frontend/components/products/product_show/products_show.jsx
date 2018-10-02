@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom'
-import ReviewIndex from '../reviews/review_index';
+import ReviewIndex from '../../reviews/review_index';
 
 
 class ProductShow extends React.Component {

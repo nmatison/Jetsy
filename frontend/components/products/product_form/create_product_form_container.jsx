@@ -1,5 +1,5 @@
-import {connect} from 'react-redux';
-import {createProduct, removeErrors} from '../../actions/product_actions';
+import { connect } from 'react-redux';
+import { createProduct, removeErrors } from '../../../actions/product_actions';
 import ProductForm from './product_form';
 
 const mapStateToProps = state => {

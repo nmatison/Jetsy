@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ProductForm from './product_form';
-import { fetchProduct, updateProduct, deleteProduct, removeErrors } from '../../actions/product_actions';
+import { fetchProduct, updateProduct, deleteProduct, removeErrors } from '../../../actions/product_actions';
 
 class EditProductForm extends React.Component {
 
