@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Redirect} from 'react-router-dom';
 import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import SplashPage from './splash/splash_page';
-import GreetingContainer from './splash/greeting_container';
+import GreetingContainer from './splash/greeting/greeting_container';
 import Modal from './splash/modal';
 import ProductIndexContainer from './products/product_index/products_index_container';
 import ProductShowContainer from './products/product_show/products_show_container';

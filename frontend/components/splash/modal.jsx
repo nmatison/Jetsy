@@ -34,7 +34,7 @@ function Modal({modal, closeModal, removeErrors}) {
       </div>
     </div>
   );
-}
+};
 
 const mapStateToProps = state => {
   return {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import CategoryContainer from './category_container';
+import CategoryContainer from '../category_container';
 import PersonalGreeting from './personal_greeting';
 import SessionLinks from './session_links';
 

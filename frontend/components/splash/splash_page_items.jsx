@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SplashPageItems = () => {
   return (
@@ -10,8 +10,8 @@ const SplashPageItems = () => {
       <Link className="splash-item" to={`/products/16`}><li className="splash4"></li></Link>
       <Link className="splash-item" to={`/products/1`}><li className="splash5"></li></Link>
     </ul>
-  )
-}
+  );
+};
 
 
 export default SplashPageItems;
