@@ -7,8 +7,7 @@ class Category extends React.Component {
     this.props.searchProducts({ query_string: searchString }).then(() => this.props.history.push({
       pathname: '/search',
       search: `${searchString}`
-    }));
-    
+    }));   
 }
 
   render(){
