@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import CategoryContainer from './category_container';
+import PersonalGreeting from './personal_greeting';
 
 class Greeting extends React.Component {
 
@@ -34,29 +35,6 @@ class Greeting extends React.Component {
     );
   };
 
-  personalGreeting() {
-    const cart = <img className="cart" src="https://png.icons8.com/ios-glyphs/50/000000/shopping-cart.png" />
-    const personIcon = <img className="person-icon" src="https://png.icons8.com/cotton/50/000000/gender-neutral-user.png" />
-    return (
-      <span className="your-page">
-        <Link to='/new-product' className="sell-link">Sell a travel item</Link>
-        <Link className="you-link" to={`/users/${this.props.currentUser.id}`}>
-          {personIcon}
-          <span className="you-text">You</span>
-        </Link>
-        <input
-          className="logout-input"
-          type="submit"
-          value="Log Out"
-          onClick={this.props.logout} />
-        <Link to="/cart" className="cart-div">
-          {cart}
-          <span className="cart-text">Cart</span>
-        </Link>
-      </span>
-    );
-  };
-
   update() {
     return (e) => {
       this.setState({["query_string"]: e.target.value})
@@ -65,8 +43,6 @@ class Greeting extends React.Component {
 
 render () {
   
-
-
     return <div className="nav-bar">
         <nav className="nav-bar-links">
           <form className="title-and-search" onSubmit={this.handleSubmit}>
@@ -78,7 +54,7 @@ render () {
             </span>
             <input type="submit" className="search-submit" value="Search" />
           </form>
-          {this.props.currentUser ? this.personalGreeting() : this.sessionLinks()}
+          {this.props.currentUser ? <PersonalGreeting currentUser={this.props.currentUser} logout={this.props.logout} /> : this.sessionLinks()}
         </nav>
           <CategoryContainer />
       </div>;
