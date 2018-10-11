@@ -35,17 +35,17 @@ render () {
               Jetsy
             </Link>
             <span className="search-span">
-              <input onChange={this.update()} className="search-bar" type="text" placeholder="Search for travel items" />
+              <input onChange={this.update()} className="search-bar" type="search" placeholder="Search for travel items" />
             </span>
             <input type="submit" className="search-submit" value="Search" />
           </form>
           {this.props.currentUser ? <PersonalGreeting 
             currentUser={this.props.currentUser} 
             logout={this.props.logout} /> : <SessionLinks openModal={this.props.openModal} /> 
-          };
+          }
         </nav>
           <CategoryContainer />
-      </div>;
+      </div>
   }
 }
 export default withRouter(Greeting);
