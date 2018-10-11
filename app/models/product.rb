@@ -8,7 +8,7 @@ class Product < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :shopping_cart_items, dependent: :destroy
   has_many :categorizes, dependent: :destroy
-  has_one :category, through: :categorizes
+  has_many :category, through: :categorizes
   has_one_attached :photo
 
 
