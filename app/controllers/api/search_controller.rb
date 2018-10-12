@@ -2,19 +2,18 @@ class Api::SearchController < ApplicationController
 
   def search
     search_string = search_params["query_string"].downcase
-
-    @products = Product.all.select do |product|
-      name = product.product_name.downcase
-      description = product.description.downcase
-
-      (!LITTLE_WORDS.include?(search_string)) &&
-      (name.include?(search_string)||
-      description.include?(search_string))
+    if COMMON_WORDS.include?(search_string) || search_string.length < 3 
+      @products = []
+      render 'api/products/index' if @products
+      return
     end
+
+    @products = Product.where('product_name LIKE ? OR description LIKE ?', "%#{search_string}%", "%#{search_string}%")
+
     render 'api/products/index' if @products
   end
 
-  LITTLE_WORDS = ["a", "about", "above", "above", "across",
+  COMMON_WORDS = ["a", "about", "above", "above", "across",
     "after", "afterwards", "again", "against", "all", "almost", "alone",
      "along", "already", "also","although","always","am","among", "amongst",
      "amoungst", "amount",  "an", "and", "another", "any","anyhow","anyone",
