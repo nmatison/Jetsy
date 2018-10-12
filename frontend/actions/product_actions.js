@@ -11,7 +11,7 @@ export const fetchProducts = () => dispatch => (
   ProductApiUtil.fetchProducts().then((products) => dispatch(receiveProducts(products)))
 );
 
-export const fetchProduct = (id) => dispath => (
+export const fetchProduct = (id) => dispatch => (
   ProductApiUtil.fetchProduct(id).then(product => dispatch(receiveProduct(product)))
 );
 
@@ -24,7 +24,7 @@ export const updateProduct = (product) => dispatch => (
 );
 
 
-export const deleteProduct = (id) => dispath => {
+export const deleteProduct = (id) => dispatch => {
   return ProductApiUtil.deleteProduct(id).then(product => dispatch(removeProduct(product)))
 };
 
