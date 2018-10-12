@@ -9,6 +9,9 @@ class Api::ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @category = Category.where("category_name LIKE ?", product_params[:c_name])
+    @category ||= Category.save(category_name: product_params[:c_name])
+    Categorize.save(product_id: @product.id, category_id: @category.id)
     if @product.save
       render 'api/products/show'
     else
@@ -37,6 +40,6 @@ class Api::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:id, :user_id, :product_name, :description, :price, :photo)
+    params.require(:product).permit(:id, :user_id, :product_name, :description, :price, :photo, :c_name)
   end
 end

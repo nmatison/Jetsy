@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import Root from './components/root';
 import configureStore from './store/store';
-import {deleteCartItem} from './actions/cart_item_actions'
+import { deleteCartItem } from './actions/cart_item_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
