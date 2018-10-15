@@ -24,6 +24,8 @@ class ProductForm extends React.Component {
        productData.append('product[price]', this.state.price);
        productData.append('product[description]', this.state.description);
        productData.append('product[c_name]', this.state.c_name)
+       productData.append('product[c_name2]', this.state.c_name2)
+       productData.append('product[c_name3]', this.state.c_name3)
        if (this.state.photoFile) {
          productData.append('product[photo]', this.state.photoFile);
          this.props.action(productData).then(
@@ -78,7 +80,6 @@ class ProductForm extends React.Component {
   categorySelector(c_type, c_val) {
     let default_value;
     default_value = c_val === "" ? "Select Category" : c_val
-    console.log(default_value)
 
     return(
       <select name="Category" defaultValue={default_value} className="category" onChange={(e) => this.setState({ [c_type]: e.target.value})}>
