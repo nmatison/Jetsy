@@ -76,6 +76,7 @@ class Api::ProductsController < ApplicationController
         cat = create_checker(cat)
       end
       result << cat.id
+      i += 1
     end
     create_associations(result)
   end
