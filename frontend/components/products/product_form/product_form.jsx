@@ -78,7 +78,7 @@ class ProductForm extends React.Component {
 
   categorySelector() {
     return(
-      <select name="Category" defaultValue="Select Category" className="quantity" onChange={(e) => this.setState({ c_name: e.target.value})}>
+      <select name="Category" defaultValue="Select Category" className="category" onChange={(e) => this.setState({ c_name: e.target.value})}>
         <option disabled="true" value={"Select Category"}>{"Select Category"}</option>
         <option value="Bags">Bags</option>
         <option value="Beach">Beach</option>
@@ -118,7 +118,10 @@ class ProductForm extends React.Component {
                 <label className="product-label">Description:</label>
                 <textarea className="product-input" placeholder=" All of your selling points for your item go here!" value={this.state.description} rows="10" cols="100" onChange={this.update('description')} />
               </div>
-              {this.categorySelector()}
+              <div className="description">
+              <label className="product-label">Categories:</label>
+                {this.categorySelector()}
+              </div>
               <div className="product-inputs">
                 <div className="cancel-div"><Link className="cancel" to="/products">Cancel</Link></div>
                 <div className="submit-product-div"><input className="submit-product" type="submit" value="Submit Product"/></div>
