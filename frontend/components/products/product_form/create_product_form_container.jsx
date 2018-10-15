@@ -9,7 +9,10 @@ const mapStateToProps = state => {
     description: '',
     price: '',
     photoFile: null,
-    photoUrl: null
+    photoUrl: null,
+    c_name: "",
+    c_name2: "",
+    c_name3: ""
   };
   const formType = "Add a new listing";
   const currentUserId = state.session.id;

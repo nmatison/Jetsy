@@ -30,7 +30,14 @@ class EditProductForm extends React.Component {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  const defaultProduct = {user_id: null, product_name: '', description: '', price: ''};
+  const defaultProduct = { user_id: null, 
+    product_name: "", 
+    description: "", 
+    price: "", 
+    c_name: "", 
+    c_name2: "", 
+    c_name3: "" 
+  };
   const product = state.entities.products[ownProps.match.params.productId] || defaultProduct;
   const formType = "Update Your Product's Information";
   return {product, formType, errors: state.errors.product}

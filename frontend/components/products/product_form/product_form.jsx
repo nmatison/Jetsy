@@ -33,7 +33,6 @@ class ProductForm extends React.Component {
    };
 
   update(field){
-    console.log(this.state)
     return (e) => {
       this.setState({[field]: e.target.value})
     };
@@ -76,10 +75,14 @@ class ProductForm extends React.Component {
     return  <input className="choose-file" type="file" onChange={this.handleFile} />
   };
 
-  categorySelector() {
+  categorySelector(c_type, c_val) {
+    let default_value;
+    default_value = c_val === "" ? "Select Category" : c_val
+    console.log(default_value)
+
     return(
-      <select name="Category" defaultValue="Select Category" className="category" onChange={(e) => this.setState({ c_name: e.target.value})}>
-        <option disabled="true" value={"Select Category"}>{"Select Category"}</option>
+      <select name="Category" defaultValue={default_value} className="category" onChange={(e) => this.setState({ [c_type]: e.target.value})}>
+        <option disabled="true" value="Select Category">Select Category</option>
         <option value="Bags">Bags</option>
         <option value="Beach">Beach</option>
         <option value="Business">Business</option>
@@ -120,7 +123,9 @@ class ProductForm extends React.Component {
               </div>
               <div className="description">
               <label className="product-label">Categories:</label>
-                {this.categorySelector()}
+                {this.categorySelector("c_name", this.state.c_name)}
+              {this.categorySelector("c_name2", this.state.c_name2)}
+              {this.categorySelector("c_name3", this.state.c_name3)}
               </div>
               <div className="product-inputs">
                 <div className="cancel-div"><Link className="cancel" to="/products">Cancel</Link></div>
