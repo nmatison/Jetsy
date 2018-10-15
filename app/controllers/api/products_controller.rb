@@ -8,8 +8,9 @@ class Api::ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
-    @category = Category.where("category_name LIKE ?", product_params[:c_name])
+    product_details = product_params.reject{|k,v| k == "c_name"}
+    @product = Product.new(product_details)
+    @category = Category.find_by(category_name: product_params[:c_name])
     @category ||= Category.save(category_name: product_params[:c_name])
     Categorize.save(product_id: @product.id, category_id: @category.id)
     if @product.save
@@ -40,6 +41,6 @@ class Api::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:id, :user_id, :product_name, :description, :price, :photo, :c_name)
+    params.require(:product).permit(:id, :user_id, :product_name, :description, :price, :c_name, :photo)
   end
 end

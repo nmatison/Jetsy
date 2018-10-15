@@ -10,7 +10,7 @@ class ProductForm extends React.Component {
     this.handleDelete = this.handleDelete.bind(this);
     this.update = this.update.bind(this);
     this.handleFile = this.handleFile.bind(this);
-  }
+  };
 
   handleSubmit(e) {
     e.preventDefault();
@@ -23,57 +23,72 @@ class ProductForm extends React.Component {
        productData.append('product[product_name]', this.state.product_name);
        productData.append('product[price]', this.state.price);
        productData.append('product[description]', this.state.description);
+       productData.append('product[c_name]', this.state.c_name)
        if (this.state.photoFile) {
          productData.append('product[photo]', this.state.photoFile);
          this.props.action(productData).then(
            () => this.props.history.push(`/products`));
-       }
-     }
-   }
+       };
+     };
+   };
 
   update(field){
+    console.log(this.state)
     return (e) => {
       this.setState({[field]: e.target.value})
+    };
+  };
+
+  handleDelete(e) {
+    e.preventDefault();
+    this.props.deleteProduct(this.props.match.params.productId).then(() => this.props.history.push("/products"));
+  };
+
+  deleteButton() {
+    if (this.props.formType === "Update Your Product's Information") {
+      return (
+        <div className="delete-product-div">
+          <input
+            type="submit"
+            value="Delete Product"
+            className="delete-product"
+            onClick={this.handleDelete} />
+          <p>Clicking this will permanently delete your product!</p>
+        </div>
+    )} else {
+      return null;
+    };
+  };
+
+  handleFile(e) {
+    const file =  e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({photoFile: file, photoUrl: fileReader.result});
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
     }
+  };
+
+  photoButton() {
+    if (this.props.formType === "Update Your Product's Information") return null;
+    return  <input className="choose-file" type="file" onChange={this.handleFile} />
+  };
+
+  categorySelector() {
+    return(
+      <select name="Category" defaultValue="Select Category" className="quantity" onChange={(e) => this.setState({ c_name: e.target.value})}>
+        <option disabled="true" value={"Select Quantity"}>{"Select Quantity"}</option>
+        <option value="Bags">Bags</option>
+        <option value="Beach">Beach</option>
+        <option value="Business">Business</option>
+        <option value="Comfort">Comfort</option>
+        <option value="Hiking">Hiking</option>
+      </select>
+    )
   }
 
-    handleDelete(e) {
-      e.preventDefault();
-      this.props.deleteProduct(this.props.match.params.productId).then(() => this.props.history.push("/products"));
-    }
-
-    deleteButton() {
-      if (this.props.formType === "Update Your Product's Information") {
-        return (
-          <div className="delete-product-div">
-            <input
-              type="submit"
-              value="Delete Product"
-              className="delete-product"
-              onClick={this.handleDelete} />
-            <p>Clicking this will permanently delete your product!</p>
-          </div>
-      )} else {
-        return null;
-      }
-    }
-
-    handleFile(e) {
-      const file =  e.currentTarget.files[0];
-      const fileReader = new FileReader();
-      fileReader.onloadend = () => {
-        this.setState({photoFile: file, photoUrl: fileReader.result});
-      };
-      if (file) {
-        fileReader.readAsDataURL(file);
-      }
-    }
-
-    photoButton() {
-      if (this.props.formType === "Update Your Product's Information") return null;
-      return  <input className="choose-file" type="file" onChange={this.handleFile} />
-    }
-z
 
   render () {
     const preview = this.state.photoUrl ? <img className="photo-preview" src={this.state.photoUrl} /> : null;
@@ -103,6 +118,7 @@ z
                 <label className="product-label">Description:</label>
                 <textarea className="product-input" placeholder=" All of your selling points for your item go here!" value={this.state.description} rows="10" cols="100" onChange={this.update('description')} />
               </div>
+              {this.categorySelector()}
               <div className="product-inputs">
                 <div className="cancel-div"><Link className="cancel" to="/products">Cancel</Link></div>
                 <div className="submit-product-div"><input className="submit-product" type="submit" value="Submit Product"/></div>
