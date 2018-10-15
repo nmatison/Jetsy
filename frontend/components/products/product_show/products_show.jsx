@@ -13,26 +13,26 @@ class ProductShow extends React.Component {
       shopping_cart_id: null,
       product_id: null
     }
-  }
+  };
 
   componentDidMount() {
     this.props.fetchReviews(this.props.match.params.productId);
     this.props.fetchProducts();
     this.props.fetchProduct(this.props.match.params.productId);
    
-  }
+  };
 
   editLink() {
     if (this.props.currentUserId === this.props.product.user_id){
       return <Link className="edit-link" to={`/products/${this.props.product.id}/edit`}>Edit Product</Link>
     }
-  }
+  };
 
   quantitySelector() {
     let options = []
     for (var i = 1; i < 101; i++) {
       options.push(<option key = {i} value={i}>{`${i}`}</option>)
-    }
+    };
 
     return (
       <select name="Quantity" defaultValue= "Select Quantity" className="quantity" onChange={(e) => this.setState({quantity: parseInt(e.target.value), product_id: this.props.product.id})}>
@@ -40,7 +40,7 @@ class ProductShow extends React.Component {
         {options}
       </select>
     )
-  }
+  };
 
   addToCart(e) {
     e.preventDefault()
@@ -54,13 +54,13 @@ class ProductShow extends React.Component {
       } else {
         window.alert("Please Select A Quantity")
       }
-    }
-  }
+    };
+  };
 
   clearErrors() {
     if (!this.props.errors) return null
     this.props.removeErrors()
-  }
+  };
 
 
   render() {
@@ -116,6 +116,13 @@ class ProductShow extends React.Component {
                 <br />
                 {product.description}
               </h1>
+              <h1>
+                {/* {this.props.product.categories.map(cat => {
+                  return(
+                    <h1>{cat.category_name}</h1>
+                  )
+                })} */}
+              </h1>
             </div>
             {this.editLink()}
             <div className="quantity-cart">
@@ -144,7 +151,7 @@ class ProductShow extends React.Component {
           </div>
         </div>
       </div>;
-  }
-}
+  };
+};
 
 export default withRouter(ProductShow);

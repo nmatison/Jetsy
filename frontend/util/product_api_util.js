@@ -13,7 +13,6 @@ export const fetchProduct = (id) => (
 );
 
 export const createProduct = (product) => {
-  console.log(product);
   return $.ajax({
     method: 'post',
     url: `api/products`,

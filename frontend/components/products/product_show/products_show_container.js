@@ -10,7 +10,8 @@ import { createCartItem } from '../../../actions/cart_item_actions';
 import { openModal } from '../../../actions/modal_actions';
 
 const mapStateToProps = (state, ownProps) => {
-  return ({product: state.entities.products[ownProps.match.params.productId],
+  const product = state.entities.products[ownProps.match.params.productId];
+  return ({product: product,
   users: state.entities.users,
   cartId: state.entities.cart.id,
   currentUserId: state.session.id,
