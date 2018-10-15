@@ -27,7 +27,7 @@ class ProductForm extends React.Component {
        if (this.state.photoFile) {
          productData.append('product[photo]', this.state.photoFile);
          this.props.action(productData).then(
-           () => this.props.history.push(`/products`));
+           (data) => this.props.history.push(`/products/${data.payload.product.id}`));
        };
      };
    };
@@ -79,7 +79,7 @@ class ProductForm extends React.Component {
   categorySelector() {
     return(
       <select name="Category" defaultValue="Select Category" className="quantity" onChange={(e) => this.setState({ c_name: e.target.value})}>
-        <option disabled="true" value={"Select Quantity"}>{"Select Quantity"}</option>
+        <option disabled="true" value={"Select Category"}>{"Select Category"}</option>
         <option value="Bags">Bags</option>
         <option value="Beach">Beach</option>
         <option value="Business">Business</option>

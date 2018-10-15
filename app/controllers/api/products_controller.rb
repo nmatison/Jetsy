@@ -10,14 +10,15 @@ class Api::ProductsController < ApplicationController
   def create
     product_details = product_params.reject{|k,v| k == "c_name"}
     @product = Product.new(product_details)
+    @product = create_checker(@product)
     @category = Category.find_by(category_name: product_params[:c_name])
-    @category ||= Category.save(category_name: product_params[:c_name])
-    Categorize.save(product_id: @product.id, category_id: @category.id)
-    if @product.save
-      render 'api/products/show'
-    else
-      render json: @product.errors.full_messages, status: 422
+    unless @category
+      @category = Category.new(category_name: product_params[:c_name])
+      @category = create_checker(@category)
     end
+    @categorize = Categorize.new(product_id: @product.id, category_id: @category.id)
+    create_checker(@categorize)
+    render 'api/products/show'
   end
 
   def update
@@ -36,6 +37,13 @@ class Api::ProductsController < ApplicationController
     else
       render json: @product.errors.full_messages, status: 422
     end
+  end
+
+  def create_checker(item)
+    unless item.save 
+      render json: @product.errors.full_messages, status: 422
+    end
+    item
   end
 
   private

@@ -14,7 +14,7 @@ import {merge} from 'lodash';
       case RECEIVE_CART_ITEMS:
         return merge({}, state, action.payload.products);
       case RECEIVE_PRODUCT:
-        return merge({}, state, {[Object.values(action.payload.product)[0].id]: Object.values(action.payload.product)[0]});
+        return merge({}, state, {[action.payload.product.id]: action.payload.product});
       case RECEIVE_USER:
         return merge({}, state, { [Object.values(action.payload.product)[0].id]: Object.values(action.payload.product)[0] });
       case REMOVE_PRODUCT:
