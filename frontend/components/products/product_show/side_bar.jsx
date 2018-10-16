@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import SellerProductContainer from './seller_product_container';
+import SideBarIndexContainer from './side_bar_index_container';
 
 
 const SideBar = ({ user }) => {
@@ -10,7 +10,7 @@ const SideBar = ({ user }) => {
       <h1>{user.username}</h1>
     </Link>
     <div className="more-seller-items">
-      <SellerProductContainer user={user} />
+      <SideBarIndexContainer user={user} />
     </div>
   </div>
   )

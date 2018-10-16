@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import SellerProducts from './seller_products';
+import SideBarIndex from './side_bar_index';
 
 const mapStateToProps = ({entities: { products }}) => ({
   products: Object.values(products)
@@ -8,4 +8,4 @@ const mapStateToProps = ({entities: { products }}) => ({
 export default connect(
   mapStateToProps,
   null
-)(SellerProducts);
+)(SideBarIndex);
