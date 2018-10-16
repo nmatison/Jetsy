@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import ReviewIndex from '../../reviews/review_index';
+import SideBar from './side_bar';
 
 
 class ProductShow extends React.Component {
@@ -66,28 +67,10 @@ class ProductShow extends React.Component {
   render() {
     if (!this.props.product || !this.props.users[this.props.product.user_id] || !this.props.reviews || !this.props.products.length) return null;
     const user = this.props.users[this.props.product.user_id]
-    const listOfProducts = this.props.products.filter((product) => product.user_id === user.id)
-    let products;
-    if (listOfProducts.length > 8) {
-      products = listOfProducts.slice(0, 8)
-    } else {
-      products = listOfProducts
-    }
     const product = this.props.product;
 
-    const sellerProducts = () => {
-      return products.map(prod => <Link
-        className="more-seller-link"
-      to={`/products/${prod.id}`}
-      key={prod.id}>
-      <img className="more-seller-product"  src={prod.photoUrl} />
-      <h6 className="more-seller-title">{prod.product_name}</h6>
-      <h6 className="more-seller-price">${prod.price}</h6>
-      </Link>
-    )
-      }
-
-    return <div className="show-main" onClick={() => this.clearErrors()}>
+    return (
+    <div className="show-main" onClick={() => this.clearErrors()}>
         <div className="product-show-div">
           <div className="image-description">
             <img src={product.photoUrl} className="show-image-div" />
@@ -142,15 +125,10 @@ class ProductShow extends React.Component {
             product={product} 
             fetchReviews={this.props.fetchReviews} 
             errors={this.props.errors} />
-          <div className="side-bar">
-            <Link to={`/users/${user.id}`} className="more-from">
-              <h2>More from</h2>
-              <h1>{user.username}</h1>
-            </Link>
-            <div className="more-seller-items">{sellerProducts()}</div>
-          </div>
+          <SideBar user={user} />
         </div>
-      </div>;
+      </div>
+    );
   };
 };
 
