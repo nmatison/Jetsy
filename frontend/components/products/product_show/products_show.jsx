@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import ReviewIndex from '../../reviews/review_index';
+import ProductCategories from './product_show_categories';
 import SideBar from './side_bar';
 
 
@@ -66,7 +67,7 @@ class ProductShow extends React.Component {
 
   render() {
     if (!this.props.product || !this.props.users[this.props.product.user_id] || !this.props.reviews || !this.props.products.length) return null;
-    const user = this.props.users[this.props.product.user_id]
+    const user = this.props.users[this.props.product.user_id];
     const product = this.props.product;
 
     return (
@@ -99,13 +100,7 @@ class ProductShow extends React.Component {
                 <br />
                 {product.description}
               </h1>
-              <h1>
-                {/* {this.props.product.categories.map(cat => {
-                  return(
-                    <h1>{cat.category_name}</h1>
-                  )
-                })} */}
-              </h1>
+             <ProductCategories categories={this.props.product.categories}/>
             </div>
             {this.editLink()}
             <div className="quantity-cart">
