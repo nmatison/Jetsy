@@ -76,8 +76,8 @@ class ProductShow extends React.Component {
           <div className="image-description">
             <img src={product.photoUrl} className="show-image-div" />
           </div>
-          <ProductInformation product={product} user={user} />
           <div className="info-submit">
+          <ProductInformation product={product} user={user} />
             {this.editLink()}
             <div className="quantity-cart">
               <label>
