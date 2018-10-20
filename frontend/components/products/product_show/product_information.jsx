@@ -10,7 +10,7 @@ class ProductInformation extends React.Component {
     const user = this.props.user;
 
     return (
-      <div>
+      <div className="product-user-information">
         <div className="product-information">
           <div className="title-price">
             <h1 className="product-title">{product.product_name}</h1>

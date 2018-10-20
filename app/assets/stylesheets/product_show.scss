@@ -69,13 +69,17 @@ $airplane: image_url("airplane.png");
 .info-submit {
   height: 90%;
   width: 30%;
-  /* border: 1px yellow solid; */
   align-self: center;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 2%;
+}
+
+.product-user-information{
+  height: 100%;
+  width: 100%;
 }
 
 .product-information {
