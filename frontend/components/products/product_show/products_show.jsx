@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom'
 import ReviewIndex from '../../reviews/review_index';
-import ProductCategories from './product_show_categories';
+import ProductInformation from './product_information'
 import SideBar from './side_bar';
 
 
@@ -76,32 +76,8 @@ class ProductShow extends React.Component {
           <div className="image-description">
             <img src={product.photoUrl} className="show-image-div" />
           </div>
+          <ProductInformation product={product} user={user} />
           <div className="info-submit">
-            <div className="product-information">
-              <div className="title-price">
-                <h1 className="product-title">{product.product_name}</h1>
-                <h1 className="product-price">
-                  Price: ${product.price}
-                  /each
-                </h1>
-              </div>
-            </div>
-            <div className="user-description">
-              <Link className="user-userpic" to={`/users/${user.id}`}>
-                <div className="sold-text">
-                  <h1 className="sold-by">Sold By:</h1>
-                  <h1 className="seller-name">{user.username}</h1>
-                </div>
-                <div className="seller-pic" />
-              </Link>
-              <h1 className="product-description">
-                Description:
-                <br />
-                <br />
-                {product.description}
-              </h1>
-             <ProductCategories categories={this.props.product.categories}/>
-            </div>
             {this.editLink()}
             <div className="quantity-cart">
               <label>
