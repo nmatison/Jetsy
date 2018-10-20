@@ -30,7 +30,7 @@ class ProductInformation extends React.Component {
           </Link>
           <h1 className="product-description">
             Description:
-                    <br />
+            <br />
             <br />
             {product.description}
           </h1>

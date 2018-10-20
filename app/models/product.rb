@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   validates :user_id, :product_name, :description, :price, presence: true
   validates :product_name, length: {maximum: 35, presence: true}
-  validates :description, length: {maximum: 300, presence: true}
+  validates :description, length: {maximum: 250, presence: true}
   validate :ensure_photo
 
   belongs_to :user
