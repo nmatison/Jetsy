@@ -5,7 +5,7 @@ const ProductCategories = ({categories}) => {
         <h1>Categories: </h1>
 
         {categories.map(cat => {
-          return <li>{cat.category_name}</li>;
+      return <li key={cat.id}>{cat.category_name}</li>;
         })}
         
     </ul>;

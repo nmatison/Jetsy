@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCategories from './product_show_categories';
+// import ProductCategories from './product_show_categories';
 import { Link } from 'react-router-dom'
 
 class ProductInformation extends React.Component {
@@ -34,7 +34,7 @@ class ProductInformation extends React.Component {
             <br />
             {product.description}
           </h1>
-          <ProductCategories categories={this.props.product.categories} />
+          {/* <ProductCategories categories={this.props.product.categories} /> */}
         </div>
       </div>
     )
