@@ -93,3 +93,10 @@ textarea:focus {
 input:focus {
 	outline: none;
 }
+
+select {
+	background-color: white;
+  color: black;
+	border-radius: 3px;
+	width: 125px;
+}
