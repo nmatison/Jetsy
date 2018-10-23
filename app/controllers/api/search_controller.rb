@@ -61,8 +61,8 @@ class Api::SearchController < ApplicationController
 
   def search_products(search_string)
     products = Product.where('product_name LIKE ? OR description LIKE ?', "%#{search_string}%", "%#{search_string}%")
-    category_id = Category.select('id').where('category_name LIKE ?', "%#{search_string}%")
-
+    category_id = Category.where('category_name LIKE ?', "%#{search_string}%")
+    debugger
     if category_id.first
       products.merge(products_from_category(category_id.first.id))
     end
