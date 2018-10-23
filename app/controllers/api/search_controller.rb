@@ -2,12 +2,13 @@ class Api::SearchController < ApplicationController
 
   def search
     search_string = search_params["query_string"].downcase
+    debugger
     if COMMON_WORDS.include?(search_string) || search_string.length < 3 
       @products = []
       render 'api/products/index' if @products
       return
     end
-
+    
     @products = search_products(search_string)
     render 'api/products/index' if @products
   end
@@ -62,7 +63,7 @@ class Api::SearchController < ApplicationController
   def search_products(search_string)
     products = Product.where('product_name LIKE ? OR description LIKE ?', "%#{search_string}%", "%#{search_string}%")
     category_id = Category.where('category_name LIKE ?', "%#{search_string}%")
-    debugger
+
     if category_id.first
       products.merge(products_from_category(category_id.first.id))
     end
