@@ -8,8 +8,7 @@ class Api::SearchController < ApplicationController
       return
     end
 
-    @products = Product.where('product_name LIKE ? OR description LIKE ?', "%#{search_string}%", "%#{search_string}%")
-
+    @products = search_products(search_string)
     render 'api/products/index' if @products
   end
 
@@ -58,5 +57,31 @@ class Api::SearchController < ApplicationController
   private
   def search_params
     params.require(:query).permit(:query_string)
+  end
+
+  def search_products(search_string)
+    products = Product.where('product_name LIKE ? OR description LIKE ?', "%#{search_string}%", "%#{search_string}%")
+    category_id = Category.select('id').where('category_name LIKE ?', "%#{search_string}%")
+
+    if category_id.first
+      products.merge(products_from_category(category_id.first.id))
+    end
+
+    products
+  end
+
+  def products_from_category(category_id)
+    categorize_search = Categorize.select('product_id').where('category_id = ?', "%#{category_id}%").all
+    other_products = nil
+
+    categorize_search.each do |id|
+      if !other_products
+        other_products = Product.where('id = ?', "%#{id}%")
+      else
+        other_products.merge(Product.where('id = ?', "%#{id}%"))
+      end
+    end
+
+    other_products
   end
 end
