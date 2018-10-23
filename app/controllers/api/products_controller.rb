@@ -71,6 +71,7 @@ class Api::ProductsController < ApplicationController
     i = 0
     while i < cat_array.length
       cat = cat_array[i]
+      next if cat == ""
       if cat.is_a?(String)
         cat = Category.new({category_name: cat})
         cat = create_checker(cat)
